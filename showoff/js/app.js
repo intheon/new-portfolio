@@ -1,48 +1,18 @@
 $(document).ready(function(){
 	// assuming page has loaded...
 
+	$.scrollify({
+		section: 		".content-area",
+		sectionName : "name",
+		easing: "easeOutExpo",
+		scrollSpeed: 1000,
+		offset : 0,
+		scrollbars: false
+	});
+
+	$(".nav-link").click(function(event){
+		var id = this.id.split("-")[0]
+		$.scrollify.move("#" + id);
+	});
 
 });
-
-
-function startDragend()
-{
-
-	$(".portfolio-slides-container").dragend({
-		onSwipe: function(event)
-		{
-			/*
-			$(".dragend-page h1").css("margin-top", $(".dragend-page").position().left);
-			$(".dragend-page h2").css("margin-right", $(".dragend-page").position().left - 16);
-			$(".dragend-page h3").css("margin-left", $(".dragend-page").position().left - 30);
-				console.log($(".dragend-page").position().left);
-				*/
-		},
-		onDrag: function(event)
-		{
-			/*
-			$(".dragend-page h1").css("margin-top", $(".dragend-page").position().left);
-			$(".dragend-page h2").css("margin-right", $(".dragend-page").position().left - 16);
-			$(".dragend-page h3").css("margin-left", $(".dragend-page").position().left - 30);
-				console.log($(".dragend-page").position().left);
-				*/
-		},
-		onDragEnd: function(event){
-/*
-			$(".dragend-page h1").removeAttr("style");
-			$(".dragend-page h2").removeAttr("style");
-			$(".dragend-page h3").removeAttr("style");
-			*/
-		},
-		onSwipeEnd: function(event){
-/*
-			$(".dragend-page h1").removeAttr("style");
-			$(".dragend-page h2").removeAttr("style");
-			$(".dragend-page h3").removeAttr("style");
-			*/
-		},
-		afterInitialize: function(event){
-			this.container.style.visibility = "visible";
-		},
-	});
-}
