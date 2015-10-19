@@ -9,7 +9,7 @@
   clear: both;
   content: ""; }
 
-#navigation-header div, .center {
+#navigation-header div, .center, #navigation {
   margin-left: auto !important;
   margin-right: auto !important;
   display: inline-block !important;
@@ -36,9 +36,6 @@ body {
 
 #page-body, .center {
   height: 90% !important; }
-
-.row + .row {
-  margin-top: 2%; }
 
 [class^="column-"] {
   float: left;
@@ -106,18 +103,44 @@ a {
   -webkit-font-smoothing: antialiased !important; }
 
 #navigation {
-  padding: 0.5%;
   position: fixed;
-  font-size: 1.4em; }
+  bottom: 0;
+  font-size: 1.2em;
+  width: 20%; }
 
-.nav-item:hover {
+.nav-link {
+  transition: all 1s;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  background: rgba(255, 255, 255, 0); }
+
+.nav-link:hover {
   cursor: pointer; }
 
+.nudge {
+  padding-left: 20%; }
+
 .content-area {
-  height: 100vh; }
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.04)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */
+  height: 110vh; }
 
 .content-1 {
-  background: #AA4D39; }
+  background: #AA4D39;
+  width: 100vw; }
 
 .content-2 {
   background: #963254; }
@@ -128,8 +151,15 @@ a {
 .content-4 {
   background: #70253f; }
 
+.active-link {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.34em; }
+
+.active-link:after {
+  content: "-"; }
+
 .active-link:before {
-  content: ">"; }
+  content: "-"; }
 
 .inner {
   padding: 4%; }
@@ -141,8 +171,9 @@ a {
   font-size: 1.4em; }
 
 .home {
-  background: url(../img/1.png);
-  background-repeat: no-repeat;
-  background-position: bottom left; }
+  	/*background: 		url(../img/1.png);
+  	background-repeat: 	no-repeat;
+  	background-position: 	left top -15%;
+  */ }
 
 /*# sourceMappingURL=styles.css.map */
