@@ -12,6 +12,22 @@ $colour1:  				#AA4D39;
 $colour2:  				#963254;
 $colour3:  				#76276C;
 
+@font-face {
+  font-family: 			'Cuprum';
+  font-weight: 			400;
+  font-style: 			normal;
+  src: 					url('./fonts/Cuprum-regular.eot');
+  src: 					url('./fonts/Cuprum-regular.eot?#iefix') format('embedded-opentype'),
+       					local('Cuprum'),
+       					local('Cuprum-regular'),
+      					url('./fonts/Cuprum-regular.woff2') format('woff2'),
+       					url('./fonts/Cuprum-regular.woff') format('woff'),
+       					url('./fonts/Cuprum-regular.ttf') format('truetype'),
+       					url('./fonts/Cuprum-regular.svg#Cuprum') format('svg');
+}
+
+
+
 // --- extends
 
 %clearfix:after
@@ -36,7 +52,7 @@ $colour3:  				#76276C;
 
 %normalFont
 {
-	font-family:		'Cuprum', sans-serif;
+	font-family:		'Cuprum';
 }
 
 // styling
@@ -179,7 +195,14 @@ a
 {
 	padding:			$smallPadding;
 	position:			fixed;
+	font-size: 			1.4em;
 }
+
+.nav-item:hover
+{
+	cursor: 			pointer;
+}
+
 .content-area
 {
 	height:				100vh;
@@ -200,4 +223,32 @@ a
 .content-4
 {
 	background:			darken($colour2, 10%);
+}
+
+.active-link:before
+{
+	content: 			">";
+}
+
+.inner
+{
+	padding: 			4%;
+}
+
+.hello
+{
+	font-size: 			6em;
+}
+
+.introduction
+{
+	font-size: 			1.4em;
+}
+
+.home
+{
+	background: 		url(../img/1.png);
+	background-repeat: 	no-repeat;
+	background-position: 	bottom left;
+
 }
