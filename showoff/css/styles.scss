@@ -59,7 +59,7 @@ $colour3:  				#76276C;
 
 html,body
 {
-	height:				100% !important;
+	height:				100vh;
 }
 body
 {
@@ -73,7 +73,7 @@ body
 {
 	margin: 			0;
 	padding: 			0;
-	height:				100% !important;
+	height:				100vh;
 }
 
 #page-body, .center
@@ -84,6 +84,7 @@ body
 .row
 {
 	@extend 			%clearfix;
+	height:110vh;
 }
 
 [class^="column-"]
@@ -214,22 +215,19 @@ a
 }
 .content-area
 {
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
-background: -moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-
-	height:				110vh;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .content-1
 {
 	background:			$colour1;	
-	width:100vw;
 }
 .content-2
 {

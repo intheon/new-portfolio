@@ -22,7 +22,7 @@ body {
   font-family: 'Cuprum'; }
 
 html, body {
-  height: 100% !important; }
+  height: 100vh; }
 
 body {
   background: #f9f9f9;
@@ -32,10 +32,13 @@ body {
 .main-container {
   margin: 0;
   padding: 0;
-  height: 100% !important; }
+  height: 100vh; }
 
 #page-body, .center {
   height: 90% !important; }
+
+.row {
+  height: 110vh; }
 
 [class^="column-"] {
   float: left;
@@ -135,12 +138,10 @@ a {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 );
-  /* IE6-9 */
-  height: 110vh; }
+  /* IE6-9 */ }
 
 .content-1 {
-  background: #AA4D39;
-  width: 100vw; }
+  background: #AA4D39; }
 
 .content-2 {
   background: #963254; }
