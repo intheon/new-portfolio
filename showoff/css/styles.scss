@@ -53,6 +53,7 @@ $colour3:  				#76276C;
 %normalFont
 {
 	font-family:		'Cuprum';
+	color:				black;
 }
 
 // styling
@@ -166,14 +167,36 @@ h4
 
 a 
 {
-	@extend 			%fancyFont;
-	color:				$colour1;
+	@extend 			%normalFont;
+	text-decoration:	none;
 	transition:			all 0.5s;
+	
 	&:hover
 	{
 		letter-spacing: 1px;
-		color:			$colour2;
 	}
+}
+
+.link 
+{
+	font-size:			4em;
+	padding-top:		20vh;
+	height:				25vh;
+	text-align: 		center;
+	transition:			all 1s;
+}
+
+.portfolio-item
+{
+	background: 		rgba(255,255,255,0.1);
+	border-radius:		8px;
+}
+
+#ed
+{
+	background:			url(../img/ed-site.png);
+	opacity:			0.7;
+	background-position: left -60px;
 }
 
 #navigation-header div
@@ -270,6 +293,17 @@ a
 .introduction
 {
 	font-size: 			1.4em;
+}
+
+.header
+{
+	font-size:			3em;
+}
+
+.smallTitle
+{
+	margin-top:			2%;
+	font-size:			1.5em;
 }
 
 .home
