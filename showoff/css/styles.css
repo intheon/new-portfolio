@@ -25,7 +25,8 @@ html, body {
 body {
   background: #f9f9f9;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: rgba(0, 0, 0, 0.6); }
 
 .main-container {
   margin: 0;
@@ -106,10 +107,6 @@ a {
   text-align: center;
   transition: all 1s; }
 
-.portfolio-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px; }
-
 #ed {
   background: url(../img/ed-site.png);
   opacity: 0.7;
@@ -186,6 +183,9 @@ a {
 
 .header {
   font-size: 3em; }
+
+.header-number {
+  font-size: 4em; }
 
 .smallTitle {
   margin-top: 2%;
