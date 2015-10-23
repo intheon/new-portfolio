@@ -7,6 +7,11 @@ $largePadding:			2%;
 $headerColour:			#000000;
 $letterSpacing:	        2px;
 $defaultFontSize:		1em;
+$padding:              	0.8%;
+$trans:                                 rgba(0,0,0,0.2);
+$border-radius-amount:                  5px;    
+$padding:                               1%;
+$transparent-bg:                        rgba(0,0,0,0.8);
 
 $white: 				#FFFFFF;
 $black: 				rgba(0,0,0,0.6);
@@ -57,8 +62,34 @@ $colour3:  				#76276C;
 %normalFont
 {
 	font-family:		'Cuprum';
-	color:				black;
+	color:				#000000;
 }
+
+%input-default
+{
+    padding:                            $padding * 2;
+    border-radius:                      $border-radius-amount;
+    outline:                            none;
+    background:                         $trans;
+    border:                             none;
+    border-bottom:                      2px solid darken($colour3, 10%);
+    transition:                         all 0.7s;
+    width: 								45%;
+	@extend  %normalFont;
+	margin-top: 						1%;
+	margin-bottom: 						1%;
+	font-size: 							1.6em;
+}
+
+%input-hover
+{
+    border-bottom:                      2px solid lighten($colour1, 5%);
+    background:                         none;
+    cursor:                             -moz-pointer;
+    cursor:                             -webkit-pointer;
+    cursor:                             pointer;
+}
+
 
 // styling
 
@@ -86,6 +117,13 @@ body
 {
 	height:				90% !important;
 }
+
+.row2
+{
+	@extend 			%clearfix;
+
+}
+
 
 .row
 {
@@ -193,9 +231,13 @@ a
 
 .portfolio-item
 {
-
+	margin-top: 		2%;
 }
 
+.description
+{
+	float: left;
+}
 #ed
 {
 	background:			url(../img/ed-site.png);
@@ -301,11 +343,7 @@ a
 
 .header
 {
-	font-size:			3em;
-}
-
-.header-number
-{
+	float: 				left;
 	font-size: 			4em;
 }
 .smallTitle
@@ -320,4 +358,30 @@ a
 	background-repeat: 	no-repeat;
 	background-position: 	left top -15%;
 */
+}
+
+.contact-form input
+{
+	@extend 			%input-default;
+}
+
+.contact-form input:hover
+{
+	@extend				%input-hover;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+:-ms-input-placeholder {  
+   color: black;  
 }

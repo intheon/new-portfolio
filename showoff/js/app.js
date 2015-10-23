@@ -1,5 +1,8 @@
+var rootUrl = "http://localhost/new-portfolio";
+
 $(document).ready(function(){
 	// assuming page has loaded...
+
 
 	$.scrollify({
 		section: 		".content-area",
@@ -39,4 +42,34 @@ $(document).ready(function(){
 		$.scrollify.move("#" + id);
 	});
 
+	$("#contact-form-submit").click(function(){
+		submitForm();
+	});
+
 });
+
+function submitForm()
+{
+	var message = $("#contact-form-message").val();
+	var from = $("#contact-form-from").val();
+	var email = $("#contact-form-email").val();
+
+	$.ajax(
+	{
+		type: "POST",
+		url: rootUrl + "/showoff/php/send_message.php",
+		data:
+			{
+				message: message,
+				from: from,
+				email: email
+			},
+			success: function(response)
+			{
+				if (response == "success")
+				{
+					$("#contact-form-submit").val("Thanks!");
+				}
+			}
+		});
+}

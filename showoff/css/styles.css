@@ -4,7 +4,7 @@
   font-style: normal;
   src: url("./fonts/Cuprum-regular.eot");
   src: url("./fonts/Cuprum-regular.eot?#iefix") format("embedded-opentype"), local("Cuprum"), local("Cuprum-regular"), url("./fonts/Cuprum-regular.woff2") format("woff2"), url("./fonts/Cuprum-regular.woff") format("woff"), url("./fonts/Cuprum-regular.ttf") format("truetype"), url("./fonts/Cuprum-regular.svg#Cuprum") format("svg"); }
-.row:after {
+.row2:after, .row:after {
   display: block;
   clear: both;
   content: ""; }
@@ -15,9 +15,29 @@
   display: inline-block !important;
   text-align: center; }
 
-body, a {
+.contact-form input, body, a {
   font-family: 'Cuprum';
-  color: black; }
+  color: #000000; }
+
+.contact-form input {
+  padding: 2%;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-bottom: 2px solid #501a49;
+  transition: all 0.7s;
+  width: 45%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 1.6em; }
+
+.contact-form input:hover {
+  border-bottom: 2px solid #bd563f;
+  background: none;
+  cursor: -moz-pointer;
+  cursor: -webkit-pointer;
+  cursor: pointer; }
 
 html, body {
   height: 100vh; }
@@ -107,6 +127,12 @@ a {
   text-align: center;
   transition: all 1s; }
 
+.portfolio-item {
+  margin-top: 2%; }
+
+.description {
+  float: left; }
+
 #ed {
   background: url(../img/ed-site.png);
   opacity: 0.7;
@@ -182,9 +208,7 @@ a {
   font-size: 1.4em; }
 
 .header {
-  font-size: 3em; }
-
-.header-number {
+  float: left;
   font-size: 4em; }
 
 .smallTitle {
@@ -196,5 +220,19 @@ a {
   	background-repeat: 	no-repeat;
   	background-position: 	left top -15%;
   */ }
+
+::-webkit-input-placeholder {
+  color: black; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: black; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: black; }
+
+:-ms-input-placeholder {
+  color: black; }
 
 /*# sourceMappingURL=styles.css.map */
