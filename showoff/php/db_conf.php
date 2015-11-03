@@ -1,9 +1,18 @@
 <?php
 
+
+	$host = "http://intheon.uk";
+	$username = "intheon_root";
+	$password = "S%!;PUXm?MVl";
+	$database = "intheon_contact";
+	$connect = mysqli_connect($host,$username,$password,$database);
+
+	/*
+
 	$host = "localhost";
 	$username = "root";
 	$password = "";
 	$database = "contact-me";
 	$connect = mysqli_connect($host,$username,$password,$database);
-
+*/
 ?>

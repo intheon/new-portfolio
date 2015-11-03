@@ -1,4 +1,5 @@
-var rootUrl = "http://localhost/new-portfolio";
+//var rootUrl = "http://localhost/new-portfolio";
+var rootUrl = "http://intheon.uk";
 
 $(document).ready(function(){
 	// assuming page has loaded...
