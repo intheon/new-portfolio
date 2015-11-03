@@ -14,12 +14,14 @@ $padding:                               1%;
 $transparent-bg:                        rgba(0,0,0,0.8);
 
 $white: 				#FFFFFF;
-$black: 				rgba(0,0,0,0.6);
+$black: 				#000000;
+$opacityValue:			0.8;
+$translucentText:		rgba(0,0,0,$opacityValue);
 
-
-$colour1:  				#AA4D39;
-$colour2:  				#963254;
-$colour3:  				#76276C;
+$colour1:  				#46262D;
+$colour2:  				#46262D;
+$colour3:  				darken(#46262D, 7%);
+$colour4:  				darken(#46262D, 7%);
 
 @font-face {
   font-family: 			'Cuprum';
@@ -72,7 +74,7 @@ $colour3:  				#76276C;
     outline:                            none;
     background:                         $trans;
     border:                             none;
-    border-bottom:                      2px solid darken($colour3, 10%);
+    border-bottom:                      2px solid darken($colour2, 10%);
     transition:                         all 0.7s;
     width: 								45%;
 	@extend  %normalFont;
@@ -83,7 +85,7 @@ $colour3:  				#76276C;
 
 %input-hover
 {
-    border-bottom:                      2px solid lighten($colour1, 5%);
+    border-bottom:                      2px solid lighten($colour2, 5%);
     background:                         none;
     cursor:                             -moz-pointer;
     cursor:                             -webkit-pointer;
@@ -143,7 +145,7 @@ body
     {
         margin-right:	0%;
     }
-}
+}A75E52
 
 .column-1
 { 	
@@ -296,19 +298,23 @@ a
 
 .content-1
 {
-	background:			$colour1;	
+	background:			$colour1;
+	color: 				$black;
 }
 .content-2
 {
-	background:			$colour2;
+	background:			darken($colour1, 4%);
+	color: 				$black;
 }
 .content-3
 {
-	background:			$colour3;
+	background:			darken($colour1, 2%);
+	color: 				$black;
 }
 .content-4
 {
-	background:			darken($colour2, 10%);
+	background:			darken($colour1, 5%);
+	color: 				$black;
 }
 
 .active-link

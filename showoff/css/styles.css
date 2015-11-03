@@ -25,7 +25,7 @@
   outline: none;
   background: rgba(0, 0, 0, 0.2);
   border: none;
-  border-bottom: 2px solid #501a49;
+  border-bottom: 2px solid #251418;
   transition: all 0.7s;
   width: 45%;
   margin-top: 1%;
@@ -33,7 +33,7 @@
   font-size: 1.6em; }
 
 .contact-form input:hover {
-  border-bottom: 2px solid #bd563f;
+  border-bottom: 2px solid #572f38;
   background: none;
   cursor: -moz-pointer;
   cursor: -webkit-pointer;
@@ -46,7 +46,7 @@ body {
   background: #f9f9f9;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.6); }
+  color: #000000; }
 
 .main-container {
   margin: 0;
@@ -68,6 +68,7 @@ body {
   [class^="column-"]:last-child {
     margin-right: 0%; }
 
+A75E52
 .column-1 {
   width: 6.5%; }
 
@@ -177,16 +178,20 @@ a {
   /* IE6-9 */ }
 
 .content-1 {
-  background: #AA4D39; }
+  background: #46262D;
+  color: #000000; }
 
 .content-2 {
-  background: #963254; }
+  background: #391f25;
+  color: #000000; }
 
 .content-3 {
-  background: #76276C; }
+  background: #3f2229;
+  color: #000000; }
 
 .content-4 {
-  background: #70253f; }
+  background: #351d22;
+  color: #000000; }
 
 .active-link {
   background: rgba(255, 255, 255, 0.2);
