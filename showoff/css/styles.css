@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Cuprum';
-  font-weight: 400;
-  font-style: normal;
-  src: url("./fonts/Cuprum-regular.eot");
-  src: url("./fonts/Cuprum-regular.eot?#iefix") format("embedded-opentype"), local("Cuprum"), local("Cuprum-regular"), url("./fonts/Cuprum-regular.woff2") format("woff2"), url("./fonts/Cuprum-regular.woff") format("woff"), url("./fonts/Cuprum-regular.ttf") format("truetype"), url("./fonts/Cuprum-regular.svg#Cuprum") format("svg"); }
 .row2:after, .row:after {
   display: block;
   clear: both;
@@ -25,7 +19,7 @@
   outline: none;
   background: rgba(0, 0, 0, 0.2);
   border: none;
-  border-bottom: 2px solid #251418;
+  border-bottom: 2px solid #687fb6;
   transition: all 0.7s;
   width: 45%;
   margin-top: 1%;
@@ -33,12 +27,18 @@
   font-size: 1.6em; }
 
 .contact-form input:hover {
-  border-bottom: 2px solid #572f38;
+  border-bottom: 2px solid #9cabcf;
   background: none;
   cursor: -moz-pointer;
   cursor: -webkit-pointer;
   cursor: pointer; }
 
+@font-face {
+  font-family: 'Cuprum';
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/Cuprum-regular.eot");
+  src: url("./fonts/Cuprum-regular.eot?#iefix") format("embedded-opentype"), local("Cuprum"), local("Cuprum-regular"), url("./fonts/Cuprum-regular.woff2") format("woff2"), url("./fonts/Cuprum-regular.woff") format("woff"), url("./fonts/Cuprum-regular.ttf") format("truetype"), url("./fonts/Cuprum-regular.svg#Cuprum") format("svg"); }
 html, body {
   height: 100vh; }
 
@@ -57,7 +57,7 @@ body {
   height: 90% !important; }
 
 .row {
-  height: 110vh; }
+  height: 100vh; }
 
 [class^="column-"] {
   float: left;
@@ -68,7 +68,6 @@ body {
   [class^="column-"]:last-child {
     margin-right: 0%; }
 
-A75E52
 .column-1 {
   width: 6.5%; }
 
@@ -155,7 +154,8 @@ a {
   background: rgba(255, 255, 255, 0); }
 
 .nav-link:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1); }
 
 .nudge {
   padding-left: 20%; }
@@ -178,19 +178,19 @@ a {
   /* IE6-9 */ }
 
 .content-1 {
-  background: #46262D;
+  background: #9CABCF;
   color: #000000; }
 
 .content-2 {
-  background: #391f25;
+  background: #8b9cc7;
   color: #000000; }
 
 .content-3 {
-  background: #3f2229;
+  background: #7a8ebe;
   color: #000000; }
 
 .content-4 {
-  background: #351d22;
+  background: #687fb6;
   color: #000000; }
 
 .active-link {
@@ -219,12 +219,6 @@ a {
 .smallTitle {
   margin-top: 2%;
   font-size: 1.5em; }
-
-.home {
-  	/*background: 		url(../img/1.png);
-  	background-repeat: 	no-repeat;
-  	background-position: 	left top -15%;
-  */ }
 
 ::-webkit-input-placeholder {
   color: black; }

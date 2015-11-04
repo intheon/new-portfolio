@@ -1,70 +1,54 @@
-// --- vars
+// --- VARS
 
-$backgroundVars:		#f9f9f9;
-$noPadding:				0;
-$smallPadding:			0.5%;
-$largePadding:			2%;
-$headerColour:			#000000;
-$letterSpacing:	        2px;
-$defaultFontSize:		1em;
-$padding:              	0.8%;
+$backgroundVars:						#f9f9f9;
+$noPadding:								0;
+$smallPadding:							0.5%;
+$largePadding:							2%;
+$headerColour:							#000000;
+$letterSpacing:	        				2px;
+$defaultFontSize:						1em;
+$padding:              					0.8%;
 $trans:                                 rgba(0,0,0,0.2);
 $border-radius-amount:                  5px;    
 $padding:                               1%;
 $transparent-bg:                        rgba(0,0,0,0.8);
 
-$white: 				#FFFFFF;
-$black: 				#000000;
-$opacityValue:			0.8;
-$translucentText:		rgba(0,0,0,$opacityValue);
+$white: 								#FFFFFF;
+$black: 								#000000;
+$opacityValue:							0.8;
+$translucentText:						rgba(0,0,0,$opacityValue);
 
-$colour1:  				#46262D;
-$colour2:  				#46262D;
-$colour3:  				darken(#46262D, 7%);
-$colour4:  				darken(#46262D, 7%);
-
-@font-face {
-  font-family: 			'Cuprum';
-  font-weight: 			400;
-  font-style: 			normal;
-  src: 					url('./fonts/Cuprum-regular.eot');
-  src: 					url('./fonts/Cuprum-regular.eot?#iefix') format('embedded-opentype'),
-       					local('Cuprum'),
-       					local('Cuprum-regular'),
-      					url('./fonts/Cuprum-regular.woff2') format('woff2'),
-       					url('./fonts/Cuprum-regular.woff') format('woff'),
-       					url('./fonts/Cuprum-regular.ttf') format('truetype'),
-       					url('./fonts/Cuprum-regular.svg#Cuprum') format('svg');
-}
+$colour1:  								#9CABCF;
+$colour2:  								darken($colour1, 5%);;
+$colour3:  								darken($colour1, 10%);
+$colour4:  								darken($colour1, 15%);
 
 
-
-// --- extends
-
+// --- EXTENDS
 %clearfix:after
 {
-	display:			block;
-	clear:				both;
-	content:			"";
+	display:							block;
+	clear:								both;
+	content:							"";
 }
 
 %center
 {
-	margin-left: 		auto !important;
-    margin-right: 		auto !important;
-    display:			inline-block !important;
-    text-align:			center;
+	margin-left:						auto !important;
+    margin-right: 						auto !important;
+    display:							inline-block !important;
+    text-align:							center;
 }
 
 %fancyFont
 {
-	font-family: 		'Righteous', cursive;
+	font-family: 						'Righteous', cursive;
 }
 
 %normalFont
 {
-	font-family:		'Cuprum';
-	color:				#000000;
+	font-family:						'Cuprum';
+	color:								#000000;
 }
 
 %input-default
@@ -93,301 +77,326 @@ $colour4:  				darken(#46262D, 7%);
 }
 
 
-// styling
+// --- FONT DEF
 
-html,body
-{
-	height:				100vh;
+@font-face {
+	font-family:						'Cuprum';
+	font-weight:						400;
+	font-style:							normal;
+	src:								url('./fonts/Cuprum-regular.eot');
+	src:								url('./fonts/Cuprum-regular.eot?#iefix') format('embedded-opentype'),
+										local('Cuprum'),
+										local('Cuprum-regular'),
+										url('./fonts/Cuprum-regular.woff2') format('woff2'),
+										url('./fonts/Cuprum-regular.woff') format('woff'),
+										url('./fonts/Cuprum-regular.ttf') format('truetype'),
+										url('./fonts/Cuprum-regular.svg#Cuprum') format('svg');
 }
+
+
+
+// STYLES
+
+html, body
+{
+	height:								100vh;
+}
+
 body
 {
-	@extend 			%normalFont;
-	background:			$backgroundVars;
-	margin:   			$noPadding;
-	padding:			$noPadding;
-	color:				$black;
+	@extend 							%normalFont;
+	background:							$backgroundVars;
+	margin:   							$noPadding;
+	padding:							$noPadding;
+	color:								$black;
 }
 
 .main-container
 {
-	margin: 			0;
-	padding: 			0;
-	height:				100vh;
+	margin: 							0;
+	padding: 							0;
+	height:								100vh;
 }
 
 #page-body, .center
 {
-	height:				90% !important;
+	height:								90% !important;
 }
 
+
+// GRID STUFF
+
+// ROWS
 .row2
 {
-	@extend 			%clearfix;
+	@extend 							%clearfix;
 
 }
-
 
 .row
 {
-	@extend 			%clearfix;
-	height:110vh;
+	@extend 							%clearfix;
+	height:								100vh;
 }
+
+// COLUMNS
 
 [class^="column-"]
 {
-	float:				left;
-	margin-right:		$largePadding;
-	-webkit-box-sizing:	border-box; 
-    -moz-box-sizing:	border-box; 
-    box-sizing:			border-box;
+	float:								left;
+	margin-right:						$largePadding;
+	-webkit-box-sizing:					border-box; 
+    -moz-box-sizing:					border-box; 
+    box-sizing:							border-box;
  
     &:last-child 
     {
-        margin-right:	0%;
+        margin-right:					0%;
     }
-}A75E52
+}
 
 .column-1
 { 	
-	width:				(100% / 12) - ($largePadding * 11 / 12);
+	width:								(100% / 12) - ($largePadding * 11 / 12);
 }
 .column-2
 { 	
-	width:				(100% / 6) - ($largePadding * 10 / 12); 
+	width:								(100% / 6) - ($largePadding * 10 / 12); 
 }
 .column-3
 { 	
-	width:				(100% / 4) - ($largePadding * 9 / 12); 
+	width:								(100% / 4) - ($largePadding * 9 / 12); 
 }
 .column-4
 { 	
-	width:				(100% / 3) - ($largePadding * 8 / 12); 
+	width:								(100% / 3) - ($largePadding * 8 / 12); 
 }
 .column-5
 { 	
-	width:				(100% / 2.4) - ($largePadding * 7 / 12); 
+	width:								(100% / 2.4) - ($largePadding * 7 / 12); 
 }
 .column-6
 { 	
-	width:				(100% / 2) - ($largePadding * 6 / 12); 
+	width:								(100% / 2) - ($largePadding * 6 / 12); 
 }
 .column-7
 { 	
-	width:				(100% / 1.714285714285714) - ($largePadding * 5 / 12); 
+	width:								(100% / 1.714285714285714) - ($largePadding * 5 / 12); 
 }
 .column-8
 { 	
-	width:				(100% / 1.5) - ($largePadding * 4 / 12); 
+	width:								(100% / 1.5) - ($largePadding * 4 / 12); 
 }
 .column-9
 { 	
-	width:				(100% / 1.333333333333333) - ($largePadding * 3 / 12); 
+	width:								(100% / 1.333333333333333) - ($largePadding * 3 / 12); 
 }
 .column-10
 { 	
-	width:				(100% / 1.2) - ($largePadding * 2 / 12); 
+	width:								(100% / 1.2) - ($largePadding * 2 / 12); 
 }
 .column-11
 { 	
-	width:				(100% / 1.090909090909091) - ($largePadding * 1 / 12); 
+	width:								(100% / 1.090909090909091) - ($largePadding * 1 / 12); 
 }
 .column-12
 { 	
-	width:				100%; 
+	width:								100%; 
 }
 
-h2,h3,h4
+h2, h3, h4
 {
-	padding:			$noPadding;
-	margin:				$noPadding;
-	font-weight: 		0;
-	letter-spacing:		$letterSpacing;
+	padding:							$noPadding;
+	margin:								$noPadding;
+	font-weight: 						0;
+	letter-spacing:						$letterSpacing;
 }
 
 h4
 {
-	color:				lighten($headerColour, 70%) !important;
-	margin-bottom:		$largePadding;
+	color:								lighten($headerColour, 70%) !important;
+	margin-bottom:						$largePadding;
 }
 
 a 
 {
-	@extend 			%normalFont;
-	text-decoration:	none;
-	transition:			all 0.5s;
+	@extend 							%normalFont;
+	text-decoration:					none;
+	transition:							all 0.5s;
 	
 	&:hover
 	{
-		letter-spacing: 1px;
+		letter-spacing: 				1px;
 	}
 }
 
 .link 
 {
-	font-size:			4em;
-	padding-top:		20vh;
-	height:				25vh;
-	text-align: 		center;
-	transition:			all 1s;
+	font-size:							4em;
+	padding-top:						20vh;
+	height:								25vh;
+	text-align: 						center;
+	transition:							all 1s;
 }
 
 .portfolio-item
 {
-	margin-top: 		2%;
+	margin-top: 						2%;
 }
 
 .description
 {
-	float: left;
+	float: 								left;
 }
+
 #ed
 {
-	background:			url(../img/ed-site.png);
-	opacity:			0.7;
-	background-position: left -60px;
+	background:							url(../img/ed-site.png);
+	opacity:							0.7;
+	background-position: 				left -60px;
 }
 
 #navigation-header div
 {
-	@extend 			%center;
-	-webkit-font-smoothing: antialiased !important;
+	@extend 							%center;
+	-webkit-font-smoothing: 			antialiased !important;
 }
 
 .center
 {
-	@extend 			%center;
+	@extend 							%center;
 }
 
 #navigation
 {
-		@extend 			%center;
-	position:			fixed;
-	bottom:				0;
-	font-size: 			1.2em;
-	width:20%;
+	@extend 							%center;
+	position:							fixed;
+	bottom:								0;
+	font-size: 							1.2em;
+	width:								20%;
 }
 
 .nav-link
 {
-	transition:			all 1s;
-	padding-top:		7%;
-	padding-bottom:		7%;
-	background: 		rgba(255,255,255,0.0);
+	transition:							all 1s;
+	padding-top:						7%;
+	padding-bottom:						7%;
+	background: 						rgba(255,255,255,0.0);
 }
 
 .nav-link:hover
 {
-	cursor: 			pointer;
+	cursor: 							pointer;
+	background: 						rgba(255,255,255,0.1);
 }
 
 .nudge
 {
-	padding-left:		20%;
+	padding-left:						20%;
 }
 .content-area
 {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background: 						-moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: 						-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: 						-webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: 						-o-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: 						-ms-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: 						linear-gradient(to bottom, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: 							progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .content-1
 {
-	background:			$colour1;
-	color: 				$black;
+	background:							$colour1;
+	color: 								$black;
 }
 .content-2
 {
-	background:			darken($colour1, 4%);
-	color: 				$black;
+	background:							$colour2;
+	color: 								$black;
 }
 .content-3
 {
-	background:			darken($colour1, 2%);
-	color: 				$black;
+	background:							$colour3;
+	color: 								$black;
 }
 .content-4
 {
-	background:			darken($colour1, 5%);
-	color: 				$black;
+	background:							$colour4;
+	color: 								$black;
 }
 
 .active-link
 {
-	background: 		rgba(255,255,255,0.2);
-	font-size:			1.34em;
+	background: 						rgba(255,255,255,0.2);
+	font-size:							1.34em;
 }
 
 .active-link:after
 {
-	content: 			"-";
+	content: 							"-";
 }
 .active-link:before
 {
-	content: 			"-";
+	content: 							"-";
 }
 
 .inner
 {
-	padding: 			4%;
+	padding: 							4%;
 }
 
 .hello
 {
-	font-size: 			6em;
+	font-size: 							6em;
 }
 
 .introduction
 {
-	font-size: 			1.4em;
+	font-size: 							1.4em;
 }
 
 .header
 {
-	float: 				left;
-	font-size: 			4em;
+	float: 								left;
+	font-size: 							4em;
 }
 .smallTitle
 {
-	margin-top:			2%;
-	font-size:			1.5em;
+	margin-top:							2%;
+	font-size:							1.5em;
 }
 
 .home
 {
-	/*background: 		url(../img/1.png);
-	background-repeat: 	no-repeat;
-	background-position: 	left top -15%;
-*/
+
 }
 
 .contact-form input
 {
-	@extend 			%input-default;
+	@extend 							%input-default;
 }
 
 .contact-form input:hover
 {
-	@extend				%input-hover;
+	@extend								%input-hover;
 }
 
+// DEFAULT OVERRIDES
+
 ::-webkit-input-placeholder {
-   color: black;
+   color: 								black;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: black;  
+   color: 								black;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: black;  
+   color: 								black;  
 }
 
 :-ms-input-placeholder {  
-   color: black;  
+   color: 								black;  
 }
