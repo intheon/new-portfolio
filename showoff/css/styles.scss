@@ -109,6 +109,7 @@ body
 	margin:   							$noPadding;
 	padding:							$noPadding;
 	color:								$black;
+	overflow:							hidden;
 }
 
 .main-container
@@ -136,7 +137,7 @@ body
 .row
 {
 	@extend 							%clearfix;
-	height:								100vh;
+	height:								110vh;
 }
 
 // COLUMNS
@@ -294,15 +295,17 @@ a
 {
 	padding-left:						20%;
 }
+
+// content areas
 .content-area
 {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
-	background: 						-moz-linear-gradient(top, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: 						-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: 						-webkit-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: 						-o-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: 						-ms-linear-gradient(top, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: 						linear-gradient(to bottom, rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	background: 						-moz-linear-gradient(top, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: 						-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.11)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: 						-webkit-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: 						-o-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: 						-ms-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: 						linear-gradient(to bottom, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* W3C */
 	filter: 							progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
@@ -355,6 +358,7 @@ a
 .introduction
 {
 	font-size: 							1.4em;
+	line-height: 						35px;
 }
 
 .header
@@ -371,6 +375,35 @@ a
 .home
 {
 
+}
+
+// animations
+
+
+// anim is magic, add this to anything and it will jump back into it's original place
+
+.home-line-one
+{
+	transition: 						all 0.4s;
+	opacity:							0;
+	margin-top:							-30%;
+}
+
+.home-line-two, .home-line-three, .home-line-four, .home-line-five
+{
+	opacity:							0;
+	position:							relative;
+	transition: 						all 0.5s;
+	margin-left:						-60% !important;
+}
+
+
+.anim
+{
+	position:							relative;
+	opacity:							1 !important;
+	margin:								0 !important;
+	padding:							0 !important;
 }
 
 .contact-form input

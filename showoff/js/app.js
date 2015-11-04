@@ -4,7 +4,7 @@ var rootUrl = "http://intheon.uk";
 $(document).ready(function(){
 	// assuming page has loaded...
 
-
+	// allow snapping scrolling
 	$.scrollify({
 		section: 		".content-area",
 		sectionName: 	"name",
@@ -38,16 +38,46 @@ $(document).ready(function(){
 		}
 	});
 
+	// register event listeners on nav items
 	$(".nav-link").click(function(event){
 		var id = this.id.split("-")[0]
 		$.scrollify.move("#" + id);
 	});
 
+	// animate the first page
+	animateFirstPage();
+
+	// make contact form actually do something
 	$("#contact-form-submit").click(function(){
 		submitForm();
 	});
 
 });
+
+
+function animateFirstPage()
+{
+	$(".home-line-one").addClass("anim");
+
+	setTimeout(function(){
+		$(".home-line-two").addClass("anim");
+
+		setTimeout(function(){
+			$(".home-line-three").addClass("anim");
+
+			setTimeout(function(){
+				$(".home-line-four").addClass("anim");
+
+				setTimeout(function(){
+					$(".home-line-five").addClass("anim");
+				},400);
+
+			},400);
+
+		},400);
+
+	},400);
+}
 
 function submitForm()
 {
