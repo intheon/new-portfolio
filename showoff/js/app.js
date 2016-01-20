@@ -7,8 +7,8 @@ $(document).ready(function(){
 // i love namespaces!
 var Home = {
 
-	//rootUrl : "http://localhost/new-portfolio",
-	rootUrl : "http://intheon.uk",
+	rootUrl : "http://localhost/new-portfolio",
+	//rootUrl : "http://intheon.uk",
 
 	init: function()
 	{
@@ -57,8 +57,21 @@ var Home = {
 
 	loadPages: function()
 	{
-		
-		Home.animateFirstPage();
+		// home
+		$("#home-section .inner").load(Home.rootUrl + "/showoff/pages/home.html", function(){
+			// a callback for the animation
+			Home.animateFirstPage();
+		});
+
+		// portfolio
+		$("#portfolio-section .inner").load(Home.rootUrl + "/showoff/pages/portfolio.html");
+
+		// about
+		$("#about-section .inner").load(Home.rootUrl + "/showoff/pages/about.html");
+
+		// contact
+		$("#contact-section .inner").load(Home.rootUrl + "/showoff/pages/contact.html");
+
 	},
 
 	makeNavigationItemsClickable: function()
