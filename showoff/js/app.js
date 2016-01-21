@@ -69,7 +69,7 @@ var Home = {
 
 		// portfolio
 		$("#portfolio-section .inner").load(Home.rootUrl + "/showoff/pages/portfolio.html", function(){
-			Home.injectPortfolioPieces();
+			Home.setUpPortfolio();
 		});
 
 		// about
@@ -112,7 +112,7 @@ var Home = {
 		},400);
 	},
 
-	injectPortfolioPieces: function()
+	setUpPortfolio: function()
 	{
 		// there are a finite number of things i want to show off, all with it's own title, link, metadata etc
 		// rather than repeating the HTML, lets make it dynamically generated!
@@ -168,7 +168,7 @@ var Home = {
 				]
 			},
 			{
-				title: "Twitter",
+				title: "Semantic Twitter",
 				desc: [
 					"An example of what happens when you mash up web API's",
 					"Asks the user for a string, and uses the Twitter API to retreive that from their DB, then crams it through 'Semantic API' to tell you what the users feeling is."
@@ -197,5 +197,37 @@ var Home = {
 				]
 			}
 		];
+
+		Home.DrawPortfolioSlide(portfolioItems[0])
+
+	},
+
+	DrawPortfolioSlide: function(slideMeta)
+	{
+		$(".slide .image-column img").attr("src", Home.rootUrl + "/showoff/img/" + slideMeta.bigImage);
+		$(".details-column header").html(slideMeta.title);
+
+		var description = "";
+
+		$.each(slideMeta.desc, function(i, v){
+			description += "<p>"+ v +"</p>";
+		});
+
+		$(".details-column .portfolio-description").html(description);
+
+		$(".blue-button").click(function(){
+			window.open(slideMeta.siteLink, "_blank");
+		});
+
+		$(".features-icon img").attr("src", Home.rootUrl + "/showoff/img/" + slideMeta.iconImage);
+
+		var features = "";
+
+		$.each(slideMeta.features, function(i, v){
+			features += "<li>" +v+ "</li>";
+		});
+
+		$(".features-list ul").html(features);
+
 	}
 }
