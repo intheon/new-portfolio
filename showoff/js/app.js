@@ -40,6 +40,10 @@ var Home = {
 					break;
 					case 1:
 						$("#portfolio-link").addClass("active-link");
+
+						setTimeout(function(){
+							$("#portfolio-header").addClass("goes-smaller");
+						},900);
 					break;
 					case 2:
 						$("#about-link").addClass("active-link");
@@ -64,7 +68,9 @@ var Home = {
 		});
 
 		// portfolio
-		$("#portfolio-section .inner").load(Home.rootUrl + "/showoff/pages/portfolio.html");
+		$("#portfolio-section .inner").load(Home.rootUrl + "/showoff/pages/portfolio.html", function(){
+			Home.injectPortfolioPieces();
+		});
 
 		// about
 		$("#about-section .inner").load(Home.rootUrl + "/showoff/pages/about.html");
@@ -104,5 +110,10 @@ var Home = {
 			},400);
 
 		},400);
+	},
+
+	injectPortfolioPieces: function()
+	{
+		// there are a finite number of things i want to show off, all with it's own title, link, metadata etc
 	}
 }
