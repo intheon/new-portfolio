@@ -206,6 +206,14 @@ a {
   padding: 10%;
   text-align: center; }
 
+.clickable {
+  transition: all 0.8s;
+  opacity: 1; }
+
+.clickable:hover {
+  cursor: pointer;
+  opacity: 0.5; }
+
 #navigation-header div {
   -webkit-font-smoothing: antialiased !important; }
 
