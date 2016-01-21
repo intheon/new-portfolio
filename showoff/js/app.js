@@ -188,7 +188,7 @@ var Home = {
 					"Rather than user excel, i made this service as I no doubt will need it again"
 				],
 				bigImage: "promo-circle.png",
-				iconImage: "portfolio-promo.icon.png",
+				iconImage: "portfolio-promo-icon.png",
 				siteLink: "http://intheon.uk/promo",
 				features: [
 					"Random code generator using chance.js",
@@ -198,7 +198,25 @@ var Home = {
 			}
 		];
 
-		Home.DrawPortfolioSlide(portfolioItems[0])
+		Home.DrawPortfolioSlide(portfolioItems[0]);
+
+		var currentSlide = 0;
+
+		$(".next-column img").click(function(){
+
+			currentSlide++;
+
+			if (currentSlide < portfolioItems.length)
+			{
+				Home.DrawPortfolioSlide(portfolioItems[currentSlide]);
+			}
+			else
+			{
+				currentSlide = 0;
+				Home.DrawPortfolioSlide(portfolioItems[currentSlide]);
+			}
+
+		});
 
 	},
 
@@ -214,6 +232,8 @@ var Home = {
 		});
 
 		$(".details-column .portfolio-description").html(description);
+
+		$(".blue-button").off("click");
 
 		$(".blue-button").click(function(){
 			window.open(slideMeta.siteLink, "_blank");
