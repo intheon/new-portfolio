@@ -119,6 +119,23 @@ var Home = {
 
 		var portfolioItems = [
 			{
+				title: "skateLocate",
+				desc: [
+					"A pretty modern website as far as the technology is concerned.",
+					"Add, view, and filter skateparks in your area of interest",
+					"Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine."
+				],
+				bigImage: "ed-circle.png",
+				iconImage: "portfolio-guitar-icon.png",
+				siteLink: "http://intheon.uk/skatelocate",
+				features: [
+					"100% Javascript on front and backend",
+					"MongoDB for persistance, and lots of 2 way data binding to make it snappy",
+					"Add skateparks, filter by tag or string, see most recently added and voted",
+					"Deployed to Heroku, and live for all!"
+				]
+			},
+			{
 				title: "Ed Hall Audio",
 				desc: [
 					"Created this for a buddy of mine who runs his own recording studio and mixing service.",
