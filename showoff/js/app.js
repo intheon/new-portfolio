@@ -7,18 +7,16 @@ $(document).ready(function(){
 // i love namespaces!
 var Home = {
 
-	rootUrl : "http://localhost/new-portfolio",
-	//rootUrl : "http://intheon.uk",
+	//rootUrl : "http://localhost/new-portfolio",
+	rootUrl : "http://intheon.uk",
 
-	init: function()
-	{
+	init: function(){
 		Home.loadPages();
 		Home.makePanelsScrollable();
 		Home.makeNavigationItemsClickable();
 	},
 
-	makePanelsScrollable: function()
-	{
+	makePanelsScrollable: function(){
 
 		// allow snapping scrolling
 		$.scrollify({
@@ -59,8 +57,12 @@ var Home = {
 		});
 	},
 
-	loadPages: function()
-	{
+	loadPages: function(){
+		// if you land on this site from its room domain, add a bit of styling
+		if (!window.location.hash) {
+			$("#home-link").addClass("active-link");
+		}
+
 		// home
 		$("#home-section .inner").load(Home.rootUrl + "/showoff/pages/home.html", function(){
 			// a callback for the animation
@@ -76,20 +78,21 @@ var Home = {
 		$("#about-section .inner").load(Home.rootUrl + "/showoff/pages/about.html");
 
 		// contact
-		$("#contact-section .inner").load(Home.rootUrl + "/showoff/pages/contact.html");
+		$("#contact-section .inner").load(Home.rootUrl + "/showoff/pages/contact.html", function(){
+			// make the form interactive
+			Home.makeContactFormInteractive();
+		});
 
 	},
 
-	makeNavigationItemsClickable: function()
-	{
+	makeNavigationItemsClickable: function(){
 		$(".nav-link").click(function(event){
 			var id = this.id.split("-")[0]
 			$.scrollify.move("#" + id);
 		});
 	},
 
-	animateFirstPage: function()
-	{
+	animateFirstPage: function(){
 		$(".home-line-one").addClass("anim");
 
 		setTimeout(function(){
@@ -112,8 +115,68 @@ var Home = {
 		},400);
 	},
 
-	setUpPortfolio: function()
-	{
+	makeContactFormInteractive: function(){
+
+		$("#contact-form-submit").click(function(){
+
+			var message = {
+				message: $("#contact-form-message").val(),
+				from: $("#contact-form-from").val(),
+				email: $("#contact-form-email").val()
+			}
+
+			if (!message.message || !message.from || !message.email){
+				Home.createNotification("Please fill out the fields!!")
+			}
+			else {
+				Home.sendMessage(message);
+			}
+
+		});
+
+	},
+
+	sendMessage: function(message){
+
+
+		$.ajax({
+			url: Home.rootUrl + "/showoff/php/mailer.php",
+			type: "POST",
+			data: message,
+			success: function(response){
+				console.log(response);
+				if (response == "success"){
+					Home.createNotification("Thank you! Your message was sent!");
+					Home.clearFields();
+				}
+
+			}
+		})
+
+
+	},
+
+	clearFields: function(){
+		$("#contact-form-message").val("");
+		$("#contact-form-from").val("");
+		$("#contact-form-email").val("");
+	},
+
+	createNotification: function(message){
+		// set the message
+		$(".message-container").text(message);
+
+		// show the message
+		$(".message-container").addClass("show-message");
+
+		// hide the message
+		setTimeout(function(){
+			$(".message-container").removeClass("show-message");
+		},2000)
+
+	},
+
+	setUpPortfolio: function(){
 		// there are a finite number of things i want to show off, all with it's own title, link, metadata etc
 		// rather than repeating the HTML, lets make it dynamically generated!
 
@@ -237,8 +300,7 @@ var Home = {
 
 	},
 
-	DrawPortfolioSlide: function(slideMeta)
-	{
+	DrawPortfolioSlide: function(slideMeta){
 		$(".slide .image-column img").attr("src", Home.rootUrl + "/showoff/img/" + slideMeta.bigImage);
 		$(".details-column header").html(slideMeta.title);
 

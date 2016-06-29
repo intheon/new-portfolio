@@ -58,12 +58,13 @@ $darkishBlue: 							#5a70a5;
     padding:                            $padding * 2;
     border-radius:                      $border-radius-amount;
     outline:                            none;
-    background:                         $trans;
+    background:                         darken($colour2, 5%);
     border:                             none;
-    border-bottom:                      2px solid darken($colour2, 10%);
+    border-bottom:                      2px solid lighten($colour2, 10%);
     transition:                         all 0.7s;
-    width: 								45%;
-	@extend  %normalFont;
+    width: 								47%;
+	font-family:						'Cuprum';
+	color:								#d5dbec;
 	margin-top: 						1%;
 	margin-bottom: 						1%;
 	font-size: 							1.6em;
@@ -71,8 +72,8 @@ $darkishBlue: 							#5a70a5;
 
 %input-hover
 {
-    border-bottom:                      2px solid lighten($colour2, 5%);
-    background:                         none;
+    border-bottom:                      2px solid lighten($colour2, 1%);
+    background:                         darken($colour2, 8%);
     cursor:                             -moz-pointer;
     cursor:                             -webkit-pointer;
     cursor:                             pointer;
@@ -529,10 +530,51 @@ a
 	@extend 							%input-default;
 }
 
+.contact-form input[type="text"]::-webkit-input-placeholder
+{
+	color:								#c4cada;		
+}
+
+
+.contact-form input[type="button"]
+{
+	width: 								51%;
+	background:                         darken($colour2, 7%);
+	text-align:							left;
+}
 .contact-form input:hover
 {
 	@extend								%input-hover;
 }
+
+.contact-form input[type="text"]:focus
+{
+	@extend								%input-hover;
+}
+
+
+.message-container
+{
+	transition: 1s margin;
+    display: block;
+    opacity: 1;
+    position: fixed;
+    bottom:-30%;
+    margin-bottom:0%;
+    padding: 1%;
+    padding-left: 2%;
+    margin-left:-1%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    z-index: 50;
+}
+
+.show-message
+{
+	transition: 1s all;
+	margin-bottom: 50%;
+}
+
 
 // DEFAULT OVERRIDES
 

@@ -9,7 +9,7 @@
   display: inline-block !important;
   text-align: center; }
 
-.contact-form input, body, a {
+body, a {
   font-family: 'Cuprum';
   color: #000000; }
 
@@ -17,18 +17,20 @@
   padding: 2%;
   border-radius: 5px;
   outline: none;
-  background: rgba(0, 0, 0, 0.2);
+  background: #7a8ebe;
   border: none;
-  border-bottom: 2px solid #687fb6;
+  border-bottom: 2px solid #adbad7;
   transition: all 0.7s;
-  width: 45%;
+  width: 47%;
+  font-family: 'Cuprum';
+  color: #d5dbec;
   margin-top: 1%;
   margin-bottom: 1%;
   font-size: 1.6em; }
 
-.contact-form input:hover {
-  border-bottom: 2px solid #9cabcf;
-  background: none;
+.contact-form input:hover, .contact-form input[type="text"]:focus {
+  border-bottom: 2px solid #8e9fc8;
+  background: #6f85b9;
   cursor: -moz-pointer;
   cursor: -webkit-pointer;
   cursor: pointer; }
@@ -313,6 +315,32 @@ a {
   margin: 0 !important;
   padding: 0 !important;
   padding: 2% 							!important; }
+
+.contact-form input[type="text"]::-webkit-input-placeholder {
+  color: #c4cada; }
+
+.contact-form input[type="button"] {
+  width: 51%;
+  background: #7388bb;
+  text-align: left; }
+
+.message-container {
+  transition: 1s margin;
+  display: block;
+  opacity: 1;
+  position: fixed;
+  bottom: -30%;
+  margin-bottom: 0%;
+  padding: 1%;
+  padding-left: 2%;
+  margin-left: -1%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  z-index: 50; }
+
+.show-message {
+  transition: 1s all;
+  margin-bottom: 50%; }
 
 ::-webkit-input-placeholder {
   color: black; }
