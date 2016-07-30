@@ -22,6 +22,8 @@ $colour1:  								#9CABCF;
 $colour2:  								darken($colour1, 5%);;
 $colour3:  								darken($colour1, 10%);
 $colour4:  								darken($colour1, 15%);
+$offWhite: 								#d5dbec;
+$darkishBlue: 							#5a70a5;
 
 
 // --- EXTENDS
@@ -56,12 +58,13 @@ $colour4:  								darken($colour1, 15%);
     padding:                            $padding * 2;
     border-radius:                      $border-radius-amount;
     outline:                            none;
-    background:                         $trans;
+    background:                         darken($colour2, 5%);
     border:                             none;
-    border-bottom:                      2px solid darken($colour2, 10%);
+    border-bottom:                      2px solid lighten($colour2, 10%);
     transition:                         all 0.7s;
-    width: 								45%;
-	@extend  %normalFont;
+    width: 								47%;
+	font-family:						'Cuprum';
+	color:								#d5dbec;
 	margin-top: 						1%;
 	margin-bottom: 						1%;
 	font-size: 							1.6em;
@@ -69,8 +72,8 @@ $colour4:  								darken($colour1, 15%);
 
 %input-hover
 {
-    border-bottom:                      2px solid lighten($colour2, 5%);
-    background:                         none;
+    border-bottom:                      2px solid lighten($colour2, 1%);
+    background:                         darken($colour2, 8%);
     cursor:                             -moz-pointer;
     cursor:                             -webkit-pointer;
     cursor:                             pointer;
@@ -81,7 +84,7 @@ $colour4:  								darken($colour1, 15%);
 
 @font-face {
 	font-family:						'Cuprum';
-	font-weight:						400;
+	font-weight:						100;
 	font-style:							normal;
 	src:								url('./fonts/Cuprum-regular.eot');
 	src:								url('./fonts/Cuprum-regular.eot?#iefix') format('embedded-opentype'),
@@ -108,8 +111,12 @@ body
 	background:							$backgroundVars;
 	margin:   							$noPadding;
 	padding:							$noPadding;
-	color:								$black;
+	color:								#c7cfe3;
 	overflow:							hidden;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
 }
 
 .main-container
@@ -119,6 +126,10 @@ body
 	height:								100vh;
 }
 
+.text-container
+{
+	width: 								49%;
+}
 #page-body, .center
 {
 	height:								90% !important;
@@ -144,7 +155,7 @@ body
 
 [class^="column-"]
 {
-	float:								left;
+	float:								left !important;
 	margin-right:						$largePadding;
 	-webkit-box-sizing:					border-box; 
     -moz-box-sizing:					border-box; 
@@ -245,17 +256,112 @@ a
 	margin-top: 						2%;
 }
 
-.description
+.portfolio-slides
 {
-	float: 								left;
+	padding-top: 						2%;
 }
 
-#ed
+
+.slide
 {
-	background:							url(../img/ed-site.png);
-	opacity:							0.7;
-	background-position: 				left -60px;
 }
+
+.image-column
+{
+	width:21%;
+	float:left;
+	padding-left:2%;
+	padding-right:2%;
+}
+
+.image-column img
+{
+	max-width:220px;
+}
+.next-column img
+{
+	padding-top:10%;
+}
+
+.next-column img
+{
+	max-width:128px;
+	float:right;
+}
+
+.details-column
+{
+	width:44%;
+	padding:2%;
+	padding-left:5%;
+	float:left;
+
+}
+.next-column
+{
+	width:23%;
+	float:left;
+
+}
+
+.details-column header
+{
+	float:left;
+	font-size:4.2em;
+	width:100%;
+	padding-top:4%;
+	color: #e8ebf5;
+}
+
+.portfolio-description
+{
+	float:left;
+	width: 								80%;
+	margin-top: 						10%;
+	padding-left: 						20%;
+	font-size: 							1.15em;
+}
+
+.portfolio-site-link
+{
+	float:  							left;
+	width: 								25%;
+	padding-left: 						75%;
+	margin-top: 						5%;
+}
+
+.portfolio-site-features
+{
+	float: 								left;
+	width: 								80%;
+	padding-left: 						20%;
+	margin-top: 						15%;
+}
+
+.features-icon
+{
+	float:left;
+	width: 								20%;
+	padding-right: 						15%;
+}
+.features-list
+{
+	float:left;
+	width: 								65%;
+}
+
+.blue-button
+{
+	background: 						$darkishBlue;
+	padding: 							10%;
+	text-align: 						center;
+}
+
+.clickable:hover
+{
+
+}
+
 
 #navigation-header div
 {
@@ -311,23 +417,23 @@ a
 
 .content-1
 {
-	background:							$colour1;
-	color: 								$black;
+	background:							$colour4;
+	color: 								$offWhite;
 }
 .content-2
 {
-	background:							$colour2;
-	color: 								$black;
+	background:							$colour3;
+	color: 								$offWhite;
 }
 .content-3
 {
-	background:							$colour3;
-	color: 								$black;
+	background:							$colour4;
+	color: 								$offWhite;
 }
 .content-4
 {
-	background:							$colour4;
-	color: 								$black;
+	background:							$colour3;
+	color: 								$offWhite;
 }
 
 .active-link
@@ -350,21 +456,33 @@ a
 	padding: 							4%;
 }
 
-.hello
+.big-header
 {
-	font-size: 							6em;
+	font-size: 							7em;
+	transition: 						all 1s;
+	line-height: 						140px;
+
+}
+
+.goes-smaller
+{
+	font-size: 							2.5em;
+	margin-top: 						-2%;
+	opacity: 							0.2;
 }
 
 .introduction
 {
-	font-size: 							1.4em;
-	line-height: 						35px;
+	font-size: 							1.25em;
+	line-height: 						25px;
+
 }
 
 .header
 {
 	float: 								left;
 	font-size: 							4em;
+
 }
 .smallTitle
 {
@@ -404,6 +522,7 @@ a
 	opacity:							1 !important;
 	margin:								0 !important;
 	padding:							0 !important;
+	padding:2% 							!important;
 }
 
 .contact-form input
@@ -411,10 +530,51 @@ a
 	@extend 							%input-default;
 }
 
+.contact-form input[type="text"]::-webkit-input-placeholder
+{
+	color:								#c4cada;		
+}
+
+
+.contact-form input[type="button"]
+{
+	width: 								51%;
+	background:                         darken($colour2, 7%);
+	text-align:							left;
+}
 .contact-form input:hover
 {
 	@extend								%input-hover;
 }
+
+.contact-form input[type="text"]:focus
+{
+	@extend								%input-hover;
+}
+
+
+.message-container
+{
+	transition: 1s margin;
+    display: block;
+    opacity: 1;
+    position: fixed;
+    bottom:-30%;
+    margin-bottom:0%;
+    padding: 1%;
+    padding-left: 2%;
+    margin-left:-1%;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    z-index: 50;
+}
+
+.show-message
+{
+	transition: 1s all;
+	margin-bottom: 50%;
+}
+
 
 // DEFAULT OVERRIDES
 
