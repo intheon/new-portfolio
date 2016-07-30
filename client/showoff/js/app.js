@@ -7,13 +7,13 @@ $(document).ready(function(){
 // i love namespaces!
 var Home = {
 
-	//rootUrl : "http://localhost:1337",
-	rootUrl : "http://intheon.uk",
+	rootUrl : "http://localhost:1337",
+	//rootUrl : "http://intheon.uk",
 
 	init: function(){
-		Home.loadPages();
-		Home.makePanelsScrollable();
-		Home.makeNavigationItemsClickable();
+		this.loadPages();
+		this.makePanelsScrollable();
+		this.makeNavigationItemsClickable();
 	},
 
 	makePanelsScrollable: function(){
