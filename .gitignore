@@ -1,0 +1,5 @@
+bower_components/
+data/
+node_modules/
+jspm_packages/
+client/showoff/php/vendor/
