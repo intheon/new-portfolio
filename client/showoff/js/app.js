@@ -38,10 +38,6 @@ var Home = {
 					break;
 					case 1:
 						$("#portfolio-link").addClass("active-link");
-
-						setTimeout(function(){
-							$("#portfolio-header").addClass("goes-smaller");
-						},900);
 					break;
 					case 2:
 						$("#about-link").addClass("active-link");
@@ -184,18 +180,16 @@ var Home = {
 			{
 				title: "skateLocate ",
 				desc: [
-					"(undergoing maintenance)",
 					"A pretty modern website as far as the technology is concerned.",
 					"Add, view, and filter skateparks in your area of interest",
 					"Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine.",
-					"Currently down as of Aug 2016 as I'm migrating from Heroku to Firebase"
 				],
 				bigImage: "roll-circle.png",
 				iconImage: "portfolio-skate-icon.png",
 				siteLink: "http://intheon.uk/skatelocate",
 				features: [
-					"100% Javascript on front and backend",
-					"MongoDB for persistance, and lots of 2 way data binding to make it snappy",
+					"100% Javascript on front and back end",
+					"MongoDB for data, and angular.js to keep it acting snapping and for databinding",
 					"Add skateparks, filter by tag or string, see most recently added and voted",
 					"Deployed to Heroku, and live for all!"
 				]
@@ -304,6 +298,15 @@ var Home = {
 
 	DrawPortfolioSlide: function(slideMeta){
 		$(".slide .image-column img").attr("src", Home.rootUrl + "/showoff/img/" + slideMeta.bigImage);
+
+		setTimeout(function(){
+			$(".slide .image-column img").addClass("flip");
+		}, 100)
+
+		setTimeout(function(){
+			$(".slide .image-column img").removeClass("flip");
+		}, 1200)
+
 		$(".details-column header").html(slideMeta.title);
 
 		var description = "";

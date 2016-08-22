@@ -576,6 +576,21 @@ a
 }
 
 
+.flip
+{
+	animation: flip 0.9s linear;
+}
+
+@keyframes flip {
+	0% { 
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+
 // DEFAULT OVERRIDES
 
 ::-webkit-input-placeholder {
