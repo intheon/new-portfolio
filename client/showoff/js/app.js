@@ -11,9 +11,9 @@ var Home = {
 	//rootUrl : "http://intheon.uk",
 
 	init: function(){
-		this.loadPages();
-		this.makePanelsScrollable();
-		this.makeNavigationItemsClickable();
+		Home.loadPages();
+		Home.makePanelsScrollable();
+		Home.makeNavigationItemsClickable();
 	},
 
 	makePanelsScrollable: function(){
@@ -182,11 +182,13 @@ var Home = {
 
 		var portfolioItems = [
 			{
-				title: "skateLocate",
+				title: "skateLocate ",
 				desc: [
+					"(undergoing maintenance)",
 					"A pretty modern website as far as the technology is concerned.",
 					"Add, view, and filter skateparks in your area of interest",
-					"Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine."
+					"Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine.",
+					"Currently down as of Aug 2016 as I'm migrating from Heroku to Firebase"
 				],
 				bigImage: "roll-circle.png",
 				iconImage: "portfolio-skate-icon.png",
