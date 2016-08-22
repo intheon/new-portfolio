@@ -152,11 +152,15 @@ a {
   max-width: 220px; }
 
 .next-column img {
-  padding-top: 10%; }
-
-.next-column img {
+  padding-top: 10%;
   max-width: 128px;
-  float: right; }
+  float: right;
+  transition: 1s all;
+  opacity: 1; }
+
+.next-column img:hover {
+  opacity: 0.5;
+  cursor: pointer; }
 
 .details-column {
   width: 44%;
@@ -206,7 +210,13 @@ a {
 .blue-button {
   background: #5a70a5;
   padding: 10%;
-  text-align: center; }
+  text-align: center;
+  transition: 1s all;
+  opacity: 1; }
+
+.blue-button:hover {
+  opacity: 0.6;
+  cursor: pointer; }
 
 #navigation-header div {
   -webkit-font-smoothing: antialiased !important; }
@@ -343,7 +353,7 @@ a {
   margin-bottom: 50%; }
 
 .flip {
-  animation: flip 0.9s linear; }
+  animation: flip 0.6s linear; }
 
 @keyframes flip {
   0% {

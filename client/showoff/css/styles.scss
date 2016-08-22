@@ -281,12 +281,16 @@ a
 .next-column img
 {
 	padding-top:10%;
-}
-
-.next-column img
-{
 	max-width:128px;
 	float:right;
+	transition: 1s all;
+	opacity: 1;
+}
+
+.next-column img:hover
+{
+	opacity: 0.5;
+	cursor: pointer;
 }
 
 .details-column
@@ -355,6 +359,14 @@ a
 	background: 						$darkishBlue;
 	padding: 							10%;
 	text-align: 						center;
+	transition:							1s all;
+	opacity: 							1;
+}
+
+.blue-button:hover
+{
+	opacity: 							0.6;
+	cursor:								pointer;
 }
 
 .clickable:hover
@@ -578,7 +590,7 @@ a
 
 .flip
 {
-	animation: flip 0.9s linear;
+	animation: flip 0.6s linear;
 }
 
 @keyframes flip {
