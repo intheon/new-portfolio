@@ -620,3 +620,125 @@ a
 :-ms-input-placeholder {  
    color: 								black;  
 }
+
+@media ( max-width: 968px )
+{
+
+	#navigation
+	{
+		top: 0;
+	}
+
+}
+
+@media ( max-width: 768px )
+{
+
+	.text-container
+	{
+		width: 80%;
+	}
+	.big-header
+	{
+		font-size: 4.5em;
+	}
+
+	.details-column header
+	{
+		font-size: 2.5em;
+
+	}
+
+	.next-column
+	{
+		width: 10%;
+	}
+
+	.portfolio-description
+	{
+	    width: 100%;
+	    margin-top: 10%;
+	    font-size: 1em;
+	}
+
+	.portfolio-site-link
+	{
+		float: left;
+	    width: 93%;
+	    padding-left: 20%;
+	    margin-top: 0%;
+	}
+
+	.portfolio-site-features
+	{
+		float: left;
+	    width: 200%;
+	    margin-left: -64%;
+	    margin-top: 15%;
+	}
+
+	.active-link:after
+	{
+		content: 							"";
+	}
+	.active-link:before
+	{
+		content: 							"";
+	}
+
+
+	.features-icon
+	{
+		float: left;
+   	 	width: 12%;
+    	padding-left: 9%;
+	}
+
+	.features-list
+	{
+		float: left;
+		width: 100%;
+	}
+
+	#home-link span
+	{
+		display: none;
+	}
+
+	#portfolio-link span
+	{
+		display: none;
+	}
+
+	#about-link span
+	{
+		display: none;
+	}
+
+	#contact-link span
+	{
+		display: none;
+	}
+
+	#home-link:after
+	{
+		content: "H"
+	}
+
+	#portfolio-link:after
+	{
+		content: "P"
+	}
+
+	#about-link:after
+	{
+		content: "A"
+	}
+
+	#contact-link:after
+	{
+		content: "C"
+	}
+
+
+}
