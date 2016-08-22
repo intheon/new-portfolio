@@ -634,6 +634,16 @@ a
 @media ( max-width: 768px )
 {
 
+	body
+	{
+		font-size: 0.7em;
+	}
+
+	.introduction
+	{
+		line-height: 20px;
+	}
+
 	.text-container
 	{
 		width: 80%;
@@ -641,6 +651,7 @@ a
 	.big-header
 	{
 		font-size: 4.5em;
+		line-height: 90px;
 	}
 
 	.details-column header
