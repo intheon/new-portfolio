@@ -1,755 +1,559 @@
-// --- VARS
-
-$backgroundVars:						#f9f9f9;
-$noPadding:								0;
-$smallPadding:							0.5%;
-$largePadding:							2%;
-$headerColour:							#000000;
-$letterSpacing:	        				2px;
-$defaultFontSize:						1em;
-$padding:              					0.8%;
-$trans:                                 rgba(0,0,0,0.2);
-$border-radius-amount:                  5px;    
-$padding:                               1%;
-$transparent-bg:                        rgba(0,0,0,0.8);
-
-$white: 								#FFFFFF;
-$black: 								#000000;
-$opacityValue:							0.8;
-$translucentText:						rgba(0,0,0,$opacityValue);
-
-$colour1:  								#9CABCF;
-$colour2:  								darken($colour1, 5%);;
-$colour3:  								darken($colour1, 10%);
-$colour4:  								darken($colour1, 15%);
-$offWhite: 								#d5dbec;
-$darkishBlue: 							#5a70a5;
-
-
-// --- EXTENDS
-%clearfix:after
-{
-	display:							block;
-	clear:								both;
-	content:							"";
+.row2:after, .row:after {
+	display: block;
+	clear: both;
+	content: "";
 }
 
-%center
-{
-	margin-left:						auto !important;
-    margin-right: 						auto !important;
-    display:							inline-block !important;
-    text-align:							center;
+#navigation-header div, .center, #navigation {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: inline-block !important;
+	text-align: center;
 }
 
-%fancyFont
-{
-	font-family: 						'Righteous', cursive;
+body, a {
+	font-family: 'Cuprum';
+	color: #000000;
 }
 
-%normalFont
-{
-	font-family:						'Cuprum';
-	color:								#000000;
+.contact-form input {
+	padding: 2%;
+	border-radius: 5px;
+	outline: none;
+	background: #7a8ebe;
+	border: none;
+	border-bottom: 2px solid #adbad7;
+	transition: all 0.7s;
+	width: 47%;
+	font-family: 'Cuprum';
+	color: #d5dbec;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	font-size: 1.6em;
 }
 
-%input-default
-{
-    padding:                            $padding * 2;
-    border-radius:                      $border-radius-amount;
-    outline:                            none;
-    background:                         darken($colour2, 5%);
-    border:                             none;
-    border-bottom:                      2px solid lighten($colour2, 10%);
-    transition:                         all 0.7s;
-    width: 								47%;
-	font-family:						'Cuprum';
-	color:								#d5dbec;
-	margin-top: 						1%;
-	margin-bottom: 						1%;
-	font-size: 							1.6em;
+.contact-form input:hover, .contact-form input[type="text"]:focus {
+	border-bottom: 2px solid #8e9fc8;
+	background: #6f85b9;
+	cursor: -moz-pointer;
+	cursor: -webkit-pointer;
+	cursor: pointer;
 }
-
-%input-hover
-{
-    border-bottom:                      2px solid lighten($colour2, 1%);
-    background:                         darken($colour2, 8%);
-    cursor:                             -moz-pointer;
-    cursor:                             -webkit-pointer;
-    cursor:                             pointer;
-}
-
-
-// --- FONT DEF
 
 @font-face {
-	font-family:						'Cuprum';
-	font-weight:						100;
-	font-style:							normal;
-	src:								url('./fonts/Cuprum-regular.eot');
-	src:								url('./fonts/Cuprum-regular.eot?#iefix') format('embedded-opentype'),
-										local('Cuprum'),
-										local('Cuprum-regular'),
-										url('./fonts/Cuprum-regular.woff2') format('woff2'),
-										url('./fonts/Cuprum-regular.woff') format('woff'),
-										url('./fonts/Cuprum-regular.ttf') format('truetype'),
-										url('./fonts/Cuprum-regular.svg#Cuprum') format('svg');
+	font-family: 'Cuprum';
+  font-weight: 100;
+  font-style: normal;
+  src: url("./fonts/Cuprum-regular.eot");
+  src: url("./fonts/Cuprum-regular.eot?#iefix") format("embedded-opentype"), local("Cuprum"), local("Cuprum-regular"), url("./fonts/Cuprum-regular.woff2") format("woff2"), url("./fonts/Cuprum-regular.woff") format("woff"), url("./fonts/Cuprum-regular.ttf") format("truetype"), url("./fonts/Cuprum-regular.svg#Cuprum") format("svg");
 }
 
-
-
-// STYLES
-
-html, body
-{
-	height:								100vh;
+html, body {
+	height: 100vh;
 }
 
-body
-{
-	@extend 							%normalFont;
-	background:							$backgroundVars;
-	margin:   							$noPadding;
-	padding:							$noPadding;
-	color:								#c7cfe3;
-	overflow:							hidden;
+body {
+	background: #f9f9f9;
+	margin: 0;
+	padding: 0;
+	color: #c7cfe3;
+	overflow: hidden;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
-	text-shadow: rgba(0,0,0,.01) 0 0 1px;
-
+	-webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+	text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-.main-container
-{
-	margin: 							0;
-	padding: 							0;
-	height:								100vh;
+.main-container {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
 }
 
-.text-container
-{
-	width: 								49%;
-}
-#page-body, .center
-{
-	height:								90% !important;
+.text-container {
+	width: 49%;
 }
 
-
-// GRID STUFF
-
-// ROWS
-.row2
-{
-	@extend 							%clearfix;
-
+#page-body, .center {
+	height: 90% !important;
 }
 
-.row
-{
-	@extend 							%clearfix;
-	height:								110vh;
+.row {
+	height: 110vh;
 }
 
-// COLUMNS
-
-[class^="column-"]
-{
-	float:								left !important;
-	margin-right:						$largePadding;
-	-webkit-box-sizing:					border-box; 
-    -moz-box-sizing:					border-box; 
-    box-sizing:							border-box;
- 
-    &:last-child 
-    {
-        margin-right:					0%;
-    }
+[class^="column-"] {
+	float: left !important;
+	margin-right: 2%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.column-1
-{ 	
-	width:								(100% / 12) - ($largePadding * 11 / 12);
-}
-.column-2
-{ 	
-	width:								(100% / 6) - ($largePadding * 10 / 12); 
-}
-.column-3
-{ 	
-	width:								(100% / 4) - ($largePadding * 9 / 12); 
-}
-.column-4
-{ 	
-	width:								(100% / 3) - ($largePadding * 8 / 12); 
-}
-.column-5
-{ 	
-	width:								(100% / 2.4) - ($largePadding * 7 / 12); 
-}
-.column-6
-{ 	
-	width:								(100% / 2) - ($largePadding * 6 / 12); 
-}
-.column-7
-{ 	
-	width:								(100% / 1.714285714285714) - ($largePadding * 5 / 12); 
-}
-.column-8
-{ 	
-	width:								(100% / 1.5) - ($largePadding * 4 / 12); 
-}
-.column-9
-{ 	
-	width:								(100% / 1.333333333333333) - ($largePadding * 3 / 12); 
-}
-.column-10
-{ 	
-	width:								(100% / 1.2) - ($largePadding * 2 / 12); 
-}
-.column-11
-{ 	
-	width:								(100% / 1.090909090909091) - ($largePadding * 1 / 12); 
-}
-.column-12
-{ 	
-	width:								100%; 
+[class^="column-"]:last-child {
+	margin-right: 0%;
 }
 
-h2, h3, h4
-{
-	padding:							$noPadding;
-	margin:								$noPadding;
-	font-weight: 						0;
-	letter-spacing:						$letterSpacing;
+.column-1 {
+	width: 6.5%;
 }
 
-h4
-{
-	color:								lighten($headerColour, 70%) !important;
-	margin-bottom:						$largePadding;
+.column-2 {
+	width: 15%;
 }
 
-a 
-{
-	@extend 							%normalFont;
-	text-decoration:					none;
-	transition:							all 0.5s;
-	
-	&:hover
-	{
-		letter-spacing: 				1px;
-	}
+.column-3 {
+	width: 23.5%;
 }
 
-.link 
-{
-	font-size:							4em;
-	padding-top:						20vh;
-	height:								25vh;
-	text-align: 						center;
-	transition:							all 1s;
+.column-4 {
+	width: 32%;
 }
 
-.portfolio-item
-{
-	margin-top: 						2%;
+.column-5 {
+	width: 40.5%;
 }
 
-.portfolio-slides
-{
-	padding-top: 						2%;
+.column-6 {
+	width: 49%;
 }
 
-
-.slide
-{
+.column-7 {
+	width: 57.5%;
 }
 
-.image-column
-{
-	width:21%;
-	float:left;
-	padding-left:2%;
-	padding-right:2%;
+.column-8 {
+	width: 66%;
 }
 
-.image-column img
-{
-	max-width:220px;
+.column-9 {
+	width: 74.5%;
 }
-.next-column img
-{
-	padding-top:10%;
-	max-width:128px;
-	float:right;
+
+.column-10 {
+	width: 83%;
+}
+
+.column-11 {
+	width: 91.5%;
+}
+
+.column-12 {
+	width: 100%;
+}
+
+h2, h3, h4 {
+	padding: 0;
+	margin: 0;
+	font-weight: 0;
+	letter-spacing: 2px;
+}
+
+h4 {
+	color: #b3b3b3 !important;
+	margin-bottom: 2%;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.5s;
+}
+
+a:hover {
+	letter-spacing: 1px;
+}
+
+.link {
+	font-size: 4em;
+	padding-top: 20vh;
+	height: 25vh;
+	text-align: center;
+	transition: all 1s;
+}
+
+.portfolio-item {
+	margin-top: 2%;
+}
+
+.portfolio-slides {
+	padding-top: 2%;
+}
+
+.image-column {
+	width: 21%;
+	float: left;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.image-column img {
+	max-width: 220px;
+}
+
+.next-column img {
+	padding-top: 10%;
+	max-width: 128px;
+	float: right;
 	transition: 1s all;
 	opacity: 1;
 }
 
-.next-column img:hover
-{
+.next-column img:hover {
 	opacity: 0.5;
 	cursor: pointer;
 }
 
-.details-column
-{
-	width:44%;
-	padding:2%;
-	padding-left:5%;
-	float:left;
-
-}
-.next-column
-{
-	width:23%;
-	float:left;
-
+.details-column {
+	width: 44%;
+	padding: 2%;
+	padding-left: 5%;
+	float: left;
 }
 
-.details-column header
-{
-	float:left;
-	font-size:4.2em;
-	width:100%;
-	padding-top:4%;
+.next-column {
+	width: 23%;
+	float: left;
+}
+
+.details-column header {
+	float: left;
+	font-size: 4.2em;
+	width: 100%;
+	padding-top: 4%;
 	color: #e8ebf5;
 }
 
-.portfolio-description
-{
-	float:left;
-	width: 								80%;
-	margin-top: 						10%;
-	padding-left: 						20%;
-	font-size: 							1.15em;
+.portfolio-description {
+	float: left;
+	width: 80%;
+	margin-top: 10%;
+	padding-left: 20%;
+	font-size: 1.15em;
 }
 
-.portfolio-site-link
-{
-	float:  							left;
-	width: 								25%;
-	padding-left: 						75%;
-	margin-top: 						5%;
+.portfolio-site-link {
+	float: left;
+	width: 25%;
+	padding-left: 75%;
+	margin-top: 5%;
 }
 
-.portfolio-site-features
-{
-	float: 								left;
-	width: 								80%;
-	padding-left: 						20%;
-	margin-top: 						15%;
+.portfolio-site-features {
+	float: left;
+	width: 80%;
+	padding-left: 20%;
+	margin-top: 15%;
 }
 
-.features-icon
-{
-	float:left;
-	width: 								20%;
-	padding-right: 						15%;
-}
-.features-list
-{
-	float:left;
-	width: 								65%;
+.features-icon {
+	float: left;
+	width: 20%;
+	padding-right: 15%;
 }
 
-.blue-button
-{
-	background: 						$darkishBlue;
-	padding: 							10%;
-	text-align: 						center;
-	transition:							1s all;
-	opacity: 							1;
+.features-list {
+	float: left;
+	width: 65%;
 }
 
-.blue-button:hover
-{
-	opacity: 							0.6;
-	cursor:								pointer;
+.blue-button {
+	background: #5a70a5;
+	padding: 10%;
+	text-align: center;
+	transition: 1s all;
+	opacity: 1;
 }
 
-.clickable:hover
-{
-
+.blue-button:hover {
+	opacity: 0.6;
+	cursor: pointer;
 }
 
-
-#navigation-header div
-{
-	@extend 							%center;
-	-webkit-font-smoothing: 			antialiased !important;
+#navigation-header div {
+	-webkit-font-smoothing: antialiased !important;
 }
 
-.center
-{
-	@extend 							%center;
+#navigation {
+	position: fixed;
+	right: 0;
+	font-size: 1.2em;
+	width: 5%;
 }
 
-#navigation
-{
-	@extend 							%center;
-	position:							fixed;
-	bottom:								0;
-	font-size: 							1.2em;
-	width:								20%;
+.nav-link {
+	transition: all 1s;
+	line-height:45px;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	background: rgba(255, 255, 255, 0);
+	font-size: 2em;
 }
 
-.nav-link
-{
-	transition:							all 1s;
-	padding-top:						7%;
-	padding-bottom:						7%;
-	background: 						rgba(255,255,255,0.0);
+.nav-link:hover {
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.1);
 }
 
-.nav-link:hover
-{
-	cursor: 							pointer;
-	background: 						rgba(255,255,255,0.1);
+.nudge {
+	padding-right: 5%;
 }
 
-.nudge
-{
-	padding-left:						20%;
+.content-area {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.11)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */;
 }
 
-// content areas
-.content-area
-{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.04+0,0+100 */
-	background: 						-moz-linear-gradient(top, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: 						-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.11)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: 						-webkit-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: 						-o-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: 						-ms-linear-gradient(top, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-	background: 						linear-gradient(to bottom, rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 100%); /* W3C */
-	filter: 							progid:DXImageTransform.Microsoft.gradient( startColorstr='#0affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+.content-1 {
+	background: #687fb6;
+	color: #d5dbec;
 }
 
-.content-1
-{
-	background:							$colour4;
-	color: 								$offWhite;
-}
-.content-2
-{
-	background:							$colour3;
-	color: 								$offWhite;
-}
-.content-3
-{
-	background:							$colour4;
-	color: 								$offWhite;
-}
-.content-4
-{
-	background:							$colour3;
-	color: 								$offWhite;
+.content-2 {
+	background: #7a8ebe;
+	color: #d5dbec;
 }
 
-.active-link
-{
-	background: 						rgba(255,255,255,0.2);
-	font-size:							1.34em;
+.content-3 {
+	background: #687fb6;
+	color: #d5dbec;
 }
 
-.active-link:after
-{
-	content: 							"-";
-}
-.active-link:before
-{
-	content: 							"-";
+.content-4 {
+	background: #7a8ebe;
+	color: #d5dbec;
 }
 
-.inner
-{
-	padding: 							4%;
-}
-
-.big-header
-{
-	font-size: 							7em;
-	transition: 						all 1s;
-	line-height: 						140px;
-
-}
-
-.goes-smaller
-{
-	font-size: 							2.5em;
-	margin-top: 						-2%;
-	opacity: 							0.2;
-}
-
-.introduction
-{
-	font-size: 							1.25em;
-	line-height: 						25px;
-
-}
-
-.header
-{
-	float: 								left;
-	font-size: 							4em;
-
-}
-.smallTitle
-{
-	margin-top:							2%;
-	font-size:							1.5em;
-}
-
-.home
-{
-
-}
-
-// animations
-
-
-// anim is magic, add this to anything and it will jump back into it's original place
-
-.home-line-one
-{
-	transition: 						all 0.4s;
-	opacity:							0;
-	margin-top:							-30%;
-}
-
-.home-line-two, .home-line-three, .home-line-four, .home-line-five
-{
-	opacity:							0;
-	position:							relative;
-	transition: 						all 0.5s;
-	margin-left:						-60% !important;
+.active-link {
+	background: rgba(255, 255, 255, 0.2);
 }
 
 
-.anim
-{
-	position:							relative;
-	opacity:							1 !important;
-	margin:								0 !important;
-	padding:							0 !important;
-	padding:2% 							!important;
+.inner {
+	padding: 4%;
 }
 
-.contact-form input
-{
-	@extend 							%input-default;
+.big-header {
+	font-size: 7em;
+	transition: all 1s;
+	line-height: 140px;
 }
 
-.contact-form input[type="text"]::-webkit-input-placeholder
-{
-	color:								#c4cada;		
+.goes-smaller {
+	font-size: 2.5em;
+	margin-top: -2%;
+	opacity: 0.2;
 }
 
-
-.contact-form input[type="button"]
-{
-	width: 								51%;
-	background:                         darken($colour2, 7%);
-	text-align:							left;
-}
-.contact-form input:hover
-{
-	@extend								%input-hover;
+.introduction {
+	font-size: 1.25em;
+	line-height: 25px;
 }
 
-.contact-form input[type="text"]:focus
-{
-	@extend								%input-hover;
+.header {
+	float: left;
+	font-size: 4em;
 }
 
+.smallTitle {
+	margin-top: 2%;
+	font-size: 1.5em;
+}
 
-.message-container
-{
+.home-line-one {
+	transition: all 0.4s;
+	opacity: 0;
+	margin-top: -30%;
+}
+
+.home-line-two, .home-line-three, .home-line-four, .home-line-five {
+	opacity: 0;
+	position: relative;
+	transition: all 0.5s;
+	margin-left: -60% !important;
+}
+
+.anim {
+	position: relative;
+	opacity: 1 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	padding: 2% 							!important;
+}
+
+.contact-form input[type="text"]::-webkit-input-placeholder {
+	color: #c4cada;
+}
+
+.contact-form input[type="button"] {
+	width: 51%;
+	background: #7388bb;
+	text-align: left;
+}
+
+.message-container {
 	transition: 1s margin;
-    display: block;
-    opacity: 1;
-    position: fixed;
-    bottom:-30%;
-    margin-bottom:0%;
-    padding: 1%;
-    padding-left: 2%;
-    margin-left:-1%;
-    background: rgba(0,0,0,0.8);
-    border-radius: 8px;
-    z-index: 50;
+	display: block;
+	opacity: 1;
+	position: fixed;
+	bottom: -30%;
+	margin-bottom: 0%;
+	padding: 1%;
+	padding-left: 2%;
+	margin-left: -1%;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 8px;
+	z-index: 50;
 }
 
-.show-message
-{
+.show-message {
 	transition: 1s all;
 	margin-bottom: 50%;
 }
 
-
-.flip
-{
+.flip {
 	animation: flip 0.6s linear;
 }
 
 @keyframes flip {
-	0% { 
+	0% {
 		transform: rotateY(0deg);
 	}
+
 	100% {
 		transform: rotateY(360deg);
 	}
 }
 
-
-// DEFAULT OVERRIDES
-
 ::-webkit-input-placeholder {
-   color: 								black;
+	color: black;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: 								black;  
+:-moz-placeholder {
+  /* Firefox 18- */
+	color: black;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: 								black;  
+::-moz-placeholder {
+  /* Firefox 19+ */
+	color: black;
 }
 
-:-ms-input-placeholder {  
-   color: 								black;  
+:-ms-input-placeholder {
+	color: black;
 }
 
-@media ( max-width: 968px )
-{
-
-	#navigation
-	{
+@media (max-width: 968px) {
+	#navigation {
 		top: 0;
 	}
-
 }
 
-@media ( max-width: 768px )
-{
-
-	body
-	{
+@media (max-width: 768px) {
+	body {
 		font-size: 0.7em;
 	}
 
-	.introduction
-	{
+	.introduction {
 		line-height: 20px;
 	}
 
-	.text-container
-	{
+	.text-container {
 		width: 80%;
 	}
-	.big-header
-	{
+
+	.big-header {
 		font-size: 4.5em;
 		line-height: 90px;
 	}
 
-	.details-column header
-	{
+	.details-column header {
 		font-size: 2.5em;
-
 	}
 
-	.next-column
-	{
+	.next-column {
 		width: 10%;
 	}
 
-	.portfolio-description
-	{
-	    width: 100%;
-	    margin-top: 10%;
-	    font-size: 1em;
+	.portfolio-description {
+		width: 100%;
+		margin-top: 10%;
+		font-size: 1em;
 	}
 
-	.portfolio-site-link
-	{
+	.portfolio-site-link {
 		float: left;
-	    width: 93%;
-	    padding-left: 20%;
-	    margin-top: 0%;
+		width: 93%;
+		padding-left: 20%;
+		margin-top: 0%;
 	}
 
-	.portfolio-site-features
-	{
+	.portfolio-site-features {
 		float: left;
-	    width: 200%;
-	    margin-left: -64%;
-	    margin-top: 15%;
+		width: 200%;
+		margin-left: -64%;
+		margin-top: 15%;
 	}
 
-	.active-link:after
-	{
-		content: 							"";
-	}
-	.active-link:before
-	{
-		content: 							"";
+	.active-link:after {
+		content: "";
 	}
 
+	.active-link:before {
+		content: "";
+	}
 
-	.features-icon
-	{
+	.features-icon {
 		float: left;
-   	 	width: 12%;
-    	padding-left: 9%;
+		width: 12%;
+		padding-left: 9%;
 	}
 
-	.features-list
-	{
+	.features-list {
 		float: left;
 		width: 100%;
 	}
 
-	#home-link span
-	{
+	#home-link span {
 		display: none;
 	}
 
-	#portfolio-link span
-	{
+	#portfolio-link span {
 		display: none;
 	}
 
-	#about-link span
-	{
+	#about-link span {
 		display: none;
 	}
 
-	#contact-link span
-	{
+	#contact-link span {
 		display: none;
 	}
 
-	#home-link:after
-	{
-		content: "H"
+	#home-link:after {
+		content: "H";
 	}
 
-	#portfolio-link:after
-	{
-		content: "P"
+	#portfolio-link:after {
+		content: "P";
 	}
 
-	#about-link:after
-	{
-		content: "A"
+	#about-link:after {
+		content: "A";
 	}
 
-	#contact-link:after
-	{
-		content: "C"
+	#contact-link:after {
+		content: "C";
 	}
-
-
 }
