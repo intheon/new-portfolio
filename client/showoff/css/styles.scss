@@ -69,9 +69,6 @@ body {
 	height: 100vh;
 }
 
-.text-container {
-	width: 49%;
-}
 
 #page-body, .center {
 	height: 90% !important;
@@ -187,6 +184,10 @@ a:hover {
 
 .image-column img {
 	max-width: 220px;
+}
+
+.text-wrapper {
+	padding-left: 4%;
 }
 
 .next-column img {
@@ -323,6 +324,7 @@ a:hover {
 .content-2 {
 	background: #7a8ebe;
 	color: #d5dbec;
+	position: relative;
 }
 
 .content-3 {
@@ -341,8 +343,13 @@ a:hover {
 
 
 .inner {
-	padding: 4%;
+	padding-top: 4%;
+	padding-right: 4%;
+	height: 96%;
+	display: inline-block;
 }
+
+
 
 .big-header {
 	font-size: 7em;
@@ -382,6 +389,17 @@ a:hover {
 	position: relative;
 	transition: all 0.5s;
 	margin-left: -60% !important;
+}
+
+.home-circle {
+	width: 1500px;
+	height: 1500px;
+	position: absolute;
+	background: url("../img/main.jpg");
+	clip-path: circle(45% at 10% 65%);
+	background-position: top;
+	opacity: 0.13;
+	float: left;
 }
 
 .anim {
@@ -467,10 +485,6 @@ a:hover {
 
 	.introduction {
 		line-height: 20px;
-	}
-
-	.text-container {
-		width: 80%;
 	}
 
 	.big-header {
