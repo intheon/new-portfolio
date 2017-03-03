@@ -1,5 +1,4 @@
-bower_components/
-data/
+.DS_Store
 node_modules/
-jspm_packages/
-client/showoff/php/vendor/
+dist/
+npm-debug.log
