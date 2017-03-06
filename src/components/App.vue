@@ -40,27 +40,43 @@
         </section>
 
         <section class="portfolio-item">
-          <h2>Ed Hall Audio</h2>
-          <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
-          <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
-          <ul>
-            <li>Responsive Design</li>
-            <li>Instagram and Soundcloud feeds</li>
-            <li>Contact form</li>
-            <li>Lightweight, uses only jQuery and Semantic UI</li>
-          </ul>
+
+          <div class="portfolio-wrapping ed"></div>
+
+          <div class="portfolio-content">
+
+            <h2>Ed Hall Audio</h2>
+            <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
+            <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
+            <ul>
+              <li>Responsive Design</li>
+              <li>Instagram and Soundcloud feeds</li>
+              <li>Contact form</li>
+              <li>Lightweight, uses only jQuery and Semantic UI</li>
+            </ul>
+
+          </div>
+
         </section>
 
         <section class="portfolio-item">
-          <h2>Springboard</h2>
-          <p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
-          <p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
-          <ul>
-            <li>REST API Backend to interact with database</li>
-            <li>Multi-user system with states for each widget</li>
-            <li>Heavy use of JavaScript and PHP for some wizardry</li>
-            <li>Semantic UI to make it look pretty</li>
-          </ul>
+
+          <div class="portfolio-wrapping springboard"></div>
+
+          <div class="portfolio-content">
+
+            <h2>Springboard</h2>
+            <p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
+            <p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
+            <ul>
+              <li>REST API Backend to interact with database</li>
+              <li>Multi-user system with states for each widget</li>
+              <li>Heavy use of JavaScript and PHP for some wizardry</li>
+              <li>Semantic UI to make it look pretty</li>
+            </ul>
+
+          </div>
+
         </section>
 
 
@@ -167,16 +183,16 @@
   }
 
     .background-triangle-right {
-      width: 900px;
-      height: 900px;
+      width: 1700px;
+      height: 1100px;
       display: inline-block;
       float: right;
       z-index: 100;
       background: white;
       position: fixed;
-      transform: rotate(-115deg);
-      top: -400px;
-      right: -700px;
+      transform: rotate(40deg);
+      top: -600px;
+      right: -1000px;
     }
 
     .nav-item-link:nth-child(even) {
@@ -218,8 +234,26 @@
     shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
     background: url("../assets/img/skate.png");
     background-size: cover;
+    right: 150px;
+  }
+
+  .ed {
+    clip-path: polygon(50% 0%,25% 90%, 110% 40%);
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../assets/img/ed.jpg");
+    background-size: cover;
+    right: 150px;
+  }
+
+
+  .springboard {
+    clip-path: polygon(130% 0%, 4% 10%, 39% 80%);
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../assets/img/ed.jpg");
+    background-size: cover;
     right: 60px;
   }
+
 
   .content-area-wrapper {
     float: left;
