@@ -1,13 +1,12 @@
 <template>
 	<div>
 
-    <div class="background-triangle-left"></div>
+    <!--<div class="background-triangle-left" v-bind:style="dynamicTriangleTwo"></div>-->
     <div class="background-triangle-right"></div>
 
 
     <div class="content-area-wrapper">
-      <div class="big-triangle-wrapping-mask"></div>
-
+      <div class="big-triangle-wrapping-mask" ></div>
 
       <section class="content-area first">
         <h1>Howdy!</h1>
@@ -22,7 +21,7 @@
 
         <section class="portfolio-item">
 
-          <div class="portfolio-wrapping skate"></div>
+          <div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>
 
           <div class="portfolio-content">
             <h2>Skate Locate</h2>
@@ -128,7 +127,39 @@
 	import { mapGetters }	from "vuex";
 
 	export default {
-    name: "app"
+    data() {
+      return {
+        numberOne: 99,
+        numberTwo: 130,
+        numberThree: 7,
+      }
+    },
+    computed: {
+      dynamicTriangleOne(){
+        return {
+          "clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% 100%)`
+        }
+      },
+      dynamicTriangleTwo(){
+        return {
+          //"clip-path": `polygon(${this.numberTwo}% 0%, 4% 10%, 39% ${this.numberOne}%)`
+        }
+      }
+    },
+    name: "app",
+    mounted(){
+      setInterval(() => {
+        this.numberOne = Math.floor(Math.random()*(100-98)+98);
+        console.log(this.numberOne);
+        console.log(this.dynamicTriangleOne);
+      }, 3200);
+      setInterval(() => {
+        this.numberOne = Math.floor(Math.random()*(130-90+1)+90);
+      }, 800);
+      setInterval(() => {
+        this.numberThree = Math.floor(Math.random() * 0) + 0.5
+      }, 1800);
+    }
 	}
 </script>
 
@@ -136,7 +167,8 @@
 
   $background: #ffffff;
   $fontColour: #565e75;
-  $masterFont: 'Cuprum';
+  $masterFont: 'Ruda';
+
 
   html, body {
     margin: 0;
@@ -169,6 +201,7 @@
     letter-spacing: 4px;
   }
 
+  /*
   .background-triangle-left {
     width: 1200px;
     height: 1200px;
@@ -177,10 +210,14 @@
     z-index: 100;
     background: white;
     position: fixed;
+    top: -1300px;
+    left: -900px;
     transform: rotate(-45deg);
-    top: -1000px;
-    left: -700px;
   }
+
+  */
+
+
 
     .background-triangle-right {
       width: 1700px;
@@ -206,13 +243,13 @@
 
 
   .big-triangle-wrapping-mask {
-    width: 1100px;
+    width: 900px;
     height: 1100px;
     float: left;
-    clip-path: polygon(0% 0%, 100% 0%, 0% 80%);
-    shape-outside: polygon(0% 0%, 100% 0%, 0% 100%);
+    shape-outside: polygon(0% 0%, 100% 0%, 20% 100%);
     background: url("../assets/img/bg.jpg");
     background-size: cover;
+    transition: 1s all;
   }
 
 
@@ -221,6 +258,7 @@
     height: 700px;
     z-index: 5;
     position: absolute;
+    transition: 1s all;
   }
 
   .portfolio-content {
@@ -230,7 +268,6 @@
   }
 
   .skate {
-    clip-path: polygon(130% 0%, 4% 10%, 39% 80%);
     shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
     background: url("../assets/img/skate.png");
     background-size: cover;
