@@ -14,7 +14,7 @@
         <p>I'm Ben, developer of internets.</p>
         <p>I focus on building web-based apps, mostly centered around dashboards and tools.</p>
         <p>Building cross-platform is one of my strengths, as i do that in both my day job and for projects.</p>
-        <p>Take a look at my portfolio to see some of my work, or drop me a line and I'll get right back to you!</p>
+        <p>Take a look at my portfolio to see some of my work, or drop me a line and I'll get right back to you!<span v-bind:style="blink">_</span></p>
       </section>
 
       <section class="content-area">
@@ -133,9 +133,15 @@
         numberOne: 99,
         numberTwo: 130,
         numberThree: 7,
+        display: "none",
       }
     },
     computed: {
+      blink(){
+        return {
+          "display": this.display
+        }
+      },
       dynamicTriangleOne(){
         return {
           "clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% ${this.numberOne}%)`
@@ -152,6 +158,10 @@
       setInterval(() => {
         this.numberOne = Math.floor(Math.random()*(100-97)+97);
       }, 2500);
+      setInterval(() => {
+          if (this.display == "inline") this.display = "none";
+          else this.display = "inline";
+      }, 1400);
     }
 	}
 </script>
@@ -159,8 +169,8 @@
 <style lang="scss">
 
   $background: #ffffff;
-  $fontColour: #565e75;
-  $masterFont: 'Ruda';
+  $fontColour: #575c64;
+  $masterFont: "Inconsolata", monospace;
 
 
   html, body {
@@ -174,6 +184,10 @@
     color: $fontColour;
     font-family: $masterFont;
     font-size: 24px;
+  }
+
+  .blink {
+    font-size: 12px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -248,7 +262,8 @@
     width: 900px;
     height: 1100px;
     float: left;
-    shape-outside: polygon(0% 0%, 100% 0%, 20% 100%);
+    shape-outside: polygon(0% 0%, 100% 0%, 0% 120%);
+    margin-right: 256px;
     background: url("../assets/img/bg.jpg");
     background-size: cover;
     transition: 1s all;
@@ -292,7 +307,6 @@
 
   .first {
     margin-top: 12%;
-    text-align: right;
   }
 
   .portfolio-item {
