@@ -21,8 +21,8 @@
           <div class="portfolio-content">
 
             <div class="inline-links">
-              <a href="https://intheon.uk/skatelocate" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://github.com/synthy2/skateLocate-angular/tree/winter-2016-update" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/synthy2/skateLocate-angular/tree/winter-2016-update" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+              <a href="https://intheon.uk/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
 
             <h2>Skate Locate</h2>
@@ -44,8 +44,8 @@
           <div class="portfolio-content">
 
             <div class="inline-links">
-              <a href="https://intheon.uk/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://github.com/synthy2/ed" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/synthy2/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+              <a href="https://intheon.uk/ed" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
 
             <h2>Ed Hall Audio</h2>
@@ -65,8 +65,8 @@
           <div class="portfolio-content">
 
             <div class="inline-links">
-              <a href="https://intheon.uk/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://github.com/synthy2/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+              <a href="https://intheon.uk/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
 
             <h2>Springboard</h2>
@@ -86,8 +86,8 @@
           <div class="portfolio-wrapping twitter" v-bind:style="dynamicTriangleFive"></div>
           <div class="portfolio-content">
             <div class="inline-links">
-              <a href="https://intheon.uk/twitter" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://github.com/synthy2/twitter-sentimental" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/synthy2/twitter-sentimental" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+              <a href="https://intheon.uk/twitter" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
 
             <h2>Semantic Twitter</h2>
@@ -137,8 +137,6 @@
 </template>
 
 <script>
-	import { mapGetters }	from "vuex";
-
 	export default {
     data() {
       return {
@@ -198,7 +196,7 @@
       setInterval(() => {
           if (this.display == "inline") this.display = "none";
           else this.display = "inline";
-      }, 1400);
+      }, 800);
     }
 	}
 </script>
