@@ -202,6 +202,7 @@
 
   h2 {
     font-size: 44px;
+    margin-bottom: 48px;
   }
 
   h1, h2 {
@@ -255,7 +256,7 @@
   .portfolio-content {
     z-index: 7;
     margin-bottom: 512px;
-    padding-right: 256px;
+    padding-right: 380px;
   }
 
   .big-triangle-wrapping-mask {
@@ -317,8 +318,17 @@
     font-size: 24px;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 128px;
+  }
+
   li {
-    font-size: 20px;
+    list-style-type: circle;
+    margin-bottom: 20px;
+    font-size: 16px;
   }
 
 
