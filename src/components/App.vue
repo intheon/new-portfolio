@@ -133,6 +133,8 @@
         numberOne: 99,
         numberTwo: 130,
         numberThree: 7,
+        numberFour: 5,
+        numberFive: 39,
         display: "none",
       }
     },
@@ -149,7 +151,7 @@
       },
       dynamicTriangleTwo(){
         return {
-          //"clip-path": `polygon(${this.numberTwo}% 0%, 4% 10%, 39% ${this.numberOne}%)`
+          "clip-path": `polygon(${this.numberTwo}% 0%, ${this.numberFour}% ${this.numberThree}%, ${this.numberFive}% ${this.numberOne}%)`
         }
       }
     },
@@ -158,6 +160,12 @@
       setInterval(() => {
         this.numberOne = Math.floor(Math.random()*(100-97)+97);
       }, 2500);
+      setInterval(() => {
+        this.numberTwo = Math.floor(Math.random()*(130-117)+117);
+        this.numberThree = Math.floor(Math.random()*(9-6)+6);
+        this.numberFour = Math.floor(Math.random()*(8-4)+4);
+        this.numberFive = Math.floor(Math.random()*(40-38)+38);
+      }, 1900);
       setInterval(() => {
           if (this.display == "inline") this.display = "none";
           else this.display = "inline";
