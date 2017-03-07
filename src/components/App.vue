@@ -2,11 +2,12 @@
 	<div>
 
     <!--<div class="background-triangle-left" v-bind:style="dynamicTriangleTwo"></div>-->
-    <div class="background-triangle-right"></div>
+    <!--<div class="background-triangle-right"></div>-->
 
 
     <div class="content-area-wrapper">
-      <div class="big-triangle-wrapping-mask" ></div>
+
+      <div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
 
       <section class="content-area first">
         <h1>Howdy!</h1>
@@ -137,7 +138,7 @@
     computed: {
       dynamicTriangleOne(){
         return {
-          "clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% 100%)`
+          "clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% ${this.numberOne}%)`
         }
       },
       dynamicTriangleTwo(){
@@ -149,16 +150,8 @@
     name: "app",
     mounted(){
       setInterval(() => {
-        this.numberOne = Math.floor(Math.random()*(100-98)+98);
-        console.log(this.numberOne);
-        console.log(this.dynamicTriangleOne);
-      }, 3200);
-      setInterval(() => {
-        this.numberOne = Math.floor(Math.random()*(130-90+1)+90);
-      }, 800);
-      setInterval(() => {
-        this.numberThree = Math.floor(Math.random() * 0) + 0.5
-      }, 1800);
+        this.numberOne = Math.floor(Math.random()*(100-97)+97);
+      }, 2500);
     }
 	}
 </script>
@@ -183,7 +176,7 @@
     font-size: 24px;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
   }
@@ -200,58 +193,42 @@
   h1, h2 {
     letter-spacing: 4px;
   }
-
   /*
-  .background-triangle-left {
-    width: 1200px;
-    height: 1200px;
-    display: inline-block;
-    float: left;
-    z-index: 100;
-    background: white;
-    position: fixed;
-    top: -1300px;
-    left: -900px;
-    transform: rotate(-45deg);
-  }
-
-  */
-
-
-
-    .background-triangle-right {
-      width: 1700px;
-      height: 1100px;
+    .background-triangle-left {
+      width: 1200px;
+      height: 1200px;
       display: inline-block;
-      float: right;
+      float: left;
       z-index: 100;
       background: white;
       position: fixed;
-      transform: rotate(40deg);
-      top: -600px;
-      right: -1000px;
+      top: -1300px;
+      left: -900px;
+      transform: rotate(-45deg);
     }
 
-    .nav-item-link:nth-child(even) {
-      background: purple;
-    }
+    */
 
+  .background-triangle-right {
+    width: 1700px;
+    height: 1100px;
+    display: inline-block;
+    float: right;
+    z-index: 100;
+    background: white;
+    position: fixed;
+    transform: rotate(40deg);
+    top: -600px;
+    right: -1000px;
+  }
 
   .nav-item-link:nth-child(even) {
     background: purple;
   }
 
-
-  .big-triangle-wrapping-mask {
-    width: 900px;
-    height: 1100px;
-    float: left;
-    shape-outside: polygon(0% 0%, 100% 0%, 20% 100%);
-    background: url("../assets/img/bg.jpg");
-    background-size: cover;
-    transition: 1s all;
+  .nav-item-link:nth-child(even) {
+    background: purple;
   }
-
 
   .portfolio-wrapping {
     width: 700px;
@@ -267,6 +244,16 @@
     padding-right: 256px;
   }
 
+  .big-triangle-wrapping-mask {
+    width: 900px;
+    height: 1100px;
+    float: left;
+    shape-outside: polygon(0% 0%, 100% 0%, 20% 100%);
+    background: url("../assets/img/bg.jpg");
+    background-size: cover;
+    transition: 1s all;
+  }
+
   .skate {
     shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
     background: url("../assets/img/skate.png");
@@ -275,13 +262,12 @@
   }
 
   .ed {
-    clip-path: polygon(50% 0%,25% 90%, 110% 40%);
+    clip-path: polygon(50% 0%, 25% 90%, 110% 40%);
     shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
     background: url("../assets/img/ed.jpg");
     background-size: cover;
     right: 150px;
   }
-
 
   .springboard {
     clip-path: polygon(130% 0%, 4% 10%, 39% 80%);
@@ -291,13 +277,11 @@
     right: 60px;
   }
 
-
   .content-area-wrapper {
     float: left;
     z-index: 4;
     background: white;
   }
-
 
   .content-area {
     font-size: 2em;
