@@ -1,142 +1,168 @@
 <template>
 	<div>
 
+		<button v-tooltip.top.left="toggleScrollingAnchorMsgOn" class="snap-scrolling-toggle-link" v-on:click="toggleScrollingAnchorState" v-if="isAnchoredScrolling">
+			<i class="fa fa-anchor" aria-hidden="true" ></i>
+		</button>
+		<button v-tooltip.top.left="toggleScrollingAnchorMsgOff" class="snap-scrolling-toggle-link" v-on:click="toggleScrollingAnchorState" v-if="!isAnchoredScrolling">
+			<i class="fa fa-angle-double-down" aria-hidden="true" ></i>
+		</button>
+
     <div class="content-area-wrapper">
 
-      <div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
-
-      <section class="content-area first">
-        <h1>Howdy!</h1>
-        <p>I'm Ben, developer of internets.</p>
-        <p>I focus on building web-based apps, mostly centered around dashboards and tools.</p>
-        <p>Building cross-platform is one of my strengths, as i do that in both my day job and for projects.</p>
-        <p>Take a look at my portfolio to see some of my work, or drop me a line and I'll get right back to you!<span v-bind:style="blink">_</span></p>
-      </section>
+			<!-- anchor #1 -->
+			<div id="anchor1">
+	      <div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
+	      <section class="content-area">
+	        <h1>Howdy!</h1>
+	        <p>I'm Ben, developer of internets.</p>
+	        <p>I focus on building web-based apps, mostly centered around dashboards and tools.</p>
+	        <p>Building cross-platform is one of my strengths, as i do that in both my day job and for projects.</p>
+	        <p>Take a look at my portfolio to see some of my work, or drop me a line and I'll get right back to you!<span v-bind:style="blink">_</span></p>
+	      </section>
+			</div>
 
       <section class="content-area">
-        <h1>Portfolio</h1>
+				<!-- anchor #2 -->
+				<div id="anchor2">
+	        <h1>Portfolio</h1>
+	        <section class="portfolio-item">
+	          <div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>
+	          <div class="portfolio-content">
 
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>
-          <div class="portfolio-content">
+	            <div class="inline-links">
+	              <a href="https://github.com/synthy2/skateLocate-angular/tree/winter-2016-update" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+	              <a href="https://intheon.uk/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+	            </div>
 
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/skateLocate-angular/tree/winter-2016-update" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
+	            <h2>Skate Locate</h2>
+	            <p>A pretty modern website as far as the technology is concerned.</p>
+	            <p>Add, view, and filter skateparks in your area of interest</p>
+	            <p>Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine.</p>
+	            <ul>
+	              <li>100% Javascript on front and back end.</li>
+	              <li>MongoDB for data, and Angular.js for the databinding and keeping the UI snappy.</li>
+	              <li>Add skateparks, filter by tag or string, see most recently added and voted.</li>
+	              <li>Deployed to Heroku, and live for all!</li>
+	            </ul>
+	          </div>
+	        </section>
+				</div>
 
-            <h2>Skate Locate</h2>
-            <p>A pretty modern website as far as the technology is concerned.</p>
-            <p>Add, view, and filter skateparks in your area of interest</p>
-            <p>Built with the MEAN stack, bundled with JSPM, Cloudinary for images, Leaflet/Mapbox for the map engine.</p>
-            <ul>
-              <li>100% Javascript on front and back end.</li>
-              <li>MongoDB for data, and Angular.js for the databinding and keeping the UI snappy.</li>
-              <li>Add skateparks, filter by tag or string, see most recently added and voted.</li>
-              <li>Deployed to Heroku, and live for all!</li>
-            </ul>
-          </div>
+				<!-- anchor #3 -->
+				<div id="anchor3">
+	        <section class="portfolio-item">
+	          <div class="portfolio-wrapping ed" v-bind:style="dynamicTriangleThree"></div>
+	          <div class="portfolio-content">
 
-        </section>
+	            <div class="inline-links">
+	              <a href="https://github.com/synthy2/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+	              <a href="https://intheon.uk/ed" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+	            </div>
 
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping ed" v-bind:style="dynamicTriangleThree"></div>
-          <div class="portfolio-content">
+	            <h2>Ed Hall Audio</h2>
+	            <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
+	            <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
+	            <ul>
+	              <li>Responsive Design</li>
+	              <li>Instagram and Soundcloud feeds</li>
+	              <li>Contact form</li>
+	              <li>Lightweight, uses only jQuery and Semantic UI</li>
+	            </ul>
+	          </div>
+	        </section>
+				</div>
 
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/ed" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
+				<!-- anchor #4 -->
+				<div id="anchor4">
+	        <section class="portfolio-item">
+	          <div class="portfolio-wrapping springboard" v-bind:style="dynamicTriangleFour"></div>
+	          <div class="portfolio-content">
 
-            <h2>Ed Hall Audio</h2>
-            <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
-            <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
-            <ul>
-              <li>Responsive Design</li>
-              <li>Instagram and Soundcloud feeds</li>
-              <li>Contact form</li>
-              <li>Lightweight, uses only jQuery and Semantic UI</li>
-            </ul>
-          </div>
-        </section>
+	            <div class="inline-links">
+	              <a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+	              <a href="https://intheon.uk/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+	            </div>
 
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping springboard" v-bind:style="dynamicTriangleFour"></div>
-          <div class="portfolio-content">
+	            <h2>Springboard</h2>
+	            <p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
+	            <p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
+	            <ul>
+	              <li>REST API Backend to interact with database</li>
+	              <li>Multi-user system with states for each widget</li>
+	              <li>Heavy use of JavaScript and PHP for some wizardry</li>
+	              <li>Semantic UI to make it look pretty</li>
+	            </ul>
+	          </div>
+	        </section>
+			  </div>
 
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
+				<!-- anchor #5 -->
+				<div id="anchor5">
+	        <section class="portfolio-item">
+	          <div class="portfolio-wrapping twitter" v-bind:style="dynamicTriangleFive"></div>
+	          <div class="portfolio-content">
+	            <div class="inline-links">
+	              <a href="https://github.com/synthy2/twitter-sentimental" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+	              <a href="https://intheon.uk/twitter" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+	            </div>
 
-            <h2>Springboard</h2>
-            <p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
-            <p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
-            <ul>
-              <li>REST API Backend to interact with database</li>
-              <li>Multi-user system with states for each widget</li>
-              <li>Heavy use of JavaScript and PHP for some wizardry</li>
-              <li>Semantic UI to make it look pretty</li>
-            </ul>
-          </div>
-        </section>
+	            <h2>Semantic Twitter</h2>
+	            <p>An example of what happens when you mash up web API's</p>
+	            <p>Asks the user for a string, and uses the Twitter API to retreive that from their DB, then crams it through 'Semantic API' to tell you what the users feeling is.</p>
+	            <ul>
+	              <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
+	              <li>Displays users results as soon as they have been parsed</li>
+	            </ul>
+	          </div>
+	        </section>
+				</div>
 
+				<!-- anchor #6 -->
+				<div id="anchor6">
+	        <section class="portfolio-item">
+	          <h2>Grammatical Numbers</h2>
+	          <p>A pretty modern website as far as the technology is concerned.</p>
+	          <p>Add, view, and filter skateparks in your area of interest</p>
+	          <ul>
+	            <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
+	            <li>Displays users results as soon as they have been parsed</li>
+	          </ul>
+	        </section>
+				</div>
 
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping twitter" v-bind:style="dynamicTriangleFive"></div>
-          <div class="portfolio-content">
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/twitter-sentimental" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/twitter" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
-
-            <h2>Semantic Twitter</h2>
-            <p>An example of what happens when you mash up web API's</p>
-            <p>Asks the user for a string, and uses the Twitter API to retreive that from their DB, then crams it through 'Semantic API' to tell you what the users feeling is.</p>
-            <ul>
-              <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
-              <li>Displays users results as soon as they have been parsed</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="portfolio-item">
-
-
-          <h2>Grammatical Numbers</h2>
-          <p>A pretty modern website as far as the technology is concerned.</p>
-          <p>Add, view, and filter skateparks in your area of interest</p>
-          <ul>
-            <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
-            <li>Displays users results as soon as they have been parsed</li>
-          </ul>
-        </section>
-
-        <section class="portfolio-item">
-          <h2>Promo Codes Generator</h2>
-          <p>I needed to generate promo codes for a client so they could distribute out free log in's for their magazine.</p>
-          <p>Rather than user excel, i made this service as I no doubt will need it again</p>
-          <ul>
-            <li>Random code generator using chance.js</li>
-            <li>Allows selection of quantity of codes</li>
-            <li>Some wizardry to allow the user to download to a csv</li>
-          </ul>
-        </section>
-
+				<!-- anchor #7 -->
+				<div id="anchor7">
+	        <section class="portfolio-item">
+	          <h2>Promo Codes Generator</h2>
+	          <p>I needed to generate promo codes for a client so they could distribute out free log in's for their magazine.</p>
+	          <p>Rather than user excel, i made this service as I no doubt will need it again</p>
+	          <ul>
+	            <li>Random code generator using chance.js</li>
+	            <li>Allows selection of quantity of codes</li>
+	            <li>Some wizardry to allow the user to download to a csv</li>
+	          </ul>
+	        </section>
+				</div>
       </section>
-      <section class="content-area">
-        <h1>About</h1>
-        <p>I've been doing web development stuff for a good 10/11 years now.</p>
-        <p>Professionally, I work a digital publishers called YUDU Media and been there for years. My Technical skills include solid understanding of HTML, CSS, JavaScript, PHP, and Graphic Design. Or to more specifically break it down... HTML4/5, CSS2/3, Sass, EcmaScript 5 + 6 (Harmony), Angular.js, Typescript, PHP5, MySQL, and mashing up Web APIs like those provided by Google/Twitter etc.</p>
-        <p>To date I've built and submitted iOS/Android/Web apps for small names like the Financial Times, KPMG, Mixmag, the FA to name a few.</p>
-        <p>Currently, I work as an Account Manager advising on the best strategy and way forward for clients. I currently look after Time Out, Screwfix, and just shy of 100 others. What I reeeeaaaally want to do is more freelance development. So hit me up if you've got something you want to create!</p>
-      </section>
+
+			<!-- anchor #8 -->
+			<div id="anchor8">
+	      <section class="content-area">
+	        <h1>About</h1>
+	        <p>I've been doing web development stuff for a good 10/11 years now.</p>
+	        <p>Professionally, I work a digital publishers called YUDU Media and been there for years. My Technical skills include solid understanding of HTML, CSS, JavaScript, PHP, and Graphic Design. Or to more specifically break it down... HTML4/5, CSS2/3, Sass, EcmaScript 5 + 6 (Harmony), Angular.js, Typescript, PHP5, MySQL, and mashing up Web APIs like those provided by Google/Twitter etc.</p>
+	        <p>To date I've built and submitted iOS/Android/Web apps for small names like the Financial Times, KPMG, Mixmag, the FA to name a few.</p>
+	        <p>Currently, I work as an Account Manager advising on the best strategy and way forward for clients. I currently look after Time Out, Screwfix, and just shy of 100 others. What I reeeeaaaally want to do is more freelance development. So hit me up if you've got something you want to create!</p>
+	      </section>
+			</div>
     </div>
 
 	</div>
 </template>
 
 <script>
+
 	export default {
     data() {
       return {
@@ -147,6 +173,9 @@
         numberFive: 39,
         numberSix: 0,
         display: "none",
+				toggleScrollingAnchorMsgOn: "Anchored scroll",
+				toggleScrollingAnchorMsgOff: "Smoothed scroll",
+				isAnchoredScrolling: false
       }
     },
     computed: {
@@ -182,6 +211,11 @@
       }
     },
     name: "app",
+		methods: {
+			toggleScrollingAnchorState(){
+				this.isAnchoredScrolling = !this.isAnchoredScrolling;
+			}
+		},
     mounted(){
       setInterval(() => {
         this.numberOne = Math.floor(Math.random()*(100-97)+97);
@@ -219,6 +253,7 @@
     color: $fontColour;
     font-family: $masterFont;
     font-size: 24px;
+		overflow-x: hidden;
   }
 
   .blink {
@@ -372,6 +407,20 @@
     right: 60px;
   }
 
+	.snap-scrolling-toggle-link {
+		position: fixed;
+		right: 0;
+		top: 0;
+		font-size: 24px;
+		background: none;
+		outline: none;
+		border: none;
+		margin: 16px;
+		margin-right: 64px;
+		z-index: 6000;
+	}
+
+
 
   .content-area-wrapper {
     float: left;
@@ -384,10 +433,6 @@
     margin-left: 20%;
     margin-right: 30%;
     margin-bottom: 30%;
-  }
-
-  .first {
-    margin-top: 12%;
   }
 
   .portfolio-item {
@@ -410,6 +455,31 @@
     margin-bottom: 20px;
     font-size: 16px;
   }
+
+	.tooltip {
+	  display: none;
+	  opacity: 0;
+	  transition: opacity .15s;
+	  pointer-events: none;
+	  padding: 4px;
+	  z-index: 10000;
+
+	  .tooltip-content {
+	    background: black;
+	    color: white;
+	    border-radius: 8px;
+	    padding: 8px;
+			font-size: 16px;
+	  }
+
+	  &.tooltip-open-transitionend {
+	    display: block;
+	  }
+
+	  &.tooltip-after-open {
+	    opacity: 1;
+	  }
+	}
 
 
 </style>

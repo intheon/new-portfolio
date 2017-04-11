@@ -10,6 +10,7 @@
   "license": "MIT",
   "repository": "https://github.com/synthy2/springboard.git",
   "dependencies": {
+    "v-tooltip": "^1.1.6",
     "vue": "^2.1.0",
     "vue-date": "^1.1.2"
   },
