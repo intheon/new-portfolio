@@ -1,9 +1,7 @@
 // LIBS
 import Vue 									from "vue";
 
-import VTooltip from 'v-tooltip'
-
-Vue.use(VTooltip)
+import router 							from "./router/router.js";
 
 // CORE
 import App 									from "./components/App.vue";
@@ -12,4 +10,5 @@ import App 									from "./components/App.vue";
 new Vue({
 	el: "#app",
 	render: h => h(App),
+	router
 });
