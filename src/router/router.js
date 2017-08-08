@@ -20,6 +20,5 @@ const routes = [
 // initialise & export Instance
 export default new VueRouter({
 	base: __dirname + "/",
-	mode: 'history',
 	routes
 });;

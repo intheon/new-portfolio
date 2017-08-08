@@ -12,7 +12,9 @@
 			<!--<router-link to="/blog">Blog</router-link>-->
 			<router-link to="/portfolio">Portfolio</router-link>
 		</nav>
-		<router-view></router-view>
+		<transition name="fade" mode="out-in">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -165,6 +167,15 @@
 			text-align: justify;
 			color: #5f4140;
 		}
+
+		.fade-enter-active, .fade-leave-active {
+	  	transition: opacity .4s ease;
+		}
+		.fade-enter, .fade-leave-active {
+		  opacity: 0
+		}
+
+
 
 		@media(max-width: 1700px){
 			.content-area {
