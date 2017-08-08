@@ -1,13 +1,13 @@
 <template>
 	<div>
-    <div class="content-area-wrapper">
+    <div>
 			<div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
-      <section class="content-area">
+      <section class="content-area home">
         <h1>Howdy!</h1>
         <p>I'm Ben, developer of internets.</p>
-        <p>I focus on building web-based apps, mostly centered around dashboards and tools.</p>
-        <p>Building cross-platform is one of my strengths, as i do that in both my day job and for projects.</p>
-        <p>Take a look at my portfolio to see some of my work, or drop me a line and I'll get right back to you!<span v-bind:style="blink">_</span></p>
+        <p>I focus on building web-based apps - Projects to help make sense of large datasets and make them look aesthetically ace.</p>
+        <p>The Open Source community is an amazing asset, and I hope to give back by releasing constantly developed tools on my Github.</p>
+        <p>I'm currently freelancing and looking for work, so please take a look at my portfolio, or drop me a line on my contact page :D<span v-bind:style="blink">_</span></p>
       </section>
 		</div>
 	</div>
@@ -94,22 +94,8 @@ $fontColour: #575c64;
     background: purple;
   }
 
-  .portfolio-wrapping {
-    width: 388px;
-    height: 412px;
-    z-index: 5;
-    position: absolute;
-    transition: 1s all;
-    transition-timing-function: cubic-bezier;
-		right: 3px;
 
-  }
 
-  .portfolio-content {
-    z-index: 7;
-    margin-bottom: 512px;
-    padding-right: 380px;
-  }
 
   .inline-links {
     float: left;
@@ -151,52 +137,11 @@ $fontColour: #575c64;
 
 
 
-  .skate {
-    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
-    background: url("../../assets/img/skate.png");
-    background-size: cover;
-  }
-
-  .ed {
-    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
-    background: url("../../assets/img/ed.jpg");
-    background-size: cover;
-  }
-
-  .springboard {
-    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
-    background: url("../../assets/img/springboard.png");
-    background-size: cover;
-  }
-
-  .twitter {
-    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
-    background: url("../../assets/img/twitter.png");
-    background-size: cover;
-  }
-
-	.snap-scrolling-toggle-link {
-		position: fixed;
-		right: 0;
-		top: 0;
-		font-size: 24px;
-		background: none;
-		outline: none;
-		border: none;
-		margin: 16px;
-		margin-right: 64px;
-		z-index: 6000;
-	}
 
 
-
-
-  .portfolio-item {
-    margin-bottom: 512px;
-  }
 
   p, ul {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   ul {

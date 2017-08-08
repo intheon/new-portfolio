@@ -10,7 +10,8 @@ import Portfolio 				        from "../components/Portfolio/Portfolio.vue";
 
 // define routes
 const routes = [
-	{ path: "/", component: Home },
+	{ path: "/", redirect: "/home" },
+	{ path: "/home", component: Home },
 	{ path: "/about", component: About },
 	{ path: "/blog", component: Blog },
 	{ path: "/portfolio", component: Portfolio }

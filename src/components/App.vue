@@ -1,7 +1,13 @@
 <template>
 	<div>
+
+		<div class="website-logo">
+			<span class="logo-name">vohzd</span>
+			<span class="logo-tagline">software</span>
+		</div>
+
 		<nav class="top-right-nav">
-			<router-link to="/">Home</router-link>
+			<router-link to="/home">Home</router-link>
 			<router-link to="/about">About</router-link>
 			<!--<router-link to="/blog">Blog</router-link>-->
 			<router-link to="/portfolio">Portfolio</router-link>
@@ -36,7 +42,7 @@
 <style lang="scss">
 
   $background: #ffffff;
-  $fontColour: #575c64;
+  $fontColour: #1a130d;
   $masterFont: "Saira Semi Condensed", sans-serif;
 
 
@@ -63,40 +69,49 @@
   }
 
   h1 {
-    margin-bottom: 64px;
-    font-size: 80px;
+    margin-bottom: 32px;
+    font-size: 74px;
   }
 
   h2 {
     font-size: 44px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   h1, h2 {
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
 
 	.top-right-nav {
 		position: absolute;
 		top: 0;
 		right: 0;
-		margin: 16px;
+		margin-top: 42px;
+    margin-right: 37px;
 	}
 
-	.content-area-wrapper {
-		z-index: 100;
-		background: white;
+	.top-right-nav  a{
+		margin-right: 32px;
+	}
+
+	.router-link-active {
+		border-bottom: 1px solid;
+		color: #9d7660;
 	}
 
 
 	  .content-area {
-	    margin: 128px;
-			margin-left: 650px;
-			height: 100vh;
 			z-index: 100;
+			min-height: calc(100vh - 130px);
 			position: relative;
-			padding: 16px;
-			background: rgba(255,255,255,0.85);
+			background: rgba(26, 19, 13, 0.06);
+			width: auto;
+			padding-left: 630px;
+			padding-right: 650px;
+			margin-top: 128px;
+			border-top: 1px solid rgba(26, 19, 13, 0.1);
+			border-bottom: 1px solid rgba(26, 19, 13, 0.1);
+			text-align: justify;
 	  }
 
 		.big-triangle-wrapping-mask {
@@ -110,15 +125,56 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: 200;
 		}
 
 		a {
-			color: #9d7660;
+			color: #726e6c;
 			text-decoration: none;
 		}
 
 		a:hover{
 			color: #82718e;
+		}
+
+		.website-logo {
+			top: 0;
+			left: 0;
+			position: absolute;
+			z-index: 900;
+			margin:32px;
+			width: 200px;
+		}
+
+		.website-logo .logo-name {
+			display: block;
+			color: white;
+			line-height: 12px;
+			font-size: 25px;
+			color: #552a3f;
+
+		}
+
+		.website-logo .logo-tagline {
+			display: block;
+			font-size: 14px;
+			color: white;
+			letter-spacing: 1px;
+			line-height: 28px;
+			margin-left: 3px;
+			text-align: justify;
+			color: #5f4140;
+		}
+
+		@media(max-width: 1700px){
+			.content-area {
+				padding-left: 200px;
+				padding-right: 200px;
+			}
+
+			.home {
+				padding-left: 600px;
+			}
 		}
 
 		@media(max-width: 1240px){
@@ -130,17 +186,31 @@
 
 		@media(max-width: 1150px){
 			.content-area {
-				margin-left: 250px;
+				padding-left: 150px;
+			}
+			.big-triangle-wrapping-mask {
+				width: 450px;
+				height: 600px;
+			}
+			.home {
+				padding-left: 380px;
+				padding-right: 150px;
 			}
 		}
 
 		@media(max-width: 1000px){
 			.content-area {
-				margin-left: 200px;
+				padding-left: 100px;
+				padding-right: 100px;
+			}
+
+			.home {
+				padding-left: 310px;
+				padding-right: 110px;
 			}
 			.big-triangle-wrapping-mask {
-				width: 550px;
-				height: 700px;
+				width: 350px;
+				height: 500px;
 			}
 
 			.content-area h1 {
@@ -156,7 +226,7 @@
 			}
 
 			.portfolio-wrapping {
-				margin-top: -400px;
+				display: none;
 				width: 228px;
 				height: 382px;
 				right: 150px;
@@ -165,9 +235,12 @@
 		}
 
 		@media(max-width: 700px){
-
+			.big-triangle-wrapping-mask {
+				display: none;
+			}
 			.content-area {
-				margin-left: 100px;
+				padding-left: 50px;
+				padding-right: 50px;
 			}
 
 			.content-area h1 {

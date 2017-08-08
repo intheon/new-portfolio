@@ -152,4 +152,49 @@ export default {
 
 <style lang="scss">
 
+  .skate {
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../../assets/img/skate.png");
+    background-size: cover;
+  }
+
+  .ed {
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../../assets/img/ed.jpg");
+    background-size: cover;
+  }
+
+  .springboard {
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../../assets/img/springboard.png");
+    background-size: cover;
+  }
+
+  .twitter {
+    shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);
+    background: url("../../assets/img/twitter.png");
+    background-size: cover;
+  }
+
+  .portfolio-wrapping {
+    width: 388px;
+    height: 412px;
+    z-index: 5;
+    position: absolute;
+    transition: 1s all;
+    transition-timing-function: cubic-bezier;
+    right: 3px;
+
+  }
+
+  .portfolio-content {
+    z-index: 7;
+    width: 100%;
+
+  }
+  .portfolio-item {
+    margin-bottom: 384px;
+  }
+
+
 </style>
