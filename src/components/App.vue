@@ -1,19 +1,12 @@
 <template>
 	<div>
-
-		<div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
-
-
 		<nav class="top-right-nav">
-
 			<router-link to="/">Home</router-link>
 			<router-link to="/about">About</router-link>
 			<!--<router-link to="/blog">Blog</router-link>-->
-
+			<router-link to="/portfolio">Portfolio</router-link>
 		</nav>
-
 		<router-view></router-view>
-
 	</div>
 </template>
 
@@ -44,7 +37,8 @@
 
   $background: #ffffff;
   $fontColour: #575c64;
-  $masterFont: "Inconsolata", monospace;
+  $masterFont: "Saira Semi Condensed", sans-serif;
+
 
   html, body {
     margin: 0;
