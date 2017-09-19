@@ -8,6 +8,13 @@
         <p>I focus on building web-based apps - Projects to help make sense of large datasets and make them look aesthetically ace.</p>
         <p>The Open Source community is an amazing asset, and I hope to give back by releasing constantly developed tools on my Github.</p>
         <p>I'm currently freelancing and looking for work, so please take a look at my portfolio, or drop me a line on my contact page :D<span v-bind:style="blink">_</span></p>
+				<ul class="about-social-links">
+					<a href="https://github.com/vohzd" target="_blank"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
+					<a href="https://angel.co/vohzd" target="_blank"><li><i class="fa fa-angellist" aria-hidden="true"></i></i></li></a>
+					<a href="https://www.linkedin.com/in/benjamin-n-smith" target="_blank"><li><i class="fa fa-linkedin" aria-hidden="true"></i></i></li></a>
+					<a href="https://stackoverflow.com/users/3609943/vohzd" target="_blank"><li><i class="fa fa-stack-overflow" aria-hidden="true"></i></li></a>
+					<a href="https://twitter.com/vohzd" target="_blank"><li><i class="fa fa-twitter" aria-hidden="true"></i></i></li></a>
+				</ul>
       </section>
 		</div>
 	</div>
@@ -68,8 +75,6 @@ $fontColour: #575c64;
   }
 
 
-
-
   .inline-links {
     float: left;
     position: absolute;
@@ -99,6 +104,23 @@ $fontColour: #575c64;
     opacity: 0.7;
     cursor: pointer;
   }
+
+	.about-social-links{
+		margin: 0;
+		padding: 0;
+	}
+
+	.about-social-links li {
+		list-style: none;
+		display: inline;
+		font-size: 24px;
+		padding-right: 16px;
+	}
+
+	.about-social-links a:hover{
+		background: none;
+		color: #552a3f;
+	}
 
   .large {
     font-size: 48px;
