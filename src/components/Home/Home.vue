@@ -1,7 +1,7 @@
 <template>
 	<div>
     <div>
-			<div class="big-triangle-wrapping-mask" v-bind:style="dynamicTriangleOne"></div>
+			<div class="big-triangle-wrapping-mask first-bg" v-bind:style="dynamicTriangleOne"></div>
       <section class="content-area home">
         <h1>Howdy!</h1>
         <p>I'm Ben, developer of internets.</p>
@@ -57,34 +57,7 @@
 
 $background: #ffffff;
 $fontColour: #575c64;
-  /*
-    .background-triangle-left {
-      width: 1200px;
-      height: 1200px;
-      display: inline-block;
-      float: left;
-      z-index: 100;
-      background: white;
-      position: fixed;
-      top: -1300px;
-      left: -900px;
-      transform: rotate(-45deg);
-    }
 
-    */
-
-  .background-triangle-right {
-    width: 1700px;
-    height: 1100px;
-    display: inline-block;
-    float: right;
-    z-index: 100;
-    background: white;
-    position: fixed;
-    transform: rotate(40deg);
-    top: -600px;
-    right: -1000px;
-  }
 
   .nav-item-link:nth-child(even) {
     background: purple;
@@ -134,11 +107,6 @@ $fontColour: #575c64;
   .small {
     font-size: 42px;
   }
-
-
-
-
-
 
   p, ul {
     font-size: 21px;

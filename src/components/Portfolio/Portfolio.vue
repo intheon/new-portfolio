@@ -1,13 +1,15 @@
 <template>
+
 	<div class="content-area-wrapper">
+			<div class="big-triangle-wrapping-mask third-bg" v-bind:style="dynamicTriangleOne"></div>
       <section class="content-area">
 	      <h1>Portfolio</h1>
         <section class="portfolio-item">
           <div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>
           <div class="portfolio-content">
             <div class="inline-links">
-              <a href="https://github.com/synthy2/skateLocate-angular/tree/winter-2016-update" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/vohzd/skatelocate" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+              <a href="http://vohzd.com/software/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
             <h2>Skate Locate</h2>
             <p>A pretty modern website as far as the technology is concerned.</p>
@@ -101,6 +103,7 @@
 export default {
   data(){
     return {
+			numberOne: 99,
       numberTwo: 130,
       numberThree: 7,
       numberFour: 5,
@@ -109,6 +112,11 @@ export default {
     }
   },
   computed: {
+		dynamicTriangleOne(){
+			return {
+				"clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% ${this.numberOne}%)`
+			}
+		},
     dynamicTriangleTwo(){
       return {
         "clip-path": `polygon(${this.numberTwo}% ${this.numberThree}%, ${this.numberThree}% ${this.numberFour}%, ${this.numberFive}% ${this.numberTwo}%)`
@@ -133,6 +141,7 @@ export default {
   methods: {
     animateTriangles(){
       setInterval(() => {
+				this.numberOne = Math.floor(Math.random()*(100-97)+97);
         this.numberSix  = Math.floor(Math.random()*(2-1)+1);
       }, 2500);
       setInterval(() => {
@@ -144,7 +153,7 @@ export default {
     }
   },
   mounted(){
-    animateTriangles()
+    this.animateTriangles()
   }
 }
 
@@ -195,6 +204,8 @@ export default {
   .portfolio-item {
     margin-bottom: 384px;
   }
+
+
 
 
 </style>

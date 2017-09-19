@@ -12,9 +12,9 @@
 			<!--<router-link to="/blog">Blog</router-link>-->
 			<router-link to="/portfolio">Portfolio</router-link>
 		</nav>
-		<transition name="fade" mode="out-in">
+		<!--<transition name="slide-left" mode="in-out">-->
 			<router-view></router-view>
-		</transition>
+		<!--</transition>-->
 	</div>
 </template>
 
@@ -45,6 +45,7 @@
 
   $background: #ffffff;
   $fontColour: #1a130d;
+	$headerColour: #552a3f;
   $masterFont: "Saira Semi Condensed", sans-serif;
 
 
@@ -59,6 +60,7 @@
     font-family: $masterFont;
     font-size: 24px;
 		overflow-x: hidden;
+		overflow-y:scroll;
   }
 
   .blink {
@@ -73,6 +75,7 @@
   h1 {
     margin-bottom: 32px;
     font-size: 74px;
+		color: $headerColour;
   }
 
   h2 {
@@ -88,12 +91,16 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		margin-top: 42px;
-    margin-right: 37px;
+		float: left;
 	}
 
-	.top-right-nav  a{
-		margin-right: 32px;
+	.top-right-nav a {
+		padding: 16px;
+		background: rgba(0,0,0,0.05);
+		float: left;
+		line-height: 123px;
+		border-left: 1px solid rgba(26, 19, 13, 0.06);
+		border-bottom: 1px solid rgba(26, 19, 13, 0.06);
 	}
 
 	.router-link-active {
@@ -104,31 +111,21 @@
 
 	  .content-area {
 			z-index: 100;
-			min-height: calc(100vh - 130px);
+			min-height: calc(100vh - 258px);
 			position: relative;
 			background: rgba(26, 19, 13, 0.06);
 			width: auto;
 			padding-left: 630px;
 			padding-right: 650px;
-			margin-top: 128px;
+			padding-top: 100px;
+			margin-top: 156px;
 			border-top: 1px solid rgba(26, 19, 13, 0.1);
 			border-bottom: 1px solid rgba(26, 19, 13, 0.1);
 			text-align: justify;
+			letter-spacing: 1px;
+
 	  }
 
-		.big-triangle-wrapping-mask {
-			width: 750px;
-			height: 900px;
-			//shape-outside: polygon(0% 0%, 100% 0%, 0% 120%);
-			margin-right: 256px;
-			background: url("../assets/img/bg.jpg");
-			background-size: cover;
-			transition: 1s all;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 200;
-		}
 
 		a {
 			color: #726e6c;
@@ -137,42 +134,76 @@
 
 		a:hover{
 			color: #82718e;
+			background: rgba(0,0,0,0.08);
 		}
 
 		.website-logo {
 			top: 0;
-			left: 0;
-			position: absolute;
-			z-index: 900;
-			margin:32px;
-			width: 200px;
+	    left: 0;
+	    position: absolute;
+	    z-index: 900;
+	    margin: 32px;
+	    width: 96px;
+	    height: 96px;
+	    background:   rgba(255, 241, 248, 0.78);
+	    line-height: 96px;
+	    border-radius: 50%;
 		}
 
 		.website-logo .logo-name {
 			display: block;
-			color: white;
-			line-height: 12px;
+			line-height: 77px;
 			font-size: 25px;
-			color: #552a3f;
-
+			color: $headerColour;
+			text-align: center;
 		}
 
 		.website-logo .logo-tagline {
 			display: block;
 			font-size: 14px;
-			color: white;
 			letter-spacing: 1px;
-			line-height: 28px;
+			line-height: 0px;
 			margin-left: 3px;
-			text-align: justify;
+			text-align: center;
 			color: #5f4140;
+			margin-top: -21px;
 		}
 
-		.fade-enter-active, .fade-leave-active {
-	  	transition: opacity .4s ease;
+		.slide-left-enter-active, .slide-left-leave-active {
+	  	transition: all 0.6s ease-out;
 		}
-		.fade-enter, .fade-leave-active {
-		  opacity: 0
+		.slide-left-enter, .slide-left-leave-active {
+			margin-left:-3000px;
+		}
+
+		.big-triangle-wrapping-mask {
+			width: 750px;
+			height: 900px;
+			shape-outside: polygon(0% 0%, 100% 0%, 0% 120%);
+			margin-right: 256px;
+			transition: 1s all;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+		}
+
+		.first-bg {
+			background: url("../assets/img/bg.jpg");
+			background-size: cover;
+		}
+
+		.second-bg {
+			background: url("../assets/img/about.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.third-bg {
+			background: url("../assets/img/portfolio.jpg");
+			background-size: cover;
+			background-position: center;
+
 		}
 
 

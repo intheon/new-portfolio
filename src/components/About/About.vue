@@ -1,6 +1,6 @@
 <template>
 	<div class="content-area-wrapper">
-
+		<div class="big-triangle-wrapping-mask second-bg" v-bind:style="dynamicTriangleOne"></div>
 		<section class="content-area">
 			<h1>About</h1>
 			<p>I've been doing web development stuff for a good 10/11 years now.</p>
@@ -16,9 +16,26 @@
 <script>
 
 	export default {
+		data() {
+			return {
+				numberOne: 99,
+				display: "none",
+			}
+		},
+		computed: {
+			dynamicTriangleOne(){
+				return {
+					"clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% ${this.numberOne}%)`
+				}
+			}
+		},
+		mounted(){
+			setInterval(() => {
+				this.numberOne = Math.floor(Math.random()*(100-97)+97);
+			}, 2500);
+		}
 	}
 </script>
 
 <style lang="scss">
-
 </style>
