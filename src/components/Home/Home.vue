@@ -2,7 +2,7 @@
 	<div>
     <div>
 			<div class="big-triangle-wrapping-mask first-bg" v-bind:style="dynamicTriangleOne"></div>
-      <section class="content-area home">
+      <section class="content-area left-pad">
         <h1>Howdy!</h1>
         <p>I'm Ben, developer of internets.</p>
         <p>I focus on building web-based apps - Projects to help make sense of large datasets and make them look aesthetically ace.</p>
@@ -81,6 +81,7 @@ $fontColour: #575c64;
     margin-left: 384px;
     margin-top: -8px;
     font-size: 20px;
+		width: 50%;
   }
 
   .link {
@@ -96,7 +97,7 @@ $fontColour: #575c64;
   }
 
   .inline-links a {
-    color: $fontColour;
+    color: #552a3f;
     text-decoration: none;
   }
 

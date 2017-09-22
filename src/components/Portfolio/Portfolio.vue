@@ -2,7 +2,7 @@
 
 	<div class="content-area-wrapper">
 			<div class="big-triangle-wrapping-mask third-bg" v-bind:style="dynamicTriangleOne"></div>
-      <section class="content-area">
+      <section class="content-area left-pad">
 	      <h1>Portfolio</h1>
         <section class="portfolio-item">
           <div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>

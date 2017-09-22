@@ -103,10 +103,7 @@
 		border-bottom: 1px solid rgba(26, 19, 13, 0.06);
 	}
 
-	.router-link-active {
-		border-bottom: 1px solid;
-		color: #9d7660;
-	}
+
 
 
 	  .content-area {
@@ -133,8 +130,15 @@
 		}
 
 		a:hover{
-			color: #82718e;
+			color: #552a3f;
 			background: rgba(0,0,0,0.08);
+		}
+
+
+		.router-link-active {
+			border-bottom: 1px solid;
+			background: rgba(0,0,0,0.1) !important;
+			color: #9d7660;
 		}
 
 		.website-logo {
@@ -214,9 +218,14 @@
 				padding-right: 200px;
 			}
 
-			.home {
+			.left-pad {
 				padding-left: 600px;
 			}
+
+			.portfolio-wrapping {
+				display: none;
+			}
+			
 		}
 
 		@media(max-width: 1240px){
@@ -224,6 +233,8 @@
 				width: 650px;
 				height: 800px;
 			}
+
+
 		}
 
 		@media(max-width: 1150px){
@@ -234,7 +245,7 @@
 				width: 450px;
 				height: 600px;
 			}
-			.home {
+			.left-pad {
 				padding-left: 380px;
 				padding-right: 150px;
 			}
@@ -246,7 +257,7 @@
 				padding-right: 100px;
 			}
 
-			.home {
+			.left-pad {
 				padding-left: 310px;
 				padding-right: 110px;
 			}

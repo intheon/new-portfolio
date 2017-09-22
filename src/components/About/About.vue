@@ -1,7 +1,7 @@
 <template>
 	<div class="content-area-wrapper">
 		<div class="big-triangle-wrapping-mask second-bg" v-bind:style="dynamicTriangleOne"></div>
-		<section class="content-area">
+		<section class="content-area left-pad">
 			<h1>About</h1>
 			<p>I've been doing web development stuff for a good 10/11 years now.</p>
 			<p>I have returned from the land of Vietnam, having been traveling there over the previous 2 months, and have just returned.</p>
