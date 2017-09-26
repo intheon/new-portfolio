@@ -1,20 +1,16 @@
 <template>
 	<div>
-
+		<nav class="top-left-nav">
+			<router-link to="/home">Home</router-link>
+			<router-link to="/about">About</router-link>
+			<router-link to="/blog">Blog</router-link>
+			<router-link to="/portfolio">Portfolio</router-link>
+		</nav>
 		<div class="website-logo">
 			<span class="logo-name">vohzd</span>
 			<span class="logo-tagline">software</span>
 		</div>
-
-		<nav class="top-right-nav">
-			<router-link to="/home">Home</router-link>
-			<router-link to="/about">About</router-link>
-			<!--<router-link to="/blog">Blog</router-link>-->
-			<router-link to="/portfolio">Portfolio</router-link>
-		</nav>
-		<!--<transition name="slide-left" mode="in-out">-->
-			<router-view></router-view>
-		<!--</transition>-->
+		<router-view></router-view>
 	</div>
 </template>
 
@@ -29,13 +25,13 @@
 		computed: {
 			dynamicTriangleOne(){
 				return {
-					"clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% ${this.numberOne}%)`
+					"clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% 210%)`
 				}
 			}
 		},
 		mounted(){
 			setInterval(() => {
-				this.numberOne = Math.floor(Math.random()*(100-97)+97);
+				this.numberOne = Math.floor(Math.random()*(100-92)+92);
 			}, 2500);
 		}
 	}
@@ -87,41 +83,31 @@
     letter-spacing: 2px;
   }
 
-	.top-right-nav {
-		position: absolute;
+	.top-left-nav {
+		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		float: left;
+		z-index: 8888;
 	}
 
-	.top-right-nav a {
-		padding: 16px;
-		background: rgba(0,0,0,0.05);
+	.top-left-nav a {
+		padding: 28px;
 		float: left;
-		line-height: 123px;
-		border-left: 1px solid rgba(26, 19, 13, 0.06);
-		border-bottom: 1px solid rgba(26, 19, 13, 0.06);
+		line-height: 64px;
+		background: rgba(0,0,0,0.3);
 	}
 
-
-
-
-	  .content-area {
-			z-index: 100;
-			min-height: calc(100vh - 258px);
-			position: relative;
-			background: rgba(26, 19, 13, 0.06);
-			width: auto;
-			padding-left: 630px;
-			padding-right: 650px;
-			padding-top: 100px;
-			margin-top: 156px;
-			border-top: 1px solid rgba(26, 19, 13, 0.1);
-			border-bottom: 1px solid rgba(26, 19, 13, 0.1);
-			text-align: justify;
-			letter-spacing: 1px;
-
-	  }
+  .content-area {
+		z-index: 100;
+		position: relative;
+		width: auto;
+		padding-left: 630px;
+		padding-right: 650px;
+		padding-top: 100px;
+		margin-top: 100px;
+		letter-spacing: 1px;
+  }
 
 
 		a {
@@ -136,22 +122,24 @@
 
 
 		.router-link-active {
-			border-bottom: 1px solid;
-			background: rgba(0,0,0,0.1) !important;
+
+			border-bottom: 1px inset;
 			color: #9d7660;
+			line-height: 63px !important;
+
 		}
 
 		.website-logo {
 			top: 0;
-	    left: 0;
-	    position: absolute;
+	    right: 0;
+	    position: fixed;
 	    z-index: 900;
 	    margin: 32px;
 	    width: 96px;
 	    height: 96px;
-	    background:   rgba(255, 241, 248, 0.78);
 	    line-height: 96px;
 	    border-radius: 50%;
+			background: rgba(255,255,255,0.6);
 		}
 
 		.website-logo .logo-name {
@@ -183,10 +171,10 @@
 		.big-triangle-wrapping-mask {
 			width: 750px;
 			height: 900px;
-			shape-outside: polygon(0% 0%, 100% 0%, 0% 120%);
+			shape-outside: polygon(0% 0%, 92% 0%, 0% 210%);
 			margin-right: 256px;
 			transition: 1s all;
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
 			z-index: 200;
@@ -225,7 +213,7 @@
 			.portfolio-wrapping {
 				display: none;
 			}
-			
+
 		}
 
 		@media(max-width: 1240px){
