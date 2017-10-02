@@ -8,9 +8,9 @@
         <p>I focus on building web-based apps - Projects to help make sense of large datasets and make them look aesthetically ace.</p>
         <p>The Open Source community is an amazing asset, and I hope to give back by releasing constantly developed tools on my Github.</p>
         <p>I'm currently freelancing and looking for work, so please take a look at my portfolio, or drop me a line on my contact page :D<span v-bind:style="blink">_</span></p>
-				<div class="available-star">
+				<!--<div class="available-star">
 					Available for hire!!
-				</div>
+				</div>-->
 				<ul class="about-social-links">
 					<a href="https://github.com/vohzd" target="_blank"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
 					<a href="https://angel.co/vohzd" target="_blank"><li><i class="fa fa-angellist" aria-hidden="true"></i></i></li></a>
@@ -76,7 +76,7 @@ $fontColour: #575c64;
 		border-bottom: 100px solid red;
 		position: relative;
 	 }
-	 
+
 	 .available-star:after {
 		width: 0;
 		height: 0;
