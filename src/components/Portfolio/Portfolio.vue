@@ -174,7 +174,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
   .skate {
     shape-outside: polygon(110% 0%, 10% 50%, 90% 70%);

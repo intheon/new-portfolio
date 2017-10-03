@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
 $background: #ffffff;
 $fontColour: #575c64;
