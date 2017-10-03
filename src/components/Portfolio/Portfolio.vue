@@ -1,7 +1,9 @@
 <template>
 
 	<div class="content-area-wrapper">
-			<div class="big-triangle-wrapping-mask third-bg" v-bind:style="dynamicTriangleOne"></div>
+		<div class="top-left-image">
+			<img src="../../assets/img/portfolio.png">
+		</div>
       <section class="content-area left-pad">
 	      <h1>Portfolio</h1>
         <section class="portfolio-item">
@@ -9,8 +11,9 @@
           <div class="portfolio-content">
             <div class="inline-links">
               <a href="https://github.com/vohzd/skatelocate" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="http://vohzd.com/software/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://vohzd.com/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
             </div>
+						<div class="count">1</div>
             <h2>Skate Locate</h2>
             <p>A pretty modern website as far as the technology is concerned.</p>
             <p>Add, view, and filter skateparks in your area of interest.</p>
@@ -27,15 +30,53 @@
 					<div class="portfolio-wrapping skate" v-bind:style="dynamicTriangleTwo"></div>
 					<div class="portfolio-content">
 						<div class="inline-links">
-							<a href="https://github.com/vohzd/skatelocate" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-							<a href="http://vohzd.com/software/skatelocate" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+							<a href="https://badluckcollective.co.uk" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
 						</div>
+						<div class="count">2</div>
 						<h2>Bad Luck Collective</h2>
 						<p>A boutique marketplace.</p>
 						<p>Built to allow small vendors sell their stuff with minimal hassle.</p>
 						<ul>
-							<li>Custom Wordpress plugin</li>
+							<li>Custom Wordpress plugin.</li>
 							<li>Auto builds a mini-Wordpress site when the site owner greenlights a seller.</li>
+							<li>Deployed over SSL onto a traditional Apache/PHP setup.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="portfolio-item">
+					<div class="portfolio-wrapping springboard" v-bind:style="dynamicTriangleFour"></div>
+					<div class="portfolio-content">
+						<div class="inline-links">
+							<a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+							<a href="https://vohzd/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+						</div>
+						<div class="count">3</div>
+						<h2>Springboard</h2>
+						<p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
+						<p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
+						<ul>
+							<li>A dual integration between Googles Federated login which passes tokens to Firebase</li>
+							<li>It will retreive your profile from Firebase, but also write to your Google Calendar</li>
+							<li>Heavy use VueJS, Webpack 3, and SASS.</li>
+							<li>Custom look and feel and fully mobile friendly.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="portfolio-item">
+					<div class="portfolio-wrapping springboard" v-bind:style="dynamicTriangleFour"></div>
+					<div class="portfolio-content">
+						<div class="inline-links">
+							<a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+							<a href="https://vohzd/lepalland" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+						</div>
+						<div class="count">4</div>
+						<h2>Le Palland</h2>
+						<p>Wordpress Booking system for my friends parents' guesthouse.</p>
+						<p>Gotta handle those bookings somehow!</p>
+						<ul>
+							<li>Custom Wordpress theme.</li>
+							<li>Deployed with SEO optimisation in mind.</li>
+							<li>Has a payment portal to handle bookings and let guest know if that booking is available.</li>
 						</ul>
 					</div>
 				</section>
@@ -43,9 +84,9 @@
           <div class="portfolio-wrapping ed" v-bind:style="dynamicTriangleThree"></div>
           <div class="portfolio-content">
             <div class="inline-links">
-              <a href="https://github.com/synthy2/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/ed" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
+              <a href="https://github.com/vohzd/ed" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
             </div>
+						<div class="count">5</div>
             <h2>Ed Hall Audio</h2>
             <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
             <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
@@ -57,59 +98,17 @@
             </ul>
           </div>
         </section>
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping springboard" v-bind:style="dynamicTriangleFour"></div>
-          <div class="portfolio-content">
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/springboard" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/springboard" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
-            <h2>Springboard</h2>
-            <p>Google used to offer a personalised dashboard called iGoogle but discontinued it, so I made my own.</p>
-            <p>Most complex piece of software I've written from scratch, allows you to have persistent modules that each have their own unique state. You can view your emails, todo's, keep track of your spending etc!</p>
-            <ul>
-              <li>REST API Backend to interact with database</li>
-              <li>Multi-user system with states for each widget</li>
-              <li>Heavy use of JavaScript and PHP for some wizardry</li>
-              <li>Semantic UI to make it look pretty</li>
-            </ul>
-          </div>
-        </section>
-        <section class="portfolio-item">
-          <div class="portfolio-wrapping twitter" v-bind:style="dynamicTriangleFive"></div>
-          <div class="portfolio-content">
-            <div class="inline-links">
-              <a href="https://github.com/synthy2/twitter-sentimental" target="_blank"><div class="link large"><i class="fa fa-github" aria-hidden="true"></i></div></a>
-              <a href="https://intheon.uk/twitter" target="_blank"><div class="link small"><i class="fa fa-link" aria-hidden="true"></i></div></a>
-            </div>
-            <h2>Semantic Twitter</h2>
-            <p>An example of what happens when you mash up web API's</p>
-            <p>Asks the user for a string, and uses the Twitter API to retreive that from their DB, then crams it through 'Semantic API' to tell you what the users feeling is.</p>
-            <ul>
-              <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
-              <li>Displays users results as soon as they have been parsed</li>
-            </ul>
-          </div>
-        </section>
-        <section class="portfolio-item">
-          <h2>Grammatical Numbers</h2>
-          <p>A pretty modern website as far as the technology is concerned.</p>
-          <p>Add, view, and filter skateparks in your area of interest</p>
-          <ul>
-            <li>Ajax based system which uses the Twitter API, and Semantic UI</li>
-            <li>Displays users results as soon as they have been parsed</li>
-          </ul>
-        </section>
-        <section class="portfolio-item">
-          <h2>Promo Codes Generator</h2>
-          <p>I needed to generate promo codes for a client so they could distribute out free log in's for their magazine.</p>
-          <p>Rather than user excel, i made this service as I no doubt will need it again</p>
-          <ul>
-            <li>Random code generator using chance.js</li>
-            <li>Allows selection of quantity of codes</li>
-            <li>Some wizardry to allow the user to download to a csv</li>
-          </ul>
-        </section>
+				<section class="portfolio-item">
+					<div class="count">6</div>
+					<h2>Older Projects</h2>
+					<p>I've done a lot of different projects over the years, so there's almost too many to list.</p>
+					<p>A sample of some of my older bits and pieces can be found here:</p>
+					<ul>
+						<li><a href="https://vohzd.com/twitter">A mashup of the Twitter API and a Semantic API which searches Twitter for your string, and reads the tweet and tells you if it's happy, sad, or neutral!</a></li>
+						<li><a href="https://vohzd.com/promo">A tool to randomly generate promotional codes (originally used for book redemption tokens)</a></li>
+						<li><a href="https://vohzd.com/grammatical">A tool to help convert any number from 0 -> 1000 into it's grammatically correct word.</a></li>
+					</ul>
+				</section>
       </section>
 	</div>
 </template>
@@ -220,6 +219,21 @@ export default {
   .portfolio-item {
     margin-bottom: 384px;
   }
+
+
+	.count {
+		font-size: 64px;
+		position: absolute;
+		margin-left: -200px;
+		margin-top: 200px;
+		color: rgba(0,0,0,0.3);
+		background: rgba(0,0,0,0.1);
+		line-height: 128px;
+		border-radius: 50%;
+		text-align: center;
+		width: 128px;
+		height: 128px;
+	}
 
 
 

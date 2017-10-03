@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<nav class="top-left-nav">
+	<div class="float">
+		<nav class="navigation">
 			<router-link to="/home">Home</router-link>
 			<router-link to="/about">About</router-link>
 			<router-link to="/blog">Blog</router-link>
@@ -15,26 +15,8 @@
 </template>
 
 <script>
-
-	export default {
-		data() {
-			return {
-				numberOne: 99,
-			}
-		},
-		computed: {
-			dynamicTriangleOne(){
-				return {
-					"clip-path": `polygon(0% 0%, ${this.numberOne}% 0%, 0% 210%)`
-				}
-			}
-		},
-		mounted(){
-			setInterval(() => {
-				this.numberOne = Math.floor(Math.random()*(100-92)+92);
-			}, 2500);
-		}
-	}
+export default {
+}
 </script>
 
 <style lang="scss">
@@ -43,7 +25,6 @@
   $fontColour: #1a130d;
 	$headerColour: #552a3f;
   $masterFont: "Saira Semi Condensed", sans-serif;
-
 
   html, body {
     margin: 0;
@@ -68,6 +49,10 @@
     padding: 0;
   }
 
+	.float {
+		float: left;
+	}
+
   h1 {
     margin-bottom: 32px;
     font-size: 74px;
@@ -83,51 +68,57 @@
     letter-spacing: 2px;
   }
 
-	.top-left-nav {
+	.navigation {
 		position: fixed;
 		top: 0;
 		left: 0;
 		float: left;
 		z-index: 8888;
+		height: 50%;
+		padding-top: 473px;
+		width: 255px;
+		background: #ededed;
 	}
 
-	.top-left-nav a {
+	.navigation a {
 		padding: 28px;
 		float: left;
 		line-height: 64px;
-		background: rgba(0,0,0,0.3);
+		width: calc(100% - 56px);
 	}
 
   .content-area {
 		z-index: 100;
 		position: relative;
 		width: auto;
-		padding-left: 630px;
+		padding-left: 542px;
 		padding-right: 650px;
-		padding-top: 100px;
-		margin-top: 100px;
+		margin-top: 60px;
 		letter-spacing: 1px;
   }
 
+	.top-left-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
 
-		a {
-			color: #726e6c;
-			text-decoration: none;
-		}
+	}
 
-		a:hover{
-			color: #552a3f;
-			background: rgba(0,0,0,0.08);
-		}
+	a {
+		color: #726e6c;
+		text-decoration: none;
+	}
 
+	a:hover{
+		color: #552a3f;
+		background: rgba(0,0,0,0.03);
+	}
 
-		.router-link-active {
-
-			border-bottom: 1px inset;
-			color: #9d7660;
-			line-height: 63px !important;
-
-		}
+	.router-link-active {
+		color: #9d7660;
+		line-height: 63px !important;
+	}
 
 		.website-logo {
 			top: 0;
@@ -168,38 +159,6 @@
 			margin-left:-3000px;
 		}
 
-		.big-triangle-wrapping-mask {
-			width: 750px;
-			height: 900px;
-			shape-outside: polygon(0% 0%, 92% 0%, 0% 210%);
-			margin-right: 256px;
-			transition: 1s all;
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 200;
-		}
-
-		.first-bg {
-			background: url("../assets/img/bg.jpg");
-			background-size: cover;
-		}
-
-		.second-bg {
-			background: url("../assets/img/about.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-
-		.third-bg {
-			background: url("../assets/img/portfolio.jpg");
-			background-size: cover;
-			background-position: center;
-
-		}
-
-
-
 		@media(max-width: 1700px){
 			.content-area {
 				padding-left: 200px;
@@ -216,22 +175,23 @@
 
 		}
 
-		@media(max-width: 1240px){
-			.big-triangle-wrapping-mask {
-				width: 650px;
-				height: 800px;
+		@media(max-width: 1340px){
+			.content-area {
+				padding-top: 190px;
+				padding-left: 420px;
 			}
-
-
 		}
 
 		@media(max-width: 1150px){
 			.content-area {
-				padding-left: 150px;
+				padding-top: 260px;
+				padding-left: 180px;
 			}
-			.big-triangle-wrapping-mask {
-				width: 450px;
-				height: 600px;
+			.content-area h1 {
+				font-size: 37px;
+			}
+			.content-area h2 {
+				font-size: 32px;
 			}
 			.left-pad {
 				padding-left: 380px;
@@ -241,6 +201,7 @@
 
 		@media(max-width: 1000px){
 			.content-area {
+				padding-top: 350px;
 				padding-left: 100px;
 				padding-right: 100px;
 			}
@@ -248,14 +209,6 @@
 			.left-pad {
 				padding-left: 310px;
 				padding-right: 110px;
-			}
-			.big-triangle-wrapping-mask {
-				width: 350px;
-				height: 500px;
-			}
-
-			.content-area h1 {
-				font-size: 35px;
 			}
 
 			.content-area p {
@@ -275,10 +228,46 @@
 
 		}
 
-		@media(max-width: 700px){
-			.big-triangle-wrapping-mask {
+		@media(max-width: 771px){
+
+			.content-area {
+				padding-top: 64px;
+			}
+
+			.navigation {
+				position: fixed;
+				top: 0;
+				left: 0;
+				float: left;
+				z-index: 8888;
+				height: 64px;
+				padding-top: 0px;
+				width: 100%;
+				background: #ededed;
+			}
+
+			.navigation a {
+				padding: 15px;
+				float: none;
+				width: auto;
+			}
+
+			.top-left-image {
 				display: none;
 			}
+
+			.website-logo {
+				display: none;
+			}
+
+			.inline-links {
+				margin-left: 406px;
+			}
+
+			.link {
+				margin-right: 16px;
+			}
+
 			.content-area {
 				padding-left: 50px;
 				padding-right: 50px;
@@ -290,6 +279,39 @@
 
 			.content-area p {
 				font-size: 17px;
+			}
+		}
+
+		@media(max-width: 540px){
+
+			.content-area h2 {
+				font-size: 24px;
+			}
+			.inline-links {
+				margin-left: 240px;
+			}
+
+			.link {
+				margin-right: 8px;
+			}
+		}
+
+		@media(max-width: 450px){
+
+			.navigation {
+				font-size: 18px;
+			}
+
+			.content-area h2 {
+				font-size: 18px;
+			}
+			.inline-links {
+				display: none;
+				margin-left: 130px;
+			}
+
+			.link {
+				margin-right: 8px;
 			}
 		}
 
