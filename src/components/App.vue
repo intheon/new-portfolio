@@ -1,15 +1,17 @@
 <template>
 	<div class="float">
 		<nav class="navigation">
-			<router-link to="/home">Home</router-link>
+			<router-link to="/home">
+				<div class="website-logo">
+					<img src="../assets/img/admin.png" class="me"/>
+					<span class="logo-name">vohzd<span class="logo-tagline">software</span></span>
+				</div>
+			</router-link>
 			<router-link to="/about">About</router-link>
 			<router-link to="/blog">Blog</router-link>
 			<router-link to="/portfolio">Portfolio</router-link>
 		</nav>
-		<div class="website-logo">
-			<span class="logo-name">vohzd</span>
-			<span class="logo-tagline">software</span>
-		</div>
+
 		<router-view></router-view>
 	</div>
 </template>
@@ -74,10 +76,10 @@ export default {
 		left: 0;
 		float: left;
 		z-index: 8888;
-		height: 50%;
-		padding-top: 473px;
+		height: 100vh;
+		padding-top: 25%;
 		width: 255px;
-		background: #ededed;
+		background: rgba(237, 237, 237, 0.9);
 	}
 
 	.navigation a {
@@ -93,17 +95,21 @@ export default {
 		width: auto;
 		padding-left: 542px;
 		padding-right: 650px;
-		margin-top: 60px;
 		letter-spacing: 1px;
+		padding-top: 12%;
   }
 
-	.top-left-image {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 9999;
-
+	.bg-image img{
+		position: fixed;
+		z-index: 1;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		float: left;
 	}
+
 
 	a {
 		color: #726e6c;
@@ -116,41 +122,38 @@ export default {
 	}
 
 	.router-link-active {
-		color: #9d7660;
+		color: #552a3f;
 		line-height: 63px !important;
+		background: rgba(0,0,0,0.03);
+
 	}
 
-		.website-logo {
-			top: 0;
-	    right: 0;
-	    position: fixed;
-	    z-index: 900;
-	    margin: 32px;
-	    width: 96px;
-	    height: 96px;
-	    line-height: 96px;
-	    border-radius: 50%;
-			background: rgba(255,255,255,0.6);
-		}
+	.website-logo {
+		float: left;
+	}
 
-		.website-logo .logo-name {
-			display: block;
-			line-height: 77px;
-			font-size: 25px;
-			color: $headerColour;
-			text-align: center;
-		}
+	.website-logo img {
+		float: left;
+	}
 
-		.website-logo .logo-tagline {
-			display: block;
-			font-size: 14px;
-			letter-spacing: 1px;
-			line-height: 0px;
-			margin-left: 3px;
-			text-align: center;
-			color: #5f4140;
-			margin-top: -21px;
-		}
+	.website-logo .logo-name {
+		line-height: 64px;
+		font-size: 22px;
+		text-align: center;
+		float: left;
+		width: 44%;
+	}
+
+	.website-logo .logo-tagline {
+		font-size: 12px;
+		letter-spacing: 1px;
+		line-height: 0px;
+		margin-left: 17px;
+		text-align: center;
+		color: #5f4140;
+		margin-top: -21px;
+		float: left;
+	}
 
 		.slide-left-enter-active, .slide-left-leave-active {
 	  	transition: all 0.6s ease-out;

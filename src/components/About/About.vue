@@ -1,7 +1,7 @@
 <template>
 	<div class="content-area-wrapper">
-		<div class="top-left-image">
-			<img src="../../assets/img/about.png">
+		<div class="bg-image">
+			<img src="../../assets/img/about.jpg">
 		</div>
 		<section class="content-area left-pad">
 			<h1>About</h1>

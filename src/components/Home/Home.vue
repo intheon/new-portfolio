@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div class="top-left-image">
-			<img src="../../assets/img/home.png">
+		<div class="bg-image">
+			<img src="../../assets/img/home.jpg">
 		</div>
     <section class="content-area left-pad">
       <h1>Howdy!</h1>
-      <p>I'm Ben, developer of internets.<img src="../../assets/img/admin.png" class="me"></p>
+      <p>I'm Ben, developer of internets.</p>
       <p>I focus on building web-based apps - Projects to help make sense of large datasets and make them look aesthetically ace.</p>
       <p>I'm currently freelancing, so could very well help you if you've got something in the works.</p>
 			<p>Check out my <router-link to="/portfolio">portfolio</router-link> for projects I've recently done for both clients and myself. :D<span v-bind:style="blink">_</span></p>
@@ -100,8 +100,7 @@ $fontColour: #575c64;
 		width: 64px;
 		height: 64px;
 		border-radius: 50%;
-		margin-top: -64px;
-		margin-left: 32px;
+
 	}
 
   .large {

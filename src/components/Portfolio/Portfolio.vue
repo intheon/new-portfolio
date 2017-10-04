@@ -1,8 +1,8 @@
 <template>
 
 	<div class="content-area-wrapper">
-		<div class="top-left-image">
-			<img src="../../assets/img/portfolio.png">
+		<div class="bg-image">
+			<img src="../../assets/img/bg.jpg">
 		</div>
       <section class="content-area left-pad">
 	      <h1>Portfolio</h1>

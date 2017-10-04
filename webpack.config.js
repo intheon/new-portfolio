@@ -1,14 +1,14 @@
-var path = require('path');
-var webpack = require('webpack');
-var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var path = require("path");
+var webpack = require("webpack");
+var PrerenderSpaPlugin = require("prerender-spa-plugin");
 
 
 module.exports = {
-  entry: './src/main.js',
+  entry: "./src/main.js",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: './dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, "/dist"),
+    publicPath: "/dist/",
+    filename: "build.js"
   },
   module: {
     rules: [
@@ -81,7 +81,7 @@ if (process.env.NODE_ENV === 'production') {
       // Path to compiled app
       path.join(__dirname, './dist'),
       // List of endpoints you wish to prerender
-      [ '/' ]
+      [ "/", "/portfolio", "/about", "blog" ]
     )
   ])
 }
