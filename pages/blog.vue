@@ -44,16 +44,18 @@ time {
 .tag {
 	display: inline;
 	padding: 8px;
-	background: #e6dbe6;
+	background: #0e0b0c;
 	border-radius: 8px;
 	margin-right: 4px;
+	color: rgba(255,255,255,0.4);
+	letter-spacing: 1px;
 }
 
 
 .blog-item h3 {
 	margin-bottom: 32px;
 	float: left;
-	border-bottom: 1px solid #b0b0b0;
+	border-bottom: 1px solid #481b35;
 	width: 100%;
 }
 

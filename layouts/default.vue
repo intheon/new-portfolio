@@ -31,15 +31,29 @@ export default {
 		overflow-y: scroll;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    color: #552a3f;
+    color: #3b1329;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    color: #4a1f35;
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 58px;
     margin-bottom: 32px;
+    position: relative;
+    float: left;
+    width: calc(100% + 36px);
+    margin-left: -32px;
+    margin-top: -32px;
+    background: rgba(15, 4, 10, 0.74);
+    border-top-right-radius: 32px;
+    padding-left: 28px;
   }
 
   h1, h2 {
@@ -57,13 +71,20 @@ export default {
     width: calc(100vw - 1075px);
     height: 100%;
     float: left;
-    background: hsla(0,0%,100%,.9);
+    background: rgba(0,0,0,0.95);
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    box-shadow: 2px 2px 2px 2px ;
     padding: 32px;
+    color: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
   }
 
   .about-img {
     float: left;
-    background: url("~assets/img/about.jpg");
+    background: url("~assets/img/home.jpg");
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -81,7 +102,7 @@ export default {
 
   .portfolio-img {
     float: left;
-    background: url("~assets/img/portfolio.jpg");
+    background: url("~assets/img/home.jpg");
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -90,7 +111,7 @@ export default {
 
   .blog-img {
     float: left;
-    background: url("~assets/img/blog.jpg");
+    background: url("~assets/img/home.jpg");
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -133,10 +154,11 @@ export default {
   .inline-links {
     float: left;
     position: absolute;
-    margin-left: 406px;
-    margin-top: -8px;
+    margin-left: 408px;
+    margin-top: 89px;
     font-size: 42px;
-		width: 50%;
+    width: 50%;
+    color: white;
   }
 
   .link {
@@ -165,13 +187,14 @@ export default {
     font-size: 64px;
     position: absolute;
     margin-left: -212px;
-    color: rgba(0,0,0,0.8);
-    margin-top: 16px;
-    background: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.2);
+    margin-top: 100px;
+    background: rgba(0,0,0,0.45);
     line-height: 128px;
     text-align: center;
     width: 128px;
     height: 128px;
+    border-radius: 50%;
   }
 
   @media (max-width: 1500px){
