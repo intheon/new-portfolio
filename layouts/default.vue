@@ -65,19 +65,27 @@ export default {
 
 
   .blue {
-    background: #e5edf4;
+    background-color: #e5edf4;
+    background-image: url("~/assets/img/city.png");
+    background-size: cover;
   }
 
   .green {
-    background: #b0d4aa;
+    background-color: #b0d4aa;
+    background-image: url("~/assets/img/forest.png");
+    background-size: cover;
   }
 
   .orange {
     background: #f6e8d9;
+    background-image: url("~/assets/img/blog.png");
+    background-size: cover;
   }
 
   .purple {
-    background: #eedef5;
+    background-color: #eedef5;
+    background-image: url("~/assets/img/museum.png");
+    background-size: cover;
   }
 
   .main-text {
@@ -93,63 +101,6 @@ export default {
     letter-spacing: 2px;
   }
 
-
-
-  /*
-  .overlay {
-    position: relative;
-    z-index: 500;
-    margin-left: 587px;
-    margin-top: 212px;
-    width: calc(100vw - 1075px);
-    height: 100%;
-    float: left;
-    background: rgba(0,0,0,0.95);
-    border-top-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    box-shadow: 2px 2px 2px 2px ;
-    padding: 32px;
-    color: rgba(255,255,255,0.8);
-    -webkit-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
-    -moz-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
-    box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
-  }*/
-
-  .about-img {
-    float: left;
-    background: url("~assets/img/home.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    position: absolute;
-  }
-
-  .home-img {
-    float: left;
-    background: url("~assets/img/home.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    position: absolute;
-  }
-
-  .portfolio-img {
-    float: left;
-    background: url("~assets/img/home.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    position: fixed;
-  }
-
-  .blog-img {
-    float: left;
-    background: url("~assets/img/home.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    position: fixed;
-  }
 
   a {
     color: #726e6c;
