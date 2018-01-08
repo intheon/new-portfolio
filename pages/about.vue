@@ -1,7 +1,6 @@
 <template>
-  <section class="main-content">
-    <div class="about-img"></div>
-    <section class="overlay pad">
+  <section class="main-content green">
+    <section class="main-text">
 			<h1>About</h1>
 			<p>I've been doing web development stuff for a good 10/11 years now.</p>
 			<p>I quit my day job to go travel around Vietnam, and now back to it as a techie.</p>

@@ -1,8 +1,6 @@
 <template>
-  <section class="main-content">
-    <div class="portfolio-img"></div>
-    <div class="overlay pad">
-    <section>
+  <section class="main-content purple">
+    <section class="main-text">
       <h1>Portfolio</h1>
       <section class="portfolio-item">
         <div class="portfolio-content">
@@ -97,7 +95,7 @@
           </ul>
         </div>
       </section>
-  		<section class="portfolio-item">
+  		<section class="portfolio-item purple">
   			<div class="count">5</div>
   			<h2>Older Projects</h2>
   			<p>I've done a lot of different projects over the years, so there's almost too many to list.</p>
@@ -109,7 +107,6 @@
   			</ul>
   		</section>
     </section>
-  </div>
   </section>
 </template>
 
@@ -119,6 +116,12 @@
 </script>
 
 <style lang="css">
+
+
+  .portfolio-item {
+    float: left;
+    width: 100%;
+  }
 
   .portfolio-content p {
 

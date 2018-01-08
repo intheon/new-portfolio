@@ -1,5 +1,13 @@
 <template lang="html">
   <nav class="navigation" v-bind:class="{ 'navigation-strip-minimised': isToolbarMinimised }">
+    <div class="toggle-toolbar-width">
+      <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="!isToolbarMinimised">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </div>
+      <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="isToolbarMinimised">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </div>
+    </div>
     <div class="navigation-strip">
       <nuxt-link to="/">
         <i class="fa fa-home" aria-hidden="true"></i>
@@ -17,14 +25,6 @@
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Portfolio</span>
       </nuxt-link>
-      <div class="fix-bottom">
-        <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="!isToolbarMinimised">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </div>
-        <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="isToolbarMinimised">
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>
-      </div>
     </div>
   </nav>
 </template>
@@ -47,61 +47,69 @@ export default {
 <style>
 
   .navigation {
-    height: 100vh;
-    background: rgba(0,0,0,0.5);
-    width: 222px;
+    height: 288px;
+    background: rgba(0,0,0,0.03);
+    width: 156px;
     float: left;
     position: fixed;
+    bottom: 0;
     z-index: 9999;
   }
 
   .navigation-strip {
     position: absolute;
     top: 0;
-    width: auto;
+    width: 100%;
     display: inline-block;
   }
 
   .navigation-strip-minimised {
-    width: 90px;
+    width: 64px;
   }
 
   .navigation a {
     float: left;
-    padding: 32px;
-    width: calc(100% - 80%);
+    padding: 24px;
+    width: calc(100% - 48px);
     bottom: 0;
     text-decoration: none;
-    color: rgba(255,255,255,0.6);
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .navigation a:hover {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.05);
     cursor: pointer;
-    color: #69324d;
+    color: #000;
   }
 
   .nuxt-link-exact-active {
-    background: rgba(0,0,0,0.3);
-    color: #69324d !important;
+    background: rgba(0,0,0,0.05);
+    color: #000 !important;
   }
 
   .navigation a i {
-    width: 64px;
+    width: 32px;
+    font-size: 16px;
   }
 
-  .fix-bottom {
-    position: fixed;
-    bottom: 0;
+  .toggle-toolbar-width {
+    position: absolute;
+    margin-top: -35px;
+    width: calc(100% - 24px);
+    top: 0;
     left: 0;
-    padding: 32px;
+    color: rgba(0,0,0,0.7);
+    font-size: 16px;
+    background: rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 24px;
   }
 
-  .toggle-toolbar {
-    color: rgba(255,255,255,0.8);
-    font-size: 24px;
-  }
+
+  /*
 
   @media (max-width: 1000px){
     .navigation {
@@ -149,6 +157,7 @@ export default {
     }
 
   }
+  */
 
 
 </style>

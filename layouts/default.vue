@@ -24,7 +24,6 @@ export default {
 
   body {
     background: #ffffff;
-    color: #1a130d;
     font-family: 'Saira Semi Condensed', sans-serif;
     font-size: 24px;
 		overflow-x: hidden;
@@ -34,7 +33,7 @@ export default {
   h1, h2, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    color: #3b1329;
+    color: #090311;
   }
 
   h3 {
@@ -44,25 +43,59 @@ export default {
   }
 
   h1 {
-    font-size: 58px;
-    margin-bottom: 32px;
-    position: relative;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
     float: left;
-    width: calc(100% + 36px);
-    margin-left: -32px;
-    margin-top: -32px;
-    background: rgba(15, 4, 10, 0.74);
-    border-top-right-radius: 32px;
-    padding-left: 28px;
-  }
-
-  h1, h2 {
-    letter-spacing: 2px;
   }
 
   p {
     font-size: 18px;
   }
+
+
+  .main-content {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+
+
+  .blue {
+    background: #e5edf4;
+  }
+
+  .green {
+    background: #b0d4aa;
+  }
+
+  .orange {
+    background: #f6e8d9;
+  }
+
+  .purple {
+    background: #eedef5;
+  }
+
+  .main-text {
+    float: left;
+    width: 40vw;
+    margin-top: 15%;
+    margin-left: 30%;
+  }
+
+  .main-text h1 {
+    line-height: 60px;
+    margin-right: 8px;
+    letter-spacing: 2px;
+  }
+
+
+
+  /*
   .overlay {
     position: relative;
     z-index: 500;
@@ -80,7 +113,7 @@ export default {
     -webkit-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
     -moz-box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
     box-shadow: inset 0px 0px 100px -6px rgba(0,0,0,0.9);
-  }
+  }*/
 
   .about-img {
     float: left;
@@ -123,9 +156,13 @@ export default {
     text-decoration: none;
   }
 
+  p a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+
   a:hover{
     color: #552a3f;
-    background: rgba(0,0,0,0.03);
   }
 
   p, ul {
@@ -146,7 +183,7 @@ export default {
     font-size: 16px;
   }
 
-  .nuxt-link-active {
+  .nuxt-link-exact-active {
     color: #552a3f;
     background: rgba(0,0,0,0.03);
   }
@@ -154,8 +191,8 @@ export default {
   .inline-links {
     float: left;
     position: absolute;
-    margin-left: 408px;
-    margin-top: 89px;
+    margin-left: 386px;
+    margin-top: 0px;
     font-size: 42px;
     width: 50%;
     color: white;
@@ -163,7 +200,7 @@ export default {
 
   .link {
     display: inline;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.04);
     margin-right: 100px;
     width: 64px;
     height: 64px;
@@ -187,9 +224,9 @@ export default {
     font-size: 64px;
     position: absolute;
     margin-left: -212px;
-    color: rgba(255,255,255,0.2);
+    color: rgba(0,0,0,0.1);
     margin-top: 100px;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.02);
     line-height: 128px;
     text-align: center;
     width: 128px;
