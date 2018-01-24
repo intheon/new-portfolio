@@ -10,15 +10,15 @@
           </div>
   				<div class="count">1</div>
           <h2>Skate Locate</h2>
-          <p>A pretty modern website as far as the technology is concerned.</p>
+          <p>A realtime map of skateparks and skatespots around the world.</p>
           <p>Add, view, and filter skateparks in your area of interest.</p>
-          <p>Built with VueJS and mostly in ES6, Firebase on the backend, Cloudinary for images, Leaflet/Mapbox for the map engine.</p>
+          <p>Built with VueJS and mostly in ES6/7. Is completely realtime with Firebase on the backend, which features websockets, Cloudinary for images, Leaflet/Mapbox for the map engine.</p>
           <div class="portfolio-image skate"></div>
           <ul>
             <li>100% Javascript on front and back end.</li>
             <li>Firebase for data storage and websocket binding</li>
-  					<li>VueJs which is an amazing library. So much quicker than React!</li>
-            <li>Add skateparks, filter by tag or string, see most recently added and voted.</li>
+  					<li>VueJS at the view layer, with Vuex managing the application state.</li>
+            <li>Built and Bundled with Webpack3.</li>
           </ul>
         </div>
       </section>
@@ -30,12 +30,12 @@
   				<div class="count">2</div>
   				<h2 class="blc-shorten">Bad Luck Collective</h2>
   				<p>A boutique marketplace.</p>
-  				<p>Built to allow small vendors sell their stuff with minimal hassle.</p>
+  				<p>Built to allow vendors sell their products with minimal hassle, and minimal cost.</p>
           <div class="portfolio-image blc"></div>
   				<ul>
-  					<li>Custom Wordpress plugin.</li>
-  					<li>Auto builds a mini-Wordpress site when the site owner greenlights a seller.</li>
-  					<li>Deployed over SSL onto a traditional Apache/PHP setup.</li>
+  					<li>Framework is based upon Sharetribe.</li>
+  					<li>Self hosted on a custom VPS running Ubuntu, with Ruby as the backend language.</li>
+  					<li>Custom front-end view layers built in VueJS.</li>
   				</ul>
   			</div>
   		</section>
