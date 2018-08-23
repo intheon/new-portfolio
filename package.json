@@ -13,7 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0-rc11"
+    "nuxt-edge": "^2.0.0-25582697.22559a8",
+    "webpack": "^4.17.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

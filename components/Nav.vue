@@ -25,6 +25,18 @@
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Portfolio</span>
       </nuxt-link>
+      <nuxt-link to="/git">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <span v-show="!isToolbarMinimised">GIT</span>
+      </nuxt-link>
+      <nuxt-link to="/ut">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <span v-show="!isToolbarMinimised">UT</span>
+      </nuxt-link>
+      <nuxt-link to="/media">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <span v-show="!isToolbarMinimised">Media</span>
+      </nuxt-link>
     </div>
   </nav>
 </template>
