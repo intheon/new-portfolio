@@ -2,11 +2,8 @@
   <section class="main-content green">
     <section class="main-text">
 			<h1>About</h1>
-			<p>I've been doing web development stuff for a good 10/11 years now.</p>
-			<p>I quit my day job to go travel around Vietnam, and now back to it as a techie.</p>
-			<p>The Open Source community is an amazing asset, and I hope to give back by releasing constantly developed tools on my Github.</p>
-			<p>Previously I recently worked for a digital publishers called YUDU Media. 4+ Years in Operations &amp; 2+ years in Account Management.</p>
-			<p>My main focus is full-stack Javascript, and Single-page apps (VueJS!!). I can build with Wordpress and the more traditional PHP/Apache stack too so get in contact if you need help!</p>
+			<p>I've been doing web development stuff for a good 15 years now.</p>
+      <p>My main focus is Full-Stack JS, with expert experience with eCommerce.</p>
 		</section>
   </section>
 </template>

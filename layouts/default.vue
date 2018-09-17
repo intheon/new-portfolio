@@ -20,14 +20,13 @@ export default {
   html, body {
     margin: 0;
     padding: 0;
+
   }
 
   body {
     background: #ffffff;
     font-family: 'Saira Semi Condensed', sans-serif;
     font-size: 24px;
-		overflow-x: hidden;
-		overflow-y: scroll;
   }
 
   h1, h2, h4, h5, h6 {
@@ -56,7 +55,8 @@ export default {
 
   .main-content {
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
+    margin-top: 8vh;
     position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;

@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'Ben Smith - Front-end Developer',
     meta: [
@@ -16,7 +13,7 @@ module.exports = {
     ],
     script: [
       { src: 'https://use.fontawesome.com/92ed6a1d13.js' },
-      { src: 'https://www.googletagmanager.com/gtag/js?id=UA-104309082-3' }
+      //{ src: 'https://www.googletagmanager.com/gtag/js?id=UA-104309082-3' }
     ]
   },
   plugins: [
