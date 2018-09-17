@@ -1,5 +1,6 @@
 <template>
   <section class="main-content purple">
+    <div class="scroll-container">
     <section class="main-text">
       <h1>Portfolio</h1>
       <section class="portfolio-item">
@@ -107,6 +108,8 @@
   			</ul>
   		</section>
     </section>
+
+  </div>
   </section>
 </template>
 

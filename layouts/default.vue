@@ -55,9 +55,14 @@ export default {
 
   .main-content {
     width: 100vw;
-    height: 92vh;
-    margin-top: 8vh;
+    height: 100vh;
     position: fixed;
+
+  }
+
+  .scroll-container {
+    margin-top: 7vh;
+    height: 93vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }

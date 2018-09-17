@@ -43,8 +43,8 @@
 
   .navigation {
     background: rgba(0,0,0,0.03);
+    height: 73px;
     width: 100%;
-    height: 64px;
     position: fixed;
     bottom: 0;
     z-index: 30;
