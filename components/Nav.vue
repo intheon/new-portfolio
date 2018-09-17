@@ -17,17 +17,22 @@
         <i class="fa fa-question" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">About</span>
       </nuxt-link>
+      <nuxt-link to="/contact">
+        <i class="fa fa-question" aria-hidden="true"></i>
+        <span v-show="!isToolbarMinimised">Contact</span>
+      </nuxt-link>
+      <!--
       <nuxt-link to="/blog">
         <i class="fa fa-pencil" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Blog</span>
-      </nuxt-link>
+      </nuxt-link>-->
       <nuxt-link to="/portfolio">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Portfolio</span>
       </nuxt-link>
       <nuxt-link to="/git">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">GIT</span>
+        <span v-show="!isToolbarMinimised">Git</span>
       </nuxt-link>
       <nuxt-link to="/ut">
         <i class="fa fa-briefcase" aria-hidden="true"></i>

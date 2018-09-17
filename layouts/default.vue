@@ -101,6 +101,24 @@ export default {
     letter-spacing: 2px;
   }
 
+  .about-social-links{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .about-social-links li {
+    list-style: none;
+    display: inline;
+    font-size: 24px;
+    padding-right: 16px;
+  }
+
+  .about-social-links a:hover{
+    background: none;
+    color: #552a3f;
+  }
+
 
   a {
     color: #726e6c;
