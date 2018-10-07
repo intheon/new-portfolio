@@ -1,15 +1,15 @@
 <template lang="html">
   <nav class="navigation">
     <div>
-      <nuxt-link to="/">
+      <nuxt-link to="/" class="blue">
         <img src="~/assets/img/admin.png" width="64px" />
         <p>vohzd</p>
       </nuxt-link>
-      <nuxt-link to="/about">
+      <nuxt-link to="/about" class="green">
         <i class="fa fa-question" aria-hidden="true"></i>
         About
       </nuxt-link>
-      <nuxt-link to="/contact">
+      <nuxt-link to="/contact" class="red">
         <i class="fa fa-question" aria-hidden="true"></i>
         Contact
       </nuxt-link>
@@ -18,19 +18,19 @@
         <i class="fa fa-pencil" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Blog</span>
       </nuxt-link>-->
-      <nuxt-link to="/portfolio">
+      <nuxt-link to="/portfolio" class="purple">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         Portfolio
       </nuxt-link>
-      <nuxt-link to="/git">
+      <nuxt-link to="/git" class="orange">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         Git
       </nuxt-link>
-      <nuxt-link to="/ut">
+      <nuxt-link to="/ut" class="pink">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         UT
       </nuxt-link>
-      <nuxt-link to="/media">
+      <nuxt-link to="/media" class="turqiouse">
         <i class="fa fa-briefcase" aria-hidden="true"></i>
         Media
       </nuxt-link>
@@ -75,6 +75,29 @@
     width: 32px;
     font-size: 16px;
   }
+
+
+.blue {
+  background: "#25437d";
+}
+.green {
+  background: "#5f8659";
+}
+.red {
+  background: "#a45959";
+}
+.purple {
+  background: "#603b85";
+}
+.orange {
+  background: "#d9aa4f";
+}
+.pink {
+  background: "#e798e6";
+}
+.turqiouse {
+  background: "#CC0000";
+}
 
 
 </style>
