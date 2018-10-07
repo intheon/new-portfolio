@@ -41,11 +41,10 @@ export default {
     color: #4a1f35;
   }
 
-  h1 {
-    font-size: 48px;
+  .site-identity {
+    font-size: 122px;
     padding: 0;
     margin: 0;
-    float: left;
   }
 
   p {

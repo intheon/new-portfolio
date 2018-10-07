@@ -1,9 +1,8 @@
 <template lang="html">
   <nav class="navigation">
     <div>
-      <nuxt-link to="/" class="blue">
-        <img src="~/assets/img/admin.png" width="64px" />
-        <p>vohzd</p>
+      <nuxt-link to="/" class="blue no-pad">
+        <img src="~/assets/img/admin.png" width="72px" />
       </nuxt-link>
       <nuxt-link to="/about" class="green">
         <i class="fa fa-question" aria-hidden="true"></i>
@@ -64,6 +63,10 @@
     background: rgba(0,0,0,0.05);
     cursor: pointer;
     color: #000;
+  }
+
+  .no-pad {
+    padding: 0px !important;
   }
 
   .nuxt-link-exact-active {
