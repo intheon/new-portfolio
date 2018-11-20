@@ -1,18 +1,16 @@
 {
-  "name": "nuxt-homepage",
-  "version": "1.0.0",
+  "name": "vohzd.com",
+  "version": "2.0.0",
   "description": "vohzd.com homepage",
   "author": "Ben <allobon@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt-edge": "^2.0.0-25619719.2dd2f2a"
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "nuxt": "^2.3.1"
   }
 }
