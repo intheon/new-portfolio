@@ -1,39 +1,32 @@
 <template lang="html">
   <nav class="navigation">
-    <div>
-      <nuxt-link to="/" class="blue no-pad">
-        <img src="~/assets/img/admin.png" width="72px" />
+      <nuxt-link to="/" class="blue">
+        <span class="nav-image"><img src="~/assets/img/admin.png" class="home-image"/></span><label class="offset-left">Home</label>
       </nuxt-link>
-      <nuxt-link to="/about" class="green">
-        <i class="fa fa-question" aria-hidden="true"></i>
-        About
+      <nuxt-link to="/about" class="blue">
+        <label>About</label>
       </nuxt-link>
-      <nuxt-link to="/contact" class="red">
-        <i class="fa fa-question" aria-hidden="true"></i>
-        Contact
+      <nuxt-link to="/contact" class="blue">
+        <label>Contact</label>
+      </nuxt-link>
+      <nuxt-link to="/portfolio" class="blue">
+        <label>Portfolio</label>
       </nuxt-link>
       <!--
       <nuxt-link to="/blog">
         <i class="fa fa-pencil" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Blog</span>
       </nuxt-link>-->
-      <nuxt-link to="/portfolio" class="purple">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        Portfolio
-      </nuxt-link>
+      <!--
       <nuxt-link to="/git" class="orange">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        Git
+        <i class="fa fa-briefcase" aria-hidden="true"></i> Git
       </nuxt-link>
       <nuxt-link to="/ut" class="pink">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        UT
+        <i class="fa fa-briefcase" aria-hidden="true"></i> UT
       </nuxt-link>
       <nuxt-link to="/media" class="turqiouse">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        Media
-      </nuxt-link>
-    </div>
+        <i class="fa fa-briefcase" aria-hidden="true"></i> Media
+      </nuxt-link>-->
   </nav>
 </template>
 
@@ -48,15 +41,31 @@
     bottom: 0;
     z-index: 30;
     top: 0;
+    display:flex;
   }
 
   .navigation a {
-    float: left;
     padding: 24px;
     display: inline;
     bottom: 0;
     text-decoration: none;
     font-size: 16px;
+    position: relative;
+  }
+
+  .relative-wrapper {
+    position: relative;
+  }
+
+  .home-image {
+    position: absolute;
+    width:73px;
+    top: 0;
+    left: 0;
+  }
+
+  .offset-left {
+    padding-left: 72px;
   }
 
   .navigation a:hover {
@@ -65,13 +74,9 @@
     color: #000;
   }
 
-  .no-pad {
-    padding: 0px !important;
-  }
-
   .nuxt-link-exact-active {
     background: rgba(0,0,0,0.05);
-    color: #000 !important;
+    color: #000;
   }
 
   .navigation a i {
@@ -79,7 +84,7 @@
     font-size: 16px;
   }
 
-
+/*
 .blue {
   background: "#25437d";
 }
@@ -100,7 +105,7 @@
 }
 .turqiouse {
   background: "#CC0000";
-}
+}*/
 
 
 </style>

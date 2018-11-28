@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import "~/static/fonts/fontawesome.js";
+
 import Nav from '~/components/Nav.vue'
 export default {
   components: {
@@ -41,10 +43,17 @@ export default {
     color: #4a1f35;
   }
 
-  .site-identity {
+  .main-header {
     font-size: 122px;
     padding: 0;
     margin: 0;
+    opacity: 0.68;
+    margin-left: -20px;
+  }
+
+  .second-header {
+    opacity: 0.88;
+    font-size: 32px;
   }
 
   p {
@@ -52,11 +61,15 @@ export default {
   }
 
 
-  .main-content {
+  .background-wrapper {
     width: 100vw;
     height: 100vh;
     position: fixed;
+  }
 
+  .content-wrapper {
+    margin-top: 73px;
+    margin-left: 73px;
   }
 
   .scroll-container {
@@ -66,42 +79,58 @@ export default {
     overflow-x: hidden;
   }
 
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100vh;
+  }
 
 
-  .blue {
-    background-color: #e5edf4;
-    background-image: url("~/assets/img/city.png");
-    background-size: cover;
+
+  .colour1 {
+    background-color: #d1d5ff;
+  }
+
+  .colour2 {
+    background-color: #d1edff;
+  }
+
+  .colour3 {
+    background-color: #ffd1d1;
+  }
+
+  .colour4 {
+    background-color: #ffe9d1;
   }
 
   .green {
     background-color: #b0d4aa;
-    background-image: url("~/assets/img/forest.png");
-    background-size: cover;
   }
 
   .orange {
     background: #f6e8d9;
-    background-image: url("~/assets/img/blog.png");
-    background-size: cover;
   }
 
   .purple {
     background-color: #eedef5;
-    background-image: url("~/assets/img/museum.png");
-    background-size: cover;
   }
 
+  /*
   .main-text {
     float: left;
     width: 40vw;
     margin-top: 15%;
     margin-left: 30%;
   }
+  */
+
+  .main-text {
+
+  }
 
   .main-text h1 {
-    line-height: 60px;
-    margin-right: 8px;
+    line-height: 72px;
     letter-spacing: 2px;
   }
 
@@ -125,7 +154,7 @@ export default {
 
 
   a {
-    color: #726e6c;
+    color: rgba(0,0,0,0.7);
     text-decoration: none;
   }
 
@@ -135,7 +164,7 @@ export default {
 
 
   a:hover{
-    color: #552a3f;
+    color: #921d56;
   }
 
   p, ul {

@@ -1,9 +1,10 @@
 <template>
-  <section class="main-content green">
-    <section class="main-text">
-			<h1>About</h1>
+  <section class="background-wrapper colour2">
+    <section class="content-wrapper">
+      <h2 class="main-header">about</h2>
 			<p>I've been doing web development stuff for a good 15 years now.</p>
       <p>My main focus is Full-Stack JS, with expert experience with eCommerce.</p>
+      <p>I work at <a href="https://bunting.com" target="_blank">bunting.com</a> by day, and run numerous other projects inc. eCommerce.</p>
 		</section>
   </section>
 </template>
