@@ -9,20 +9,72 @@
         <a href="https://stackoverflow.com/users/3609943/vohzd" target="_blank"><li><i class="fab fa-stack-overflow" aria-hidden="true"></i></li></a>
         <a href="https://twitter.com/vohzd" target="_blank"><li><i class="fab fa-twitter" aria-hidden="true"></i></i></li></a>
       </ul>
-      <form>
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Message">
-        <input type="text" placeholder="Email">
-      </form>
+      <div class="contact-form">
+        <input type="text" placeholder="Name" v-model="name">
+        <input type="text" placeholder="Message" v-model="message">
+        <input type="text" placeholder="Email" v-model="email">
+        <button @click="sendMessage">{{ buttonText }}</button>
+      </div>
 		</section>
   </section>
 </template>
 
 <script>
+
 	export default {
+    data(){
+      return {
+        name: "",
+        message: "",
+        email: "",
+        buttonText: "Send!"
+      }
+    },
+    methods: {
+      sendMessage(){
+        this.buttonText = "Working...";
+        this.$axios.post("https://vohzd.com/email/sender.php", {
+          fromName: this.name,
+          fromEmail: this.email,
+          toEmail: "<allobon@gmail.com>",
+          toName: "Ben",
+          subject: "Message from vohzd.com",
+          html: this.message
+        }).then(() => {
+          this.buttonText = "Thanks, sent!";
+          setTimeout(() => { this.clear(); }, 1500)
+        }).catch(() => {
+          this.buttonText = "Error";
+          setTimeout(() => { this.clear(); }, 1500)
+        });
+      },
+      clear(){
+        this.name = "";
+        this.message = "";
+        this.email = "";
+        this.buttonText = "Send!"
+      }
+    }
 	}
+
 </script>
 
 <style>
+
+  .contact-form input {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    background: rgba(255,255,255,0.5);
+    padding: 16px;
+    outline: none;
+    border: none;
+  }
+
+  .contact-form button {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    background: rgba(255,255,255,0.75);
+    padding: 16px;
+    outline: none;
+    border: none;
+  }
 
 </style>

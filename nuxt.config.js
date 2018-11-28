@@ -13,7 +13,8 @@ module.exports = {
     ]
   },
   modules: [
-    [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ]
+    [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
+    "@nuxtjs/axios"
   ],
   loading: { color: '#552a3f' },
   mode: "spa"
