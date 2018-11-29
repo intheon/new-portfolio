@@ -51,6 +51,17 @@
     text-decoration: none;
     font-size: 16px;
     position: relative;
+    outline: none;
+    border:  1px solid rgba(0,0,0,0);
+  }
+
+
+  .navigation a {
+    filter: blur(0);
+  }
+
+  .navigation:hover a:not(:hover) {
+    filter: blur(1px);
   }
 
   .relative-wrapper {
@@ -59,7 +70,7 @@
 
   .home-image {
     position: absolute;
-    width:73px;
+    width:70px;
     top: 0;
     left: 0;
   }
@@ -69,13 +80,17 @@
   }
 
   .navigation a:hover {
-    background: rgba(0,0,0,0.05);
+    border-bottom:  1px solid rgba(0,0,0,0.1) ;
+    border-right:  1px solid rgba(0,0,0,0.1) ;
+
     cursor: pointer;
     color: #000;
   }
 
   .nuxt-link-exact-active {
-    background: rgba(0,0,0,0.05);
+    border-bottom:  1px solid rgba(0,0,0,0.1)  !important;
+    border-right:  1px solid rgba(0,0,0,0.1)  !important;
+
     color: #000;
   }
 
