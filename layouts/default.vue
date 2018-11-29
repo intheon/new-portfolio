@@ -48,7 +48,7 @@ export default {
     padding: 0;
     margin: 0;
     opacity: 0.68;
-    margin-left: -20px;
+    margin-left: -7px;
   }
 
   .second-header {
