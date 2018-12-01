@@ -60,7 +60,6 @@ export default {
     font-size: 18px;
   }
 
-
   .background-wrapper {
     width: 100vw;
     height: 100vh;
@@ -85,8 +84,6 @@ export default {
     overflow: auto;
     height: 100vh;
   }
-
-
 
   .colour1 {
     background-color: #d1d5ff;
