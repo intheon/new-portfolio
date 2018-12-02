@@ -188,18 +188,18 @@ export default {
   }
 
   .inline-links {
-    float: left;
     position: absolute;
-    margin-left: 386px;
-    margin-top: 0px;
-    font-size: 42px;
-    width: 50%;
+    font-size: 30px;
+    right: 0;
     color: white;
+    background: rgba(0,0,0,0.8);
+    width: 16%;
+    text-align: center;
   }
 
   .link {
     display: inline;
-    background: rgba(0,0,0,0.04);
+    background: rgba(0,0,0,0.6);
     margin-right: 100px;
     width: 64px;
     height: 64px;
@@ -210,27 +210,14 @@ export default {
   }
 
   .inline-links a {
-    color: #552a3f;
     text-decoration: none;
+    color: white;
   }
 
-  .link:hover {
+  .inline-links a:hover {
     opacity: 0.7;
     cursor: pointer;
-  }
-
-  .count {
-    font-size: 64px;
-    position: absolute;
-    margin-left: -212px;
-    color: rgba(0,0,0,0.1);
-    margin-top: 100px;
-    background: rgba(0,0,0,0.02);
-    line-height: 128px;
-    text-align: center;
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
+    color: #921d56;
   }
 
   @media (max-width: 1500px){
@@ -254,10 +241,6 @@ export default {
 
     .link {
       margin-right: 55px;
-    }
-
-    .inline-links {
-      margin-left: 290px;
     }
 
     .blc-shorten {

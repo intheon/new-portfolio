@@ -35,13 +35,14 @@
 
   .navigation {
     background: rgba(0,0,0,0.03);
-    height: 73px;
+    height: 72px;
     width: 100%;
     position: fixed;
     bottom: 0;
     z-index: 30;
     top: 0;
     display:flex;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
   }
 
   .navigation a {
@@ -52,7 +53,6 @@
     font-size: 16px;
     position: relative;
     outline: none;
-    border:  1px solid rgba(0,0,0,0);
   }
 
 
@@ -70,7 +70,7 @@
 
   .home-image {
     position: absolute;
-    width:70px;
+    width:72px;
     top: 0;
     left: 0;
   }
@@ -80,16 +80,14 @@
   }
 
   .navigation a:hover {
-    border-bottom:  1px solid rgba(0,0,0,0.1) ;
-    border-right:  1px solid rgba(0,0,0,0.1) ;
+
 
     cursor: pointer;
     color: #000;
   }
 
   .nuxt-link-exact-active {
-    border-bottom:  1px solid rgba(0,0,0,0.1)  !important;
-    border-right:  1px solid rgba(0,0,0,0.1)  !important;
+
 
     color: #000;
   }
