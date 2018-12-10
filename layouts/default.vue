@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import "~/static/fonts/fontawesome.js";
+//import "~/static/fonts/fontawesome.js";
 
 import Nav from '~/components/Nav.vue'
 export default {
@@ -181,6 +181,15 @@ export default {
     margin-bottom: 20px;
     font-size: 16px;
   }
+
+  input, button {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    background: rgba(255,255,255,0.5);
+    padding: 16px;
+    outline: none;
+    border: none;
+  }
+
 
   .nuxt-link-exact-active {
     color: #552a3f;

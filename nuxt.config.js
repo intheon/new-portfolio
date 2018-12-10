@@ -4,7 +4,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'keywords', content: 'Javascript, Front-End, Development, Developer, HTML, HTML5, ES6, Vue, VueJS, React, NextJS, Webpack, Freelance, Wordpress, eCommerce, CRO, Conversion Rate Optimization' },
+      { name: 'keywords', content: 'Javascript, Front-End, Development, Developer, HTML, HTML5, ES6, Vue, VueJS, React, NextJS, Webpack, Freelance, Wordpress, eCommerce, CRO, Conversion Rate Optimisation' },
       { hid: 'description', name: 'description', content: 'Ben Smith AKA vohzd | Marvellous full-stack JS developer!' }
     ],
     link: [

@@ -1,7 +1,7 @@
 <template>
-  <section class="main-content green">
-    <section class="main-text">
-      <h1>Services</h1>
+  <section class="background-wrapper colour4">
+    <section class="content-wrapper">
+      <h2 class="main-header">Services</h2>
 			<p>Standard website - £350</p>
       <p>Full eCommerce build - £900</p>
       <p>Conversion Rate Optimisation (10 Campaigns / Split tests) - £150</p>

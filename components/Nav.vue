@@ -1,16 +1,19 @@
 <template lang="html">
   <nav class="navigation">
-      <nuxt-link to="/" class="blue">
+      <nuxt-link to="/">
         <span class="nav-image"><img src="~/assets/img/admin.png" class="home-image"/></span><label class="offset-left">Home</label>
       </nuxt-link>
-      <nuxt-link to="/about" class="blue">
+      <nuxt-link to="/about">
         <label>About</label>
       </nuxt-link>
-      <nuxt-link to="/contact" class="blue">
+      <nuxt-link to="/contact">
         <label>Contact</label>
       </nuxt-link>
-      <nuxt-link to="/portfolio" class="blue">
+      <nuxt-link to="/portfolio">
         <label>Portfolio</label>
+      </nuxt-link>
+      <nuxt-link to="/media">
+        <label>Media</label>
       </nuxt-link>
       <!--
       <nuxt-link to="/blog">
