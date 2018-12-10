@@ -1,11 +1,14 @@
 <template>
-  <section class="main-content green">
-    <section class="main-text">
-      <h1>Media</h1>
-			<p>Random downloadable shit</p>
-
-		</section>
+  <section class="background-wrapper colour2">
+    <section class="content-wrapper">
+      <h2 class="main-header">Media</h2>
+      <section class="music-manager">
+        <h3 class="mb">Last.fm exporter</h3>
+        <input v-model="lastfmname" placeholder="last.fm username" class="mr" /><button>Find</button>
+      </section>
+    </section>
   </section>
+
 </template>
 
 <script>
@@ -14,5 +17,4 @@
 </script>
 
 <style>
-
 </style>

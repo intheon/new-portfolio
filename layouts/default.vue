@@ -6,6 +6,8 @@
 </template>
 
 <script>
+//import "~/static/fonts/fontawesome.js";
+
 import Nav from '~/components/Nav.vue'
 export default {
   components: {
@@ -20,14 +22,13 @@ export default {
   html, body {
     margin: 0;
     padding: 0;
+
   }
 
   body {
     background: #ffffff;
     font-family: 'Saira Semi Condensed', sans-serif;
     font-size: 24px;
-		overflow-x: hidden;
-		overflow-y: scroll;
   }
 
   h1, h2, h4, h5, h6 {
@@ -42,68 +43,115 @@ export default {
     color: #4a1f35;
   }
 
-  h1 {
-    font-size: 48px;
+  .main-header {
+    font-size: 122px;
     padding: 0;
     margin: 0;
-    float: left;
+    opacity: 0.68;
+    margin-left: -7px;
+  }
+
+  .second-header {
+    opacity: 0.88;
+    font-size: 32px;
   }
 
   p {
     font-size: 18px;
   }
 
-
-  .main-content {
+  .background-wrapper {
     width: 100vw;
     height: 100vh;
     position: fixed;
+  }
+
+  .content-wrapper {
+    margin-top: 73px;
+    margin-left: 73px;
+  }
+
+  .scroll-container {
+    margin-top: 7vh;
+    height: 93vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }
 
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100vh;
+  }
 
+  .colour1 {
+    background-color: #d1d5ff;
+  }
 
-  .blue {
-    background-color: #e5edf4;
-    background-image: url("~/assets/img/city.png");
-    background-size: cover;
+  .colour2 {
+    background-color: #d1edff;
+  }
+
+  .colour3 {
+    background-color: #ffd1d1;
+  }
+
+  .colour4 {
+    background-color: #ffe9d1;
   }
 
   .green {
     background-color: #b0d4aa;
-    background-image: url("~/assets/img/forest.png");
-    background-size: cover;
   }
 
   .orange {
     background: #f6e8d9;
-    background-image: url("~/assets/img/blog.png");
-    background-size: cover;
   }
 
   .purple {
     background-color: #eedef5;
-    background-image: url("~/assets/img/museum.png");
-    background-size: cover;
   }
 
+  /*
   .main-text {
     float: left;
     width: 40vw;
     margin-top: 15%;
     margin-left: 30%;
   }
+  */
+
+  .main-text {
+
+  }
 
   .main-text h1 {
-    line-height: 60px;
-    margin-right: 8px;
+    line-height: 72px;
     letter-spacing: 2px;
+  }
+
+  .about-social-links{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .about-social-links li {
+    list-style: none;
+    display: inline;
+    font-size: 24px;
+    padding-right: 16px;
+  }
+
+  .about-social-links a:hover{
+    background: none;
+    color: #552a3f;
   }
 
 
   a {
-    color: #726e6c;
+    color: rgba(0,0,0,0.7);
     text-decoration: none;
   }
 
@@ -113,7 +161,7 @@ export default {
 
 
   a:hover{
-    color: #552a3f;
+    color: #921d56;
   }
 
   p, ul {
@@ -134,24 +182,33 @@ export default {
     font-size: 16px;
   }
 
+  input, button {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    background: rgba(255,255,255,0.5);
+    padding: 16px;
+    outline: none;
+    border: none;
+  }
+
+
   .nuxt-link-exact-active {
     color: #552a3f;
     background: rgba(0,0,0,0.03);
   }
 
   .inline-links {
-    float: left;
     position: absolute;
-    margin-left: 386px;
-    margin-top: 0px;
-    font-size: 42px;
-    width: 50%;
+    font-size: 30px;
+    right: 0;
     color: white;
+    background: rgba(0,0,0,0.8);
+    width: 16%;
+    text-align: center;
   }
 
   .link {
     display: inline;
-    background: rgba(0,0,0,0.04);
+    background: rgba(0,0,0,0.6);
     margin-right: 100px;
     width: 64px;
     height: 64px;
@@ -162,27 +219,14 @@ export default {
   }
 
   .inline-links a {
-    color: #552a3f;
     text-decoration: none;
+    color: white;
   }
 
-  .link:hover {
+  .inline-links a:hover {
     opacity: 0.7;
     cursor: pointer;
-  }
-
-  .count {
-    font-size: 64px;
-    position: absolute;
-    margin-left: -212px;
-    color: rgba(0,0,0,0.1);
-    margin-top: 100px;
-    background: rgba(0,0,0,0.02);
-    line-height: 128px;
-    text-align: center;
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
+    color: #921d56;
   }
 
   @media (max-width: 1500px){
@@ -206,10 +250,6 @@ export default {
 
     .link {
       margin-right: 55px;
-    }
-
-    .inline-links {
-      margin-left: 290px;
     }
 
     .blc-shorten {

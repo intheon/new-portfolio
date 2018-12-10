@@ -1,102 +1,98 @@
 <template lang="html">
-  <nav class="navigation" v-bind:class="{ 'navigation-strip-minimised': isToolbarMinimised }">
-    <div class="toggle-toolbar-width">
-      <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="!isToolbarMinimised">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-      </div>
-      <div class="toggle-toolbar-size toggle-toolbar" v-on:click="toggleToolbarSize" v-show="isToolbarMinimised">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      </div>
-    </div>
-    <div class="navigation-strip">
+  <nav class="navigation">
       <nuxt-link to="/">
-        <i class="fa fa-home" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">Home</span>
+        <span class="nav-image"><img src="~/assets/img/admin.png" class="home-image"/></span><label class="offset-left">Home</label>
       </nuxt-link>
       <nuxt-link to="/about">
-        <i class="fa fa-question" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">About</span>
+        <label>About</label>
       </nuxt-link>
+      <nuxt-link to="/contact">
+        <label>Contact</label>
+      </nuxt-link>
+      <nuxt-link to="/portfolio">
+        <label>Portfolio</label>
+      </nuxt-link>
+      <nuxt-link to="/media">
+        <label>Media</label>
+      </nuxt-link>
+      <!--
       <nuxt-link to="/blog">
         <i class="fa fa-pencil" aria-hidden="true"></i>
         <span v-show="!isToolbarMinimised">Blog</span>
+      </nuxt-link>-->
+      <!--
+      <nuxt-link to="/git" class="orange">
+        <i class="fa fa-briefcase" aria-hidden="true"></i> Git
       </nuxt-link>
-      <nuxt-link to="/portfolio">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">Portfolio</span>
+      <nuxt-link to="/ut" class="pink">
+        <i class="fa fa-briefcase" aria-hidden="true"></i> UT
       </nuxt-link>
-      <nuxt-link to="/git">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">GIT</span>
-      </nuxt-link>
-      <nuxt-link to="/ut">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">UT</span>
-      </nuxt-link>
-      <nuxt-link to="/media">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">Media</span>
-      </nuxt-link>
-    </div>
+      <nuxt-link to="/media" class="turqiouse">
+        <i class="fa fa-briefcase" aria-hidden="true"></i> Media
+      </nuxt-link>-->
   </nav>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      isToolbarMinimised: false
-    }
-  },
-  methods: {
-    toggleToolbarSize () {
-      this.isToolbarMinimised = !this.isToolbarMinimised
-    }
-  }
-}
-</script>
 
 <style>
 
   .navigation {
-    height: 288px;
     background: rgba(0,0,0,0.03);
-    width: 156px;
-    float: left;
+    height: 72px;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    z-index: 9999;
-  }
-
-  .navigation-strip {
-    position: absolute;
+    z-index: 30;
     top: 0;
-    width: 100%;
-    display: inline-block;
-  }
-
-  .navigation-strip-minimised {
-    width: 64px;
+    display:flex;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
   }
 
   .navigation a {
-    float: left;
     padding: 24px;
-    width: calc(100% - 48px);
+    display: inline;
     bottom: 0;
     text-decoration: none;
     font-size: 16px;
+    position: relative;
+    outline: none;
+  }
+
+
+  .navigation a {
+    filter: blur(0);
+  }
+
+  .navigation:hover a:not(:hover) {
+    filter: blur(1px);
+  }
+
+  .relative-wrapper {
+    position: relative;
+  }
+
+  .home-image {
+    position: absolute;
+    width:72px;
+    top: 0;
+    left: 0;
+  }
+
+  .offset-left {
+    padding-left: 72px;
   }
 
   .navigation a:hover {
-    background: rgba(0,0,0,0.05);
+
+
     cursor: pointer;
     color: #000;
   }
 
   .nuxt-link-exact-active {
-    background: rgba(0,0,0,0.05);
-    color: #000 !important;
+
+
+    color: #000;
   }
 
   .navigation a i {
@@ -104,72 +100,28 @@ export default {
     font-size: 16px;
   }
 
-  .toggle-toolbar-width {
-    position: absolute;
-    margin-top: -35px;
-    width: calc(100% - 24px);
-    top: 0;
-    left: 0;
-    color: rgba(0,0,0,0.7);
-    font-size: 16px;
-    background: rgba(0,0,0,0.03);
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-    border-top: 1px solid rgba(0,0,0,0.07);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-  }
-
-
-  /*
-
-  @media (max-width: 1000px){
-    .navigation {
-      width: 128px;
-    }
-
-    .navigation a {
-      float: left;
-      font-size: 24px;
-      padding: 16px;
-      width: calc(128px - 31px);
-    }
-
-    .navigation a span {
-      display: none;
-    }
-
-    .navigation a i {
-      width: 100px;
-      font-size: 25px;
-      text-align: center;
-    }
-
-  }
-
-  @media (max-width: 768px){
-
-    .navigation-strip {
-      width: auto;
-      text-align: center;
-      width: 100%;
-
-    }
-    .navigation {
-      width: 100%;
-      height: 64px;
-    }
-
-    .navigation a {
-      float: left;
-      font-size: 24px;
-      padding: 8px;
-      width: calc(25% - 16px);
-      line-height: 42px;
-    }
-
-  }
-  */
+/*
+.blue {
+  background: "#25437d";
+}
+.green {
+  background: "#5f8659";
+}
+.red {
+  background: "#a45959";
+}
+.purple {
+  background: "#603b85";
+}
+.orange {
+  background: "#d9aa4f";
+}
+.pink {
+  background: "#e798e6";
+}
+.turqiouse {
+  background: "#CC0000";
+}*/
 
 
 </style>
