@@ -101,6 +101,14 @@ export default {
     background-color: #ffe9d1;
   }
 
+  .colour5 {
+    background-color: #ffa6a6;
+  }
+
+  .colour6 {
+    background-color: #edf6ce;
+  }
+
   .green {
     background-color: #b0d4aa;
   }

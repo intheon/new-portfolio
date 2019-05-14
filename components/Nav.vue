@@ -6,21 +6,18 @@
       <nuxt-link to="/about">
         <label>About</label>
       </nuxt-link>
+      <nuxt-link to="/blog">
+        <label>Blog</label>
+      </nuxt-link>
       <nuxt-link to="/contact">
         <label>Contact</label>
       </nuxt-link>
       <nuxt-link to="/portfolio">
         <label>Portfolio</label>
-      </nuxt-link>
+      </nuxt-link><!--
       <nuxt-link to="/media">
         <label>Media</label>
       </nuxt-link>
-      <!--
-      <nuxt-link to="/blog">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
-        <span v-show="!isToolbarMinimised">Blog</span>
-      </nuxt-link>-->
-      <!--
       <nuxt-link to="/git" class="orange">
         <i class="fa fa-briefcase" aria-hidden="true"></i> Git
       </nuxt-link>
