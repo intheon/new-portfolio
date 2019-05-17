@@ -1,6 +1,6 @@
 <template>
   <section class="background-wrapper colour1">
-    <video-header text="vohzd" />
+    <homepage-hexagons />
     <div class="content-wrapper">
       <h2 class="second-header">eCommerce Expertise</h2>
       <section>
@@ -17,13 +17,13 @@
 <script>
 import ConsoleBlink from "~/components/ConsoleBlink.vue";
 import SocialLinks from "~/components/SocialLinks.vue";
-import VideoHeader from "~/components/VideoHeader.vue";
+import HomepageHexagons from "~/components/HomepageHexagons.vue";
 
 export default {
   components: {
     "console-blink": ConsoleBlink,
     "social-links": SocialLinks,
-    "video-header": VideoHeader
+    "homepage-hexagons": HomepageHexagons
   }
 }
 </script>
