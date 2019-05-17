@@ -8,10 +8,10 @@
 <script>
 //import "~/static/fonts/fontawesome.js";
 
-import Nav from '~/components/Nav.vue'
+import Nav from "~/components/Nav.vue"
 export default {
   components: {
-    'navigation-bar': Nav
+    "navigation-bar": Nav
   }
 }
 </script>
@@ -27,8 +27,8 @@ export default {
 
   body {
     background: #ffffff;
-    font-family: 'Saira Semi Condensed', sans-serif;
-    font-size: 24px;
+    font-family: "Stylish";
+    font-size: 28px;
   }
 
   h1, h2, h4, h5, h6 {
@@ -44,7 +44,7 @@ export default {
   }
 
   .main-header {
-    font-size: 122px;
+    font-size: 200px;
     padding: 0;
     margin: 0;
     opacity: 0.68;
@@ -53,11 +53,7 @@ export default {
 
   .second-header {
     opacity: 0.88;
-    font-size: 32px;
-  }
-
-  p {
-    font-size: 18px;
+    font-size: 44px;
   }
 
   .background-wrapper {
@@ -121,18 +117,7 @@ export default {
     background-color: #eedef5;
   }
 
-  /*
-  .main-text {
-    float: left;
-    width: 40vw;
-    margin-top: 15%;
-    margin-left: 30%;
-  }
-  */
 
-  .main-text {
-
-  }
 
   .main-text h1 {
     line-height: 72px;
@@ -158,22 +143,15 @@ export default {
   }
 
 
-  a {
-    color: rgba(0,0,0,0.7);
+  a, .eva {
+    color: rgba(0,0,0,0.4);
     text-decoration: none;
+    transition: 0.4s all;
   }
 
-  p a {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-  }
-
-
-  a:hover{
+  a:hover, .eva:hover{
     color: #921d56;
-  }
-
-  p, ul {
-    font-size: 17px;
+    fill: #921d56;
   }
 
   ul {
@@ -191,13 +169,16 @@ export default {
   }
 
   input, button {
-    font-family: 'Saira Semi Condensed', sans-serif;
+    font-family: "Saira Semi Condensed", sans-serif;
     background: rgba(255,255,255,0.5);
     padding: 16px;
     outline: none;
     border: none;
   }
 
+  .absolute {
+    position: absolute;
+  }
 
   .nuxt-link-exact-active {
     color: #552a3f;
@@ -261,7 +242,7 @@ export default {
     }
 
     .blc-shorten {
-      content: 'BLC';
+      content: "BLC";
     }
   }
 
