@@ -54,6 +54,8 @@ export default {
   .second-header {
     opacity: 0.88;
     font-size: 44px;
+    margin-top: 64px;
+    display: inline-block;
   }
 
   .background-wrapper {
@@ -65,6 +67,8 @@ export default {
   .content-wrapper {
     margin-top: 73px;
     margin-left: 73px;
+    z-index: 2;
+    position: relative;
   }
 
   .scroll-container {
