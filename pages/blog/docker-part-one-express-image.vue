@@ -1,6 +1,6 @@
 <template>
   <section class="background-wrapper colour6">
-    <div class="content-wrapper blog-content-wrapper">
+    <div class="blog-content-wrapper">
       <h2 class="second-header">Docker Part One: How to create an image from scratch and upload to Docker Hub</h2>
       <p>Docker is great. It'll allow you to run many different apps/services/projects on on machine simaltaneously without having the headache of conflicting dependencies/ports etc.</p>
       <p>First, let's create a basic Express app and turn that into a Docker Image.</p>

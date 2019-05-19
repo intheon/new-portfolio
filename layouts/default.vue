@@ -249,9 +249,11 @@ export default {
   .blog-content-wrapper {
     text-align: center;
     margin-top: 73px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    padding-left: 15%;
+    padding-right: 16%;
+    height: 94vh;
+    overflow: scroll;
+    width: 69%;
     z-index: 2;
     position: relative;
   }
