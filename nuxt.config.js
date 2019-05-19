@@ -15,9 +15,13 @@ module.exports = {
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Stylish" },
     ]
   },
+  css: [
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' }
+  ],
   modules: [
     [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
     "@nuxtjs/axios",
+    '@nuxtjs/markdownit'
     //"@marcdiethelm/nuxtjs-countly"
   ],
   loading: { color: "#552a3f" },

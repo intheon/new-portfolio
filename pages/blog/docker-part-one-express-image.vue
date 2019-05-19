@@ -1,6 +1,22 @@
 <template>
   <section class="background-wrapper colour6">
     <div class="blog-content-wrapper">
+<vue-markdown >
+  ## testing
+
+
+  ```javascript
+  var foo = function (bar) {
+    return bar++;
+  };
+
+  console.log(foo(5));
+  ```
+
+</vue-markdown>
+
+
+<!--
       <h2 class="second-header">Docker Part One: How to create an image from scratch and upload to Docker Hub</h2>
       <p>Docker is great. It'll allow you to run many different apps/services/projects on on machine simaltaneously without having the headache of conflicting dependencies/ports etc.</p>
       <p>First, let's create a basic Express app and turn that into a Docker Image.</p>
@@ -41,7 +57,28 @@
         <li><code>docker commit -m "building" -a Ben CONTAINER ID vohzd/express</code></li>
         <li>Itll now be on the hub</li>
 
-      </ol>
+      </ol>-->
     </div>
   </section>
 </template>
+
+<script>
+  import blogOne from "./one.md";
+import VueMarkdown from 'vue-markdown';
+import Prism from 'prismjs';
+import "~/node_modules/prismjs/themes/prism-twilight.css"
+
+
+  export default {
+    components: {
+      VueMarkdown
+    },
+    computed: {
+      blogContent() {
+        return blogOne;
+      }
+    },
+
+  }
+
+</script>
