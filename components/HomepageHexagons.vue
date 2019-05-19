@@ -5,8 +5,8 @@
     <div class="hexagon hexagon-one"></div>
 
     <div class="hexagon hexagon-two hexagon-video">
-      <video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-        <source src="~/assets/video/skate.mp4" />
+      <video autoplay playsinline muted loop preload poster="~/assets/img/placeholder.png">
+        <source src="~/assets/video/loop.mp4" />
       </video>
     </div>
 
@@ -38,7 +38,8 @@ export default {
   position: absolute;
   width: 384px;
   height: 384px;
-  background-color: #c4c8ff;
+  background: linear-gradient(to bottom right, #d5caff, #a8a0b7);
+  box-shadow: inset 10px 0px 100px 16px #cdcfec;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -48,7 +49,7 @@ export default {
 }
 
 .hexagon-two {
-
+  opacity: 0.6
 }
 
 .hexagon-three {

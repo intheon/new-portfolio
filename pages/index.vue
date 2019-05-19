@@ -1,5 +1,5 @@
 <template>
-  <section class="background-wrapper colour1">
+  <section class="background-wrapper gradient1">
     <homepage-hexagons />
     <div class="content-wrapper">
       <h2 class="second-header">eCommerce Expertise</h2>

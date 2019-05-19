@@ -106,21 +106,12 @@ export default {
   }
 
   .colour6 {
-    background-color: #edf6ce;
+    background-color: #f6edce;
   }
 
-  .green {
-    background-color: #b0d4aa;
+  .gradient1 {
+    background: linear-gradient(to bottom right, #d1d5ff, #ebeaec);
   }
-
-  .orange {
-    background: #f6e8d9;
-  }
-
-  .purple {
-    background-color: #eedef5;
-  }
-
 
 
   .main-text h1 {
@@ -173,7 +164,7 @@ export default {
   }
 
   input, button {
-    font-family: "Saira Semi Condensed", sans-serif;
+    font-family: "Stylish";
     background: rgba(255,255,255,0.5);
     padding: 16px;
     outline: none;
@@ -221,6 +212,51 @@ export default {
     cursor: pointer;
     color: #921d56;
   }
+
+  .blog-posts {
+    margin-left: -7px;
+  }
+
+  .blog-cta {
+    background: rgba(255,255,255,0.6);
+    width: 384px;
+    margin: 8px;
+    display: inline-block;
+    padding: 32px;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .blog-cta:hover {
+    opacity: 0.7;
+  }
+
+  .blog-cta h3 {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+
+  .blog-cta time {
+    display: inline-block;
+  }
+
+  .blog-cta button {
+    float: right;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .blog-content-wrapper {
+    text-align: center;
+    margin-top: 73px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    z-index: 2;
+    position: relative;
+  }
+
+
 
   @media (max-width: 1500px){
     .overlay {

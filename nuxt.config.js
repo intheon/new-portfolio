@@ -17,8 +17,14 @@ module.exports = {
   },
   modules: [
     [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    //"@marcdiethelm/nuxtjs-countly"
   ],
   loading: { color: "#552a3f" },
-  mode: "spa"
+  mode: "spa",
+  /*
+  countly: {
+  	url: "http://localhost:32768",
+  	app_key: "78b5dad03c4e8ebac440108213c7aed099463ce7"
+  }*/
 }
