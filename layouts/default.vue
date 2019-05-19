@@ -247,6 +247,16 @@ export default {
     background: rgba(255,255,255,0.4);
   }
 
+  .blog-content-wrapper h2 {
+    margin-top: 32px;
+    display: inline-block;
+  }
+
+  .blog-content-wrapper h3 {
+    margin-top: 32px;
+    display: inline-block;
+  }
+
   .blog-content-wrapper {
     margin-top: 73px;
     padding-left: 15%;
@@ -258,7 +268,7 @@ export default {
     position: relative;
   }
 
-  pre {
+  .blog-content-wrapper pre {
     border-radius: .5em;
     border: .3em solid hsl(0, 0%, 33%);
     box-shadow: 1px 1px .5em black inset;
@@ -267,23 +277,26 @@ export default {
     padding: 1em;
     background: hsl(0, 0%, 8%);
     color: white;
-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-font-size: 1em;
-text-align: left;
-text-shadow: 0 -.1em .2em black;
-white-space: pre;
-word-spacing: normal;
-word-break: normal;
-word-wrap: normal;
-line-height: 1.5;
--moz-tab-size: 4;
--o-tab-size: 4;
-tab-size: 4;
--webkit-hyphens: none;
--ms-hyphens: none;
-hyphens: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 16px !important;
+    text-align: left;
+    text-shadow: 0 -.1em .2em black;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 
+  .blog-content-wrapper em {
+    opacity: 0.3;
+  }
   @media (max-width: 1500px){
     .overlay {
       margin-left: 512px;
