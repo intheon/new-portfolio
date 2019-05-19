@@ -7,6 +7,7 @@
 
 <script>
 //import "~/static/fonts/fontawesome.js";
+import "~/node_modules/prismjs/themes/prism-twilight.css"
 
 import Nav from "~/components/Nav.vue"
 export default {
@@ -247,7 +248,6 @@ export default {
   }
 
   .blog-content-wrapper {
-    text-align: center;
     margin-top: 73px;
     padding-left: 15%;
     padding-right: 16%;
@@ -258,7 +258,31 @@ export default {
     position: relative;
   }
 
-
+  pre {
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px .5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    background: hsl(0, 0%, 8%);
+    color: white;
+font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+font-size: 1em;
+text-align: left;
+text-shadow: 0 -.1em .2em black;
+white-space: pre;
+word-spacing: normal;
+word-break: normal;
+word-wrap: normal;
+line-height: 1.5;
+-moz-tab-size: 4;
+-o-tab-size: 4;
+tab-size: 4;
+-webkit-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
+  }
 
   @media (max-width: 1500px){
     .overlay {
