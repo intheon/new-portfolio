@@ -249,12 +249,10 @@ export default {
 
   .blog-content-wrapper h2 {
     margin-top: 32px;
-    display: inline-block;
   }
 
   .blog-content-wrapper h3 {
     margin-top: 32px;
-    display: inline-block;
   }
 
   .blog-content-wrapper {

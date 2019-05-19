@@ -16,9 +16,7 @@
     "@nuxtjs/markdownit": "^1.2.4",
     "babel-runtime": "^6.26.0",
     "eva-icons": "^1.1.1",
-    "highlight.js": "^9.15.6",
     "nuxt": "^2.7.1",
-    "prismjs": "^1.16.0",
-    "vue-markdown": "^2.2.4"
+    "prismjs": "^1.16.0"
   }
 }
