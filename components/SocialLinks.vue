@@ -20,11 +20,11 @@
 
 <script>
 
-import * as eva from "eva-icons";
+//import * as eva from "eva-icons";
 
 export default {
   mounted(){
-    eva.replace();
+    //eva.replace();
   }
 }
 </script>

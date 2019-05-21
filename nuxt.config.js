@@ -21,8 +21,7 @@ module.exports = {
     "@nuxtjs/axios",
     //"@marcdiethelm/nuxtjs-countly"
   ],
-  loading: { color: "#552a3f" },
-  mode: "spa",
+  loading: { color: "#552a3f" }
   /*
   countly: {
   	url: "http://localhost:32768",
