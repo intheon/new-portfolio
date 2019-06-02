@@ -23,7 +23,7 @@ module.exports = {
     //"@marcdiethelm/nuxtjs-countly"
   ],
   sitemap: {
-    "hostname": "https://vohzd.com"
+    "hostname": "https://vohzd.com",
     "gzip": true
   },
   loading: { color: "#552a3f" }
