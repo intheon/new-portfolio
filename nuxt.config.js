@@ -18,6 +18,10 @@ module.exports = {
   modules: [
     [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
     '@nuxtjs/markdownit',
+    "@nuxtjs/sitemap": {
+      "hostname": "https://vohzd.com"
+      "gzip": true
+    },
     "@nuxtjs/axios",
     //"@marcdiethelm/nuxtjs-countly"
   ],
