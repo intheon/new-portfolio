@@ -18,13 +18,14 @@ module.exports = {
   modules: [
     [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
     '@nuxtjs/markdownit',
-    "@nuxtjs/sitemap": {
-      "hostname": "https://vohzd.com"
-      "gzip": true
-    },
+    "@nuxtjs/sitemap",
     "@nuxtjs/axios",
     //"@marcdiethelm/nuxtjs-countly"
   ],
+  sitemap: {
+    "hostname": "https://vohzd.com"
+    "gzip": true
+  },
   loading: { color: "#552a3f" }
   /*
   countly: {
