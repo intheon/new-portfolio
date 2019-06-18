@@ -45,11 +45,13 @@ export default {
   }
 
   .main-header {
-    font-size: 200px;
+    font-size: 100px;
     padding: 0;
     margin: 0;
     opacity: 0.68;
     margin-left: -7px;
+    margin-top: 32px;
+    display: inline-block;
   }
 
   .second-header {
@@ -221,6 +223,8 @@ export default {
   .blog-cta {
     background: rgba(255,255,255,0.6);
     width: 384px;
+    min-height: 200px;
+    vertical-align: top;
     margin: 8px;
     display: inline-block;
     padding: 32px;
@@ -238,13 +242,13 @@ export default {
     font-size: 28px;
   }
 
-  .blog-cta time {
-    display: inline-block;
+  .blog-fixed-bottom {
+    position: absolute;
+    bottom: 32px;
   }
 
-  .blog-cta button {
-    float: right;
-    background: rgba(255,255,255,0.4);
+  .blog-cta time {
+    display: inline-block;
   }
 
   .blog-content-wrapper h2 {

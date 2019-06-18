@@ -2,7 +2,7 @@
   <section class="background-wrapper colour4">
     <section class="content-wrapper">
       <h2 class="main-header">portfolio</h2>
-      <div class="flex">
+      <div class="flex scroll">
         <section class="portfolio-item">
           <h2>All Silk Mastering</h2>
           <div class="inline-links">
@@ -70,6 +70,10 @@
 
   .portfolio-content p {
 
+  }
+
+  .scroll {
+    overflow-x: scroll;
   }
 
   .portfolio-item h2 {

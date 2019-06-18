@@ -9,7 +9,7 @@
 <script>
   import Prism from 'prismjs';
 
-  import BlogPost from "~/components/blog.vue";
+  import BlogPost from "~/components/blog/blog3.vue";
 
   export default {
     components: {
@@ -19,6 +19,5 @@
       Prism.highlightAll()
     }
   }
-
 
 </script>
