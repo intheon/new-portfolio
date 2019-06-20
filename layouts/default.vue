@@ -140,6 +140,12 @@ export default {
     color: #552a3f;
   }
 
+  .mt {
+    margin-top: 64px;
+  }
+  .ml {
+    margin-left: 64px;
+  }
 
   a, .eva {
     color: rgba(0,0,0,0.4);

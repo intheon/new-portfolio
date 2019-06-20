@@ -12,12 +12,13 @@
       <nuxt-link to="/contact">
         <label>Contact</label>
       </nuxt-link>
-      <nuxt-link to="/portfolio">
-        <label>Portfolio</label>
-      </nuxt-link><!--
       <nuxt-link to="/media">
         <label>Media</label>
       </nuxt-link>
+      <nuxt-link to="/portfolio">
+        <label>Portfolio</label>
+      </nuxt-link>
+      <!--
       <nuxt-link to="/git" class="orange">
         <i class="fa fa-briefcase" aria-hidden="true"></i> Git
       </nuxt-link>
