@@ -59,6 +59,7 @@ export default {
     font-size: 44px;
     margin-top: 64px;
     display: inline-block;
+    width: 100%;
   }
 
   .background-wrapper {
@@ -145,6 +146,13 @@ export default {
   }
   .ml {
     margin-left: 64px;
+  }
+  .mb {
+    margin-bottom: 32px;
+  }
+
+  .c50 {
+    width: 50%;
   }
 
   a, .eva {

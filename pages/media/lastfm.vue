@@ -1,23 +1,23 @@
 <template>
   <section class="background-wrapper colour2">
     <section class="content-wrapper flex pad">
-      <h2 class="second-header">Export all your tracks</h2>
-      <section class="mt ml">
+      <section class="c50">
+        <h2 class="second-header mb">Export all your tracks</h2>
         <input v-model="user" placeholder="last.fm username" class="mr" /><button @click="go">{{ buttonText }}</button>
         <div v-if="numPages">
           <p>Downloaded {{ currentPage }} / {{ numPages }} pages.</p>
           <p>Downloaded {{ trackDownloadProgress }} / {{ numTracks }} tracks!</p>
         </div>
       </section>
-      <section class="ml mt">
-        <ul v-if="tracks" class="exported-tracks">
-          <li v-for="track in tracks">
+      <section class="c50">
+        <div v-if="tracks" class="exported-tracks">
+          <div v-for="track in tracks.slice().reverse()" class="track">
             <span v-if="track.artist">{{ track.artist["#text"] }} - </span>
             <span v-if="track.name">{{ track.name }}</span>
             <!--<span v-if="track.album">{{ track.album["#text"] }}</span>-->
             <span v-if="track.date" class="tiny">({{ track.date["#text"] }})</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
     </section>
   </section>
@@ -45,7 +45,7 @@
           if (this.currentPage < this.numPages){
             this.currentPage++;
             let countup = setInterval(() => {
-              this.trackDownloadProgress += 1;
+              this.trackDownloadProgress += 2;
             }, 2);
             setTimeout(() => {
               clearInterval(countup)
@@ -57,7 +57,7 @@
         setTimeout(() => {
           this.trackDownloadProgress = this.numTracks;
 
-        }, 600)
+        }, 1200)
       },
       async retreiveTracks(){
         try {
@@ -80,11 +80,21 @@
 <style>
 
   .exported-tracks {
-    font-size: 0.7em;
+    font-size: 0.4em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: inset 0px 0px 128px #c0dced;
+    height: calc(100vh - 64px);
+    width: calc(100%);
+    font-family: monospace;
   }
+  .exported-tracks .track{
+    padding: 16px;
 
+    border-bottom: 1px solid #c0dced;
+  }
   .tiny {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 
 </style>
