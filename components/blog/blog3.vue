@@ -4,55 +4,32 @@
 We're going to get this new docker image live on the web
 
 ### Step 1 - SSH into your machine.
-### Step 2 - Create express app.
+### Step 2 - Run a container of your choice (e.g I'm using my hello world image).
 ```
-> npm init -y
-> npm i -S express
+docker run -p 3000:3000 -d vohzd/express
 ```
-### Step 3 - Open `package.json` and add a start script
-``` javascript
-  "scripts": {
-    "start": "node server.js"
-  }
+### Step 3 - Go to your sites-available folder
 ```
-### Step 4 - Open `index.js`
-``` javascript
-  const app = require('express')();
+cd /etc/nginx/sites-available
+```
+### Step 4 - Find the conf for the site you want to change, in my case I have a file called `vohzd.com` which is for this site.
+```
+nano vohzd.com
+```
 
-  app.get('/', (req, res) => { res.send('Awwww yis'); });
-
-  app.listen(3000, () => console.log('Server running'));
+### Step 5 - Add a `proxy_pass` to route to your Docker image. I added mine under my `location` block.
 ```
-### Step 5 - Create Dockerfile
-``` docker
-  FROM mhart/alpine-node
-
-  WORKDIR /src
-
-  COPY package.json .
-
-  RUN npm i COPY . .
-
-  EXPOSE 3000 CMD ["npm", "start"]
+location / {
+        try_files $uri $uri/ =404;
+}
+location /docker {
+        proxy_pass http://localhost:3000/;
+}
 ```
-_alpine-node is a super tiny linux distro weighing in at 55MB._
-### Step 6 - Build the image
+### Step 5 - Save your conf (with CTRL + O) + Reboot your server.
 ```
- > BUILD IMAGE docker build -t IMAGENAME .
+systemctl restart nginx
 ```
-_HINT: to see images type `docker images`_
-### Step 7 - Run the image
-```
-> RUN IMAGE docker run -p 3000:3000 -d IMAGENAME
-```
-_HINT: to stop/ kill this type `docker ps` followed by `docker kil APP_NAME`_
-### Step 8 - Upload the image
-```
- > docker commit -m "building" -a Ben CONTAINER ID vohzd/express`
-```
-### Step 9 - Congrats!
-
-_HINT: to kill EVERYTHING type `docker system prune -a` (the `-a` flag goes nuclear)_
 
 </template>
 

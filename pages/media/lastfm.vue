@@ -31,7 +31,7 @@
         user: null,
         numPages: null,
         numTracks: null,
-        currentPage: 436,
+        currentPage: 1,
         trackDownloadProgress: 1,
         tracks: null,
         buttonText: "Commence"
@@ -62,7 +62,7 @@
       async retreiveTracks(){
         try {
 
-          let res = await this.$axios.get(`http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${this.user}&api_key=3329fbd5c9a9642aac2144cff8dc183a&format=json&limit=200&page=${this.currentPage}`);
+          let res = await this.$axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${this.user}&api_key=3329fbd5c9a9642aac2144cff8dc183a&format=json&limit=200&page=${this.currentPage}`);
           if (!this.numPages){
             this.numPages = parseInt(res.data.recenttracks["@attr"].totalPages);
             this.numTracks = parseInt(res.data.recenttracks["@attr"].total);
