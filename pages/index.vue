@@ -6,7 +6,7 @@
       <section>
         <p>I'm Ben, developer of internets</p>
         <p>I'm a full stack developer, specialising in JavaScript</p>
-        <p>> Check out <nuxt-link to="/portfolio">portfolio</nuxt-link> for cool projects</p>
+        <p>> Check out my <nuxt-link to="/portfolio">portfolio</nuxt-link> for cool projects</p>
         <p>> Need tech help? I <nuxt-link to="/services">freelance</nuxt-link> too :D<console-blink /></p>
         <social-links />
       </section>
