@@ -20,16 +20,15 @@ module.exports = {
     '@nuxtjs/markdownit',
     "@nuxtjs/sitemap",
     "@nuxtjs/axios",
-    //"@marcdiethelm/nuxtjs-countly"
+    "@marcdiethelm/nuxtjs-countly"
   ],
   sitemap: {
     "hostname": "https://vohzd.com",
     "gzip": true
   },
-  loading: { color: "#552a3f" }
-  /*
+  loading: { color: "#552a3f" },
   countly: {
-  	url: "http://localhost:32768",
-  	app_key: "78b5dad03c4e8ebac440108213c7aed099463ce7"
-  }*/
+  	url: "https://stats.vohzd.com",
+  	app_key: "bf13aa8d442d47c3088710e7a423e4e516a9ae51"
+  }
 }
