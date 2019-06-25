@@ -2,7 +2,7 @@
   <section class="background-wrapper colour2">
     <section class="content-wrapper flex pad">
       <section class="c50">
-        <h2 class="second-header mb">Export all your tracks</h2>
+        <h2 class="second-header mb">export your last.fm tracks</h2>
         <input v-model="user" placeholder="last.fm username" class="mr" /><button @click="go">{{ buttonText }}</button>
         <div v-if="numPages">
           <p>Downloaded {{ currentPage }} / {{ numPages }} pages.</p>

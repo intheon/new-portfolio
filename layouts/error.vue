@@ -1,7 +1,7 @@
 <template>
   <section class="background-wrapper colour5">
     <section class="content-wrapper">
-      <h1 class="main-header">nope</h1>
+      <h2 class="second-header mb">nope</h2>
       <span class="error-message">{{ error.message }}</span>
       <img src="~/assets/img/404.png" />
 		</section>

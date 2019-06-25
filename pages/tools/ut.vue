@@ -3,7 +3,6 @@
     <section class="main-text">
       <h1>UT</h1>
 			<p>UT Servers</p>
-
 		</section>
   </section>
 </template>

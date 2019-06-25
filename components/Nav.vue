@@ -1,33 +1,23 @@
 <template lang="html">
   <nav class="navigation">
       <nuxt-link to="/">
-        <span class="nav-image"><img src="~/assets/img/admin.png" class="home-image"/></span><label class="offset-left">Home</label>
+        <span class="nav-image"><img src="~/assets/img/admin.png" class="home-image"/></span><label class="offset-left"></label>
       </nuxt-link>
       <nuxt-link to="/about">
-        <label>About</label>
+        <label>about</label>
       </nuxt-link>
       <nuxt-link to="/blog">
-        <label>Blog</label>
+        <label>blog</label>
       </nuxt-link>
       <nuxt-link to="/contact">
-        <label>Contact</label>
-      </nuxt-link>
-      <nuxt-link to="/media">
-        <label>Media</label>
+        <label>contact</label>
       </nuxt-link>
       <nuxt-link to="/portfolio">
-        <label>Portfolio</label>
+        <label>portfolio</label>
       </nuxt-link>
-      <!--
-      <nuxt-link to="/git" class="orange">
-        <i class="fa fa-briefcase" aria-hidden="true"></i> Git
+      <nuxt-link to="/tools">
+        <label>tools</label>
       </nuxt-link>
-      <nuxt-link to="/ut" class="pink">
-        <i class="fa fa-briefcase" aria-hidden="true"></i> UT
-      </nuxt-link>
-      <nuxt-link to="/media" class="turqiouse">
-        <i class="fa fa-briefcase" aria-hidden="true"></i> Media
-      </nuxt-link>-->
   </nav>
 </template>
 
@@ -77,7 +67,7 @@
   }
 
   .offset-left {
-    padding-left: 72px;
+    padding-left: 16px;
   }
 
   .navigation a:hover {

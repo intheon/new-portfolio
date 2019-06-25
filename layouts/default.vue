@@ -242,6 +242,7 @@ export default {
     margin: 8px;
     display: inline-block;
     padding: 32px;
+    border-radius: 2px;
     font-size: 18px;
     position: relative;
     transition: all 0.4s;
@@ -308,6 +309,19 @@ export default {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+  }
+
+  .tool-item {
+    padding: 16px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  .tool-description {
+    width: 100%;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 0.7em;
+    color: rgba(0,0,0,0.3);
   }
 
   .blog-content-wrapper em {
