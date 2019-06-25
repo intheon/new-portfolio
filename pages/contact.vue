@@ -27,26 +27,29 @@
         name: "",
         message: "",
         email: "",
-        buttonText: "Send!"
+        buttonText: "Send!",
+        serverURL: "https://vohzd.com/email"
       }
     },
     methods: {
-      sendMessage(){
+      async sendMessage(){
         this.buttonText = "Working...";
-        this.$axios.post("https://vohzd.com/email/sender.php", {
-          fromName: this.name,
-          fromEmail: this.email,
-          toEmail: "<allobon@gmail.com>",
-          toName: "Ben",
-          subject: "Message from vohzd.com",
-          html: this.message
-        }).then(() => {
+        try {
+          await this.$axios.post(this.serverURL, {
+            fromName: this.name,
+            fromEmail: this.email,
+            toEmail: "<allobon@gmail.com>",
+            toName: "Ben",
+            subject: "Message from vohzd.com",
+            html: this.message
+          });
           this.buttonText = "Thanks, sent!";
           setTimeout(() => { this.clear(); }, 1500)
-        }).catch(() => {
+        }
+        catch (e){
           this.buttonText = "Error";
           setTimeout(() => { this.clear(); }, 1500)
-        });
+        }
       },
       clear(){
         this.name = "";
