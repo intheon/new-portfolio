@@ -19,16 +19,11 @@ module.exports = {
     [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ],
     '@nuxtjs/markdownit',
     "@nuxtjs/sitemap",
-    "@nuxtjs/axios",
-    "@marcdiethelm/nuxtjs-countly"
+    "@nuxtjs/axios"
   ],
   sitemap: {
     "hostname": "https://vohzd.com",
     "gzip": true
   },
-  loading: { color: "#552a3f" },
-  countly: {
-  	url: "https://stats.vohzd.com",
-  	app_key: "bf13aa8d442d47c3088710e7a423e4e516a9ae51"
-  }
+  loading: { color: "#552a3f" }
 }
