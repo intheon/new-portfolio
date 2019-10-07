@@ -22,7 +22,7 @@
           <h2>Skate Locate</h2>
           <div class="inline-links">
             <a href="https://github.com/vohzd/skatelocate" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
-            <a href="https://vohzd.com/skatelocate" target="_blank"><i class="fas fa-link"></i></a>
+            <a href="https://skatelocate.vohzd.com/" target="_blank"><i class="fa fa-link"></i></a>
           </div>
           <img src="~assets/img/portfolio-image-mile.png" class="portfolio-image" />
           <p>A realtime map of skateparks and skatespots around the world.</p>
@@ -36,18 +36,7 @@
           </ul>
         </section>
         <section class="portfolio-item">
-          <h2>Bad Luck Collective</h2>
-          <div class="inline-links">
-            <a href="https://vohzd.com/blc" target="_blank"><i class="fas fa-link"></i></a>
-          </div>
-          <img src="~assets/img/portfolio-image-blc.png" class="portfolio-image" />
-          <p>A boutique marketplace.</p>
-          <p>Built to allow vendors sell their products with minimal hassle, and minimal cost.</p>
-          <ul>
-            <li>Bespokely coded market place deployed on AWS EC2.</li>
-            <li>Upload your products for sale, receive payment, manage orders and even has a realtime messaging system.</li>
-            <li>Built with NuxtJS, Express, SocketIO.</li>
-          </ul>
+          <h2>More coming soon!</h2>
         </section>
       </div>
     </section>

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-//import "~/static/fonts/fontawesome.js";
+import "~/static/fonts/fontawesome.js";
 import "~/node_modules/prismjs/themes/prism-twilight.css"
 
 import Nav from "~/components/Nav.vue"
