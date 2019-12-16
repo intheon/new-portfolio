@@ -30,6 +30,9 @@ export const head = {
   ],
   script: [{ src: "http://localhost:1337/libraries/main.js" }]
 };
+export const plugins = [
+  "~/plugins/date.js"
+];
 export const modules = [
   ["@nuxtjs/google-analytics", { id: "UA-104309082-3" }],
   "@nuxtjs/markdownit",
