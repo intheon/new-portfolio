@@ -1,23 +1,25 @@
 {
   "name": "vohzd.com",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "vohzd.com homepage",
   "author": "Ben <allobon@gmail.com>",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env IS_DEV=TRUE nuxt",
     "build": "nuxt build",
-    "start": "nuxt build && nuxt start",
+    "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/axios": "^5.9.2",
     "@nuxtjs/google-analytics": "^2.2.2",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/sitemap": "^2.0.1",
-    "babel-runtime": "^6.26.0",
     "date-fns": "^2.8.1",
     "eva-icons": "^1.1.2",
-    "nuxt": "^2.10.2",
-    "prismjs": "^1.17.1"
+    "nuxt": "^2.11.0",
+    "prismjs": "^1.18.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
   }
 }
