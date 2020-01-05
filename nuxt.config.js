@@ -39,6 +39,6 @@ module.exports = {
     credentials: true
   },
   plugins: [
-    "~/plugins/date.js",
+    "~/plugins/date.js"
   ]
 }
