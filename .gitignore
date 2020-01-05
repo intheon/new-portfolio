@@ -1,8 +1,9 @@
-# dependencies
+ependencies
 node_modules
 
 # logs
 npm-debug.log
+access.json
 
 # Nuxt build
 .nuxt
