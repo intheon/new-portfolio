@@ -17,7 +17,15 @@
     },
     mounted(){
       Prism.highlightAll()
-    }
+    },
+    head () {
+      return {
+        title: "Provision a VPS | vohzd.com",
+        meta: [
+          { hid: "provision-description", name: "description", content: "How to provision a VPS" }
+        ]
+      }
+    },
   }
 
 </script>

@@ -25,7 +25,15 @@ export default {
     "console-blink": ConsoleBlink,
     "social-links": SocialLinks,
     "homepage-hexagons": HomepageHexagons
-  }
+  },
+  head () {
+    return {
+      title: "Home | vohzd.com",
+      meta: [
+        { hid: "index-description", name: "description", content: "The homepage of superstar developer Vohzd" }
+      ]
+    }
+  },
 }
 </script>
 

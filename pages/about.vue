@@ -11,6 +11,14 @@
 
 <script>
 	export default {
+    head () {
+      return {
+        title: "About | vohzd.com",
+        meta: [
+          { hid: "about-description", name: "description", content: "About me" }
+        ]
+      }
+    },
 	}
 </script>
 

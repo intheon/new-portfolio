@@ -23,6 +23,7 @@
           </div>
         </nuxt-link>
 
+        <!--
         <nuxt-link to="/tools/fonts">
           <div class="tool-item mb">
             <label>> Font Selector</label>
@@ -57,7 +58,7 @@
               I run both UT99 and UT4 servers. Ultrrraaaa Killll!
             </span>
           </div>
-        </nuxt-link>
+        </nuxt-link>-->
 
       </div>
 
@@ -68,8 +69,21 @@
 
 <script>
 	export default {
+    head () {
+      return {
+        title: "Tools | vohzd.com",
+        meta: [
+          { hid: "index-description", name: "description", content: "Useful stuff" }
+        ]
+      }
+    },
 	}
 </script>
 
 <style>
+
+  .tools-wrapper {
+    overflow: scroll;
+  }
+
 </style>

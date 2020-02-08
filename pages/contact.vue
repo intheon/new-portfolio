@@ -9,12 +9,13 @@
         <a href="https://stackoverflow.com/users/3609943/vohzd" target="_blank"><li><i class="fab fa-stack-overflow" aria-hidden="true"></i></li></a>
         <a href="https://twitter.com/vohzd" target="_blank"><li><i class="fab fa-twitter" aria-hidden="true"></i></i></li></a>
       </ul>
+      <!--
       <div class="contact-form">
         <input type="text" placeholder="Name" v-model="name">
         <input type="text" placeholder="Message" v-model="message">
         <input type="text" placeholder="Email" v-model="email">
         <button @click="sendMessage">{{ buttonText }}</button>
-      </div>
+      </div>-->
 		</section>
   </section>
 </template>
@@ -57,7 +58,15 @@
         this.email = "";
         this.buttonText = "Send!"
       }
-    }
+    },
+    head () {
+      return {
+        title: "Contact | vohzd.com",
+        meta: [
+          { hid: "contact-description", name: "description", content: "Contact me" }
+        ]
+      }
+    },
 	}
 
 </script>

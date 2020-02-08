@@ -1,7 +1,7 @@
 <template>
   <section class="background-wrapper colour6">
-    <div class="blog-content-wrapper">
-      <blog-post />
+    <div class="blog-content-wrapper pb">
+      <blog-post></blog-post>
     </div>
   </section>
 </template>
@@ -9,7 +9,7 @@
 <script>
   import Prism from 'prismjs';
 
-  import BlogPost from "~/components/blog/blog3.vue";
+  import BlogPost from "~/components/blog/blog4.vue";
 
   export default {
     components: {
@@ -20,9 +20,9 @@
     },
     head () {
       return {
-        title: "Deploy Docker Image | vohzd.com",
+        title: "Cheaper Heroku | vohzd.com",
         meta: [
-          { hid: "deploy-docker-description", name: "description", content: "How to get your Docker container live on the internet" }
+          { hid: "index-description", name: "description", content: "A cheaper way to do automate Docker deployments" }
         ]
       }
     },

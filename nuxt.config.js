@@ -14,7 +14,7 @@ module.exports = {
       { rel: "canonical", href: "https://vohzd.com" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Stylish" }
     ],
-    script: [{ src: "http://localhost:1337/libraries/main.js" }]
+    //script: [{ src: "http://localhost:1337/libraries/main.js" }]
   },
   loading: { color: "#552a3f" },
   router: {
