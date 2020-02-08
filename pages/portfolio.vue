@@ -4,11 +4,11 @@
       <h2 class="main-header">portfolio</h2>
       <div class="flex scroll">
         <section class="portfolio-item">
-          <h2>All Silk Mastering</h2>
-          <div class="inline-links">
-            <a href="https://allsilkmasteringhouse.com" target="_blank"><i class="fas fa-link"></i></a>
+          <div class="overflow-wrapper">
+            <img src="~assets/img/portfolio-image-ed.png" class="portfolio-image" />
           </div>
-          <img src="~assets/img/portfolio-image-ed.png" class="portfolio-image" />
+          <h2>All Silk Mastering</h2>
+          <a href="https://allsilkmasteringhouse.com" target="_blank">https://allsilkmasteringhouse.com</a>
           <p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
           <p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
           <ul>
@@ -19,12 +19,12 @@
           </ul>
         </section>
         <section class="portfolio-item">
-          <h2>Skate Locate</h2>
-          <div class="inline-links">
-            <a href="https://github.com/vohzd/skatelocate" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
-            <a href="https://skatelocate.vohzd.com/" target="_blank"><i class="fa fa-link"></i></a>
+          <div class="overflow-wrapper">
+            <img src="~assets/img/portfolio-image-mile.png" class="portfolio-image" />
           </div>
-          <img src="~assets/img/portfolio-image-mile.png" class="portfolio-image" />
+          <h2>Skate Locate</h2>
+          <a href="https://github.com/vohzd/skatelocate" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://skatelocate.vohzd.com/" target="_blank">https://skatelocate.vohzd.com/</a>
           <p>A realtime map of skateparks and skatespots around the world.</p>
           <p>Add, view, and filter skateparks in your area of interest.</p>
           <p>Built with VueJS and mostly in ES6/7. Is completely realtime with Firebase on the backend, which features websockets, Cloudinary for images, Leaflet/Mapbox for the map engine.</p>
@@ -35,9 +35,6 @@
             <li>Built and Bundled with Webpack3.</li>
           </ul>
         </section>
-        <section class="portfolio-item">
-          <h2>More coming soon!</h2>
-        </section>
       </div>
     </section>
   </section>
@@ -45,16 +42,29 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: "Portfolio | vohzd.com",
+        meta: [
+          { hid: "portfolio-description", name: "description", content: "Cool stuff I've built" }
+        ]
+      }
+    },
   }
 </script>
 
 <style lang="css">
 
 
+  /*
   .portfolio-item {
-    flex: 1 0 30%;
+    flex: 1 0 10%;
     margin-right: 3%;
     position: relative;
+  }*/
+  .portfolio-item {
+    width: 30%;
+    margin-right: 5%;
   }
 
   .portfolio-content p {
@@ -66,19 +76,16 @@
   }
 
   .portfolio-item h2 {
-    position: absolute;
-    background: rgba(0,0,0,0.8);
     font-weight: normal;
-    font-size: 18px;
-    color: white;
-    padding: 8px;
-    width: 16%;
-    text-align: center;
   }
 
   .portfolio-image {
     width: 100%;
+  }
+
+  .overflow-wrapper {
     overflow: hidden;
+    max-height: 320px;
   }
 
   .skate {

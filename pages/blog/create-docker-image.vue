@@ -17,7 +17,15 @@
     },
     mounted(){
       Prism.highlightAll()
-    }
+    },
+    head () {
+      return {
+        title: "Create a Docker image | vohzd.com",
+        meta: [
+          { hid: "create-docker-description", name: "description", content: "First tutorial on Docker explaining how to create your own image" }
+        ]
+      }
+    },
   }
 
 

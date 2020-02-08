@@ -12,6 +12,14 @@
 
 <script>
 	export default {
+    head () {
+      return {
+        title: "Services | vohzd.com",
+        meta: [
+          { hid: "services-description", name: "description", content: "Development services on offer" }
+        ]
+      }
+    },
 	}
 </script>
 
