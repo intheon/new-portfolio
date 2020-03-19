@@ -18,6 +18,9 @@
       <nuxt-link to="/tools">
         <label>tools</label>
       </nuxt-link>
+      <nuxt-link to="/ut">
+        <label>ut</label>
+      </nuxt-link>
   </nav>
 </template>
 

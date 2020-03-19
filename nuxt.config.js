@@ -6,7 +6,7 @@ module.exports = {
       { name: "Author", content: "vohzd" },
       { name: "google-site-verification", content: "YFLjJEzwNtdNatFp0w4SBmfHPtVMfcWyD9Pp1eJxzW4" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "keywords", content: "javascript, developer, vue, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
+      { name: "keywords", content: "javascript, developer, vue, gaming, unreal, tournament, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
       { hid: "description", name: "description", content: "vohzd | Marvellous full-stack developer!" }
     ],
     link: [

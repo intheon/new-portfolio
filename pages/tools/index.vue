@@ -1,9 +1,9 @@
 <template>
   <section class="background-wrapper colour2">
     <section class="content-wrapper">
-      <h2 class="second-header mb">tools</h2>
+      <h2 class="main-header mb">tools</h2>
 
-      <div class="tools-wrapper c50">
+      <div class="c50">
 
         <nuxt-link to="/tools/lastfm">
           <div class="tool-item mb">
