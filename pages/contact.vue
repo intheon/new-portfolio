@@ -1,92 +1,93 @@
 <template>
-  <section class="background-wrapper colour3">
-    <section class="content-wrapper">
-      <h2 class="main-header">contact</h2>
-      <ul class="about-social-links">
-        <a href="https://github.com/vohzd" target="_blank"><li><i class="fab fa-github" aria-hidden="true"></i></li></a>
-        <a href="https://angel.co/vohzd" target="_blank"><li><i class="fab fa-angellist" aria-hidden="true"></i></i></li></a>
-        <a href="https://www.linkedin.com/in/benjamin-n-smith" target="_blank"><li><i class="fab fa-linkedin" aria-hidden="true"></i></i></li></a>
-        <a href="https://stackoverflow.com/users/3609943/vohzd" target="_blank"><li><i class="fab fa-stack-overflow" aria-hidden="true"></i></li></a>
-        <a href="https://twitter.com/vohzd" target="_blank"><li><i class="fab fa-twitter" aria-hidden="true"></i></i></li></a>
-      </ul>
-      <!--
-      <div class="contact-form">
-        <input type="text" placeholder="Name" v-model="name">
-        <input type="text" placeholder="Message" v-model="message">
-        <input type="text" placeholder="Email" v-model="email">
-        <button @click="sendMessage">{{ buttonText }}</button>
-      </div>-->
-		</section>
-  </section>
+  <div class="content-wrapper mtx">
+    <h1>contact</h1>
+
+    <div class="row">
+      <p>{{ welcomeText }}</p>
+      <div class="c50">
+        <input class="row mb" v-model="name" placeholder="name" />
+        <input class="row mb" v-model="email" placeholder="email" />
+        <textarea class="row mb" v-model="message" placeholder="message"></textarea>
+        <form-button @click.native="handleMessage" class="text-center" :button-text="buttonText" :is-loading="isLoading" :is-disabled="isDisabled" ></form-button>
+      </div>
+      <div class="c50">
+        <div class="c20 right">
+          <a href="https://github.com/vohzd" target="_blank" class="text-center"><font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon> @vohzd</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-
-	export default {
-    data(){
-      return {
-        name: "",
-        message: "",
-        email: "",
-        buttonText: "Send!",
-        serverURL: "https://vohzd.com/email"
+import FormButton from "~/components/form/FormButton.vue";
+export default {
+  components: {
+    FormButton
+  },
+  data(){
+    return {
+      buttonText: "Send!",
+      isLoading: false,
+      isDisabled: true,
+      name: "",
+      email: "",
+      message: "",
+      regEx: /\S+@\S+\.\S+/,
+      welcomeText: "Send me a message directly. I'll get back to you asap."
+    }
+  },
+  head () {
+    return {
+      title: "Contact  | vohzd.com",
+      meta: [
+        { hid: "index-description", name: "description", content: "The homepage of superstar developer Vohzd" }
+      ]
+    }
+  },
+  methods: {
+    async handleMessage(){
+      this.isLoading = true;
+      await this.$axios.post("http://localhost:1337/email", {
+        "from": this.email,
+        "name": this.name,
+        "message": this.message
+      });
+      this.welcomeText = "Thank you! That's been sent!"
+      this.reset();
+    },
+    testIsValid(){
+      if (this.name && this.regEx.test(this.email) && this.message){
+        this.isDisabled = false;
+      }
+      else {
+        this.isDisabled = true;
       }
     },
-    methods: {
-      async sendMessage(){
-        this.buttonText = "Working...";
-        try {
-          await this.$axios.post(this.serverURL, {
-            fromName: this.name,
-            fromEmail: this.email,
-            toEmail: "<allobon@gmail.com>",
-            toName: "Ben",
-            subject: "Message from vohzd.com",
-            html: this.message
-          });
-          this.buttonText = "Thanks, sent!";
-          setTimeout(() => { this.clear(); }, 1500)
-        }
-        catch (e){
-          this.buttonText = "Error";
-          setTimeout(() => { this.clear(); }, 1500)
-        }
-      },
-      clear(){
-        this.name = "";
-        this.message = "";
-        this.email = "";
-        this.buttonText = "Send!"
-      }
+    reset(){
+      this.isLoading = false;
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    }
+  },
+  watch: {
+    name(){
+      this.testIsValid();
     },
-    head () {
-      return {
-        title: "Contact | vohzd.com",
-        meta: [
-          { hid: "contact-description", name: "description", content: "Contact me" }
-        ]
-      }
+    email(){
+      this.testIsValid()
     },
-	}
-
+    message(){
+      this.testIsValid();
+    }
+  }
+}
 </script>
 
 <style>
 
-  .contact-form input {
-    font-family: 'Saira Semi Condensed', sans-serif;
-    background: rgba(255,255,255,0.5);
-    padding: 16px;
-    outline: none;
-    border: none;
-  }
 
-  .contact-form button {
-    font-family: 'Saira Semi Condensed', sans-serif;
-    background: rgba(255,255,255,0.75);
-    padding: 16px;
-    outline: none;
-    border: none;
-  }
+
 
 </style>

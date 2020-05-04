@@ -1,22 +1,38 @@
-# nuxt-homepage
+# REFACTOR UNDERWAY - IS WIP !!!
 
-> vohzd.com homepage
 
-## Build Setup
+# Springboard
+My personal dashboard á la iGoogle, but in realtime!
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+Organise the shit out of your life, in a self hosted fashion.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### V3 Major Refactor
 
-# build for production and launch server
-$ npm run build
-$ npm start
+- Uses `nuxtjs` which hides a lot of the boring implementations and is just nicer to work with.
+- Move to monorepo & Docker for ease of self hosting.
+- Uses MongoDB Compass as a backend (their web based interface is awesome). Self hosting Mongo will come in V4 as an option with Docker Compose.
+- Dropping of client-side encryption, as this is intended for hardware you own (might reconsider in future).
+- More focus on features.
+- Better styling.
+- Relies on any S3 compatible hosting for filestorage.
 
-# generate static project
-$ npm run generate
-```
+### Installation
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+1. Clone this repo
+2. Create a folder called `keys`.
+3. Add the files `jwtSecret.js`, `s3.js`, `mongo.js` to api/keys (there's examples of what you need to add) - Note this is just for a dev environment, for prod you pass in env vars.
+   - `JWT_SECRET` - Some secure and random string.
+   - `SERVER_ENDPOINT` - Where your API is hosted (default port 1337 on this monorepo).
+   - `S3_BUCKET` - S3 Bucket Name
+   - `S3_ENDPOINT` - S3 URL Endpoint.
+   - `MONGO_DB` - Database Endpoint.
+   - `S3_REGION` - e.g eu-central-1, with Min.io, this is set to "default".
+   - `S3_KEY` - Api Key
+   - `S3_SECRET` - Api Secret.
+4. Add in your values for these (you can get your MongoDB string from https://cloud.mongodb.com)
+5. `npm install && npm run dev`
+6. Open `localhost:3000`
+
+Raise an issue if you have a feature request!
+
+Updates are coming ... soon... when I finish some contract work... promise...
