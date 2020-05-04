@@ -1,30 +1,31 @@
 module.exports = {
-  title: "Vohzd | Full Stack JS Developer",
   head: {
+    title: "Vohzd | Full Stack JS Developer",
     meta: [
       { charset: "utf-8" },
-      { name: "Author", content: "vohzd" },
-      { name: "google-site-verification", content: "YFLjJEzwNtdNatFp0w4SBmfHPtVMfcWyD9Pp1eJxzW4" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "keywords", content: "javascript, developer, vue, gaming, unreal, tournament, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
-      { hid: "description", name: "description", content: "vohzd | Marvellous full-stack developer!" }
+      { hid: "description", name: "description", content: "vohzd | Marvellous full-stack developer!" },
+      { hid: "identifier-url", name: "identifier-url", content: "https://vohzd.com" },
+      { hid: "title", name: "title", content: "Vohzd.com" },
+      { hid: "abstract", name: "abstract", content: "vohzd | Marvellous full-stack developer!" },
+      { hid: "keywords", name: "keywords", content: "sjavascript, developer, vue, gaming, unreal, tournament, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
+      { hid: "author", name: "author", content: "vohzd" },
+      { hid: "language", name: "language", content: "EN" },
+      { hid: "robots", name: "robots", content: "All" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "canonical", href: "https://vohzd.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Stylish" }
-    ],
-    //script: [{ src: "http://localhost:1337/libraries/main.js" }]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "canonical", href: "https://vohzd.com" }
+    ]
   },
-  loading: { color: "#552a3f" },
-  router: {
-    base: "/"
-  },
+  css: [
+    "~/node_modules/plyr/dist/plyr.css"
+  ],
+  loading: { color: '#552a3f' },
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
-    [ "@nuxtjs/google-analytics", { id: "UA-104309082-3" } ]
   ],
   build: {
     optimizeCSS: true
@@ -33,12 +34,14 @@ module.exports = {
     hostname: "https://vohzd.com",
     gzip: true
   },
+  plugins: [
+    "~/plugins/plyr.js",
+    "~/plugins/date.js",
+    "~/plugins/fontawesome.js"
+  ],
   axios: {
     baseURL: "/",
     proxyHeaders: false,
     credentials: true
-  },
-  plugins: [
-    "~/plugins/date.js"
-  ]
+  }
 }
