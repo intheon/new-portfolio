@@ -8,6 +8,7 @@
 <script>
 
 import { mapActions, mapGetters } from "vuex";
+import "~/node_modules/prismjs/themes/prism-twilight.css"
 
 import TopNav from "~/components/nav/Top.vue";
 
@@ -145,6 +146,47 @@ export default {
 
   p {
     margin-bottom: 1.2em;
+  }
+
+  pre {
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px .5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    background: hsl(0, 0%, 8%);
+
+  }
+
+  code {
+    color: white;
+    background: hsl(0, 0%, 8%);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    text-shadow: 0 -.1em .2em black;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .blog-content-wrapper h2 {
+    background: none;
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 42px;
+    margin-bottom: 1.2em;
+    white-space: revert;
   }
 
   .text-ellipsis {

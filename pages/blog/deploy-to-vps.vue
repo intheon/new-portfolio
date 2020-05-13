@@ -1,6 +1,6 @@
 <template>
   <section class="background-wrapper colour6">
-    <div class="blog-content-wrapper">
+    <div class="blog-content-wrapper mtx row">
       <blog-post />
     </div>
   </section>
