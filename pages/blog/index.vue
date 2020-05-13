@@ -2,7 +2,7 @@
   <div class="mtx">
     <h1>blog</h1>
     <div class="blog-posts">
-      <nuxt-link to="/blog/cheaper-heroku" class="mbx">
+      <nuxt-link to="/blog/cheaper-heroku" class="mbx row">
         <article class="blog-cta">
           <h3>Cheaper automated deployments (4x cheaper than Heroku)</h3>
           <div class="blog-fixed-bottom">
@@ -10,7 +10,7 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link to="/blog/deploy-to-vps" class="mbx">
+      <nuxt-link to="/blog/deploy-to-vps" class="mbx row">
         <article class="blog-cta">
           <h3>Docker Part Three: Time to deploy your container live!</h3>
           <div class="blog-fixed-bottom">
@@ -18,7 +18,7 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link to="/blog/provision-vps" class="mbx">
+      <nuxt-link to="/blog/provision-vps" class="mbx row">
         <article class="blog-cta">
           <h3>Docker Part Two: How to provision a VPS, install Nginx, and configure SSL.</h3>
           <div class="blog-fixed-bottom">
@@ -26,7 +26,7 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link to="/blog/create-docker-image" class="mbx">
+      <nuxt-link to="/blog/create-docker-image" class="mbx row">
         <article class="blog-cta">
           <h3>Docker Part One: How to create an image from scratch and upload to Docker Hub</h3>
           <div class="blog-fixed-bottom">

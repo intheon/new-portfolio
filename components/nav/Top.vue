@@ -55,6 +55,7 @@ export default {
 	.nav-link {
     display: inline-block;
 		line-height: 54px;
+    background: none;
 	}
 
 </style>

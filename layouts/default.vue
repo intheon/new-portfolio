@@ -26,12 +26,12 @@ export default {
     --first-r: 30;
     --first-g: 28;
     --first-b: 31;
-    --second-hex: #869eb6;
-    --second-hex-darker: #485f77;
+    --second-hex: #a9bfd5;
+    --second-hex-darker: #597490;
     --second-r: 134;
     --second-g: 158;
     --second-b: 182;
-    --third-hex: #194967;
+    --third-hex: #3f6e8b;
     --third-r: 25;
     --third-g: 73;
     --third-b: 103;
@@ -89,11 +89,10 @@ export default {
     padding: 0;
     width: 100%;
     height: calc(100% - 64px);
-    font-size: 22px;
+    font-size: 24px;
     text-shadow: 1px 1px rgba(0,0,0,0.05);
     line-height: 1.5em;
     position: relative;
-    overflow: hidden;
   }
 
   .vc-chrome {
@@ -105,11 +104,16 @@ export default {
     text-decoration: none;
     transition: 0.5s all;
     display: inline-block;
+    padding: 4px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 3px;
   }
 
   a:hover {
     color: var(--third-hex);
     cursor: pointer;
+    background: rgba(255,255,255,0.0);
+
   }
 
 
@@ -1397,11 +1401,11 @@ export default {
   }
 
   .page-enter-active {
-    animation: acrossIn .3s ease-out both;
+    animation: acrossIn .2s ease-out both;
   }
 
   .page-leave-active {
-    animation: acrossOut .3s ease-in both;
+    animation: acrossOut .2s ease-in both;
   }
 
   @keyframes acrossIn {
