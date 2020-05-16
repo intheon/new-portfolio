@@ -1,6 +1,6 @@
 <template>
   <div class=" mtx">
-    <h1>oh hai...</h1>
+    <h1>Oh hai...</h1>
     <section>
       <p>I'm Ben, developer of internets</p>
       <p>I'm a full stack developer, specialising in JavaScript</p>

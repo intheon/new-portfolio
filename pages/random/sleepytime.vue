@@ -1,7 +1,7 @@
 <template>
   <section class="background-wrapper colour2">
     <section class="content-wrapper">
-      <h2 class="second-header mb">sleepytime</h2>
+      <h2 class="second-header mb">Sleepytime</h2>
       <h3>If you need to go to bed now, you should wake up at:</h3>
       <div>The time is now {{ timeNow | dateFilter }}</div>
       <div>Cycle 1: {{ cycle1 | dateFilter }}</div>

@@ -1,15 +1,16 @@
 <template>
   <section class="background-wrapper colour4">
-    <section class="content-wrapper">
+    <section class="content-wrapper mtx">
       <h2 class="main-header">Unreal Tournament</h2>
+      <p>Here be useful stuff for the amazing game Unreal Tournament.</p>
       <p>I've been playing UT since 2000/2001. It's stood the test of time and still active today.</p>
-      <p>I made my first map around 2004/2005, and will be uploading an archive of maps.</p>
-			<div class="row">
+      <nuxt-link to="/random/ut/map-inspect">Map Inspector</nuxt-link>
+
+			<div class="row mtx">
+        <h3>COMING SOON</h3>
+
         <ul>
-          <li>Isolated</li>
-          <li>Redemption</li>
-          <li>Have A Cigar</li>
-          <li>Chantry</li>
+          <li>UNREAL ARCHIVE</li>
         </ul>
       </div>
 		</section>

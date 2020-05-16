@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrapper mtx">
-    <h1>contact</h1>
+    <h1>Contact</h1>
 
     <div class="row">
       <p>{{ welcomeText }}</p>

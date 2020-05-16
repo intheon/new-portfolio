@@ -1,6 +1,6 @@
 <template>
   <div class="mtx">
-    <h1>portfolio</h1>
+    <h1>Portfolio</h1>
     <p>Here's my professional projects I've done for clients.</p>
 
     <a href="#" class="row mb" >All Silk Mastering House</a>

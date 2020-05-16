@@ -1,6 +1,6 @@
 <template>
   <div class="mtx">
-    <h1>blog</h1>
+    <h1>Blog</h1>
     <div class="blog-posts">
       <nuxt-link to="/blog/cheaper-heroku" class="mbx row">
         <article class="blog-cta">
