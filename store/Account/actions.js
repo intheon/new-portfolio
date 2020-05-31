@@ -3,7 +3,6 @@ import state 												from "./state.js";
 export default {
   async checkAuthState({ commit, dispatch }){
     try {
-      commit("SET_IS_LOADING", true);
       let req = await this.$axios.get(`${this.getters.serverEndpoint}/checkAuthState`, { withCredentials: true });
       if (req.status === 200){
         dispatch("setUserMeta", req.data.user);
@@ -14,7 +13,6 @@ export default {
         dispatch("setUserMeta", false);
       }
     }
-    commit("SET_IS_LOADING", false);
   },
   async checkUserExists({ commit, dispatch }, email){
     try {
@@ -35,7 +33,6 @@ export default {
     }
   },
   async login({ commit, dispatch }, payload){
-    commit("SET_IS_LOADING", true);
     try {
       let req = await this.$axios.post(`${this.getters.serverEndpoint}/login`, { email: payload.email, password: payload.password }, { withCredentials: true });
       if (req.status === 401){
@@ -55,16 +52,13 @@ export default {
       if (e.response.status === 401){
         dispatch("setNotification", "Wrong Password");
       }
-      commit("SET_IS_LOADING", false);
     }
   },
   async logout({ commit, dispatch }, needsRedirect){
-    commit("SET_IS_LOADING", true);
     try {
       let req = await this.$axios.post(`${this.getters.serverEndpoint}/logout`, {}, { withCredentials: true });
       if (req.status === 200){
         dispatch("setUserMeta", null);
-        commit("SET_IS_LOADING", false);
       }
       if (needsRedirect){
         this.$router.push("/");
@@ -72,7 +66,6 @@ export default {
     }
     catch (e){
       dispatch("setNotification", e.response.message);
-      commit("SET_IS_LOADING", false);
     }
   },
   async requestPasswordReset({ commit, dispatch }, email){
@@ -80,13 +73,12 @@ export default {
     catch (e) { console.log(e) }
   },
   async register({ commit, dispatch }, payload){
-    commit("SET_IS_LOADING", true);
     try {
       await this.$axios.post(`${this.getters.serverEndpoint}/register`, { "email": payload.email, "password": payload.password, "name": payload.name });
       await dispatch("login", { "email": payload.email, "password": payload.password });
     }
     catch (e){
-      commit("SET_IS_LOADING", false);
+      console.log(e)
     }
   },
   setUserMeta({ commit }, meta){

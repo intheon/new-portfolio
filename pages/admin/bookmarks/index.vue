@@ -1,15 +1,13 @@
 <template lang="html">
   <div>
     <main class="center-container mtx">
-      <div class="row">
-        <h1>Admin Dashboard</h1>
+      <div class="row relative">
+        <h1>Bookmarks</h1>
+        <nuxt-link to="/admin/bookmarks/new" class="absolute-top-right"><button>Create New</button></nuxt-link>
       </div>
       <div class="row">
-        <p>Please select an option.</p>
-        <nuxt-link to="/admin/bookmarks">Bookmarks</nuxt-link>
-        <div class="mt row">
-          <button type="button" class="dashboard-button" @click="logout">Logout</button>
-        </div>
+        <h4>Existing Bookmarks</h4>
+        <p>None</p>
       </div>
     </main>
   </div>
