@@ -1,6 +1,6 @@
 {
   "name": "vohzd.com",
-  "version": "4.0.0",
+  "version": "4.0.2",
   "description": "vohzd.com homepage",
   "author": "Ben <admin@epitrade.io>",
   "scripts": {
@@ -22,7 +22,7 @@
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/sitemap": "^2.3.0",
     "cross-env": "^7.0.2",
-    "date-fns": "^2.13.0",
+    "date-fns": "^2.14.0",
     "nuxt": "^2.12.2",
     "plyr": "^3.6.2",
     "prismjs": "^1.20.0",

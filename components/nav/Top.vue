@@ -21,6 +21,7 @@
       random stuff
     </nuxt-link>
 
+    <account-icon></account-icon>
 
 	</header>
 </template>
@@ -29,6 +30,8 @@
 
 import { mapActions, mapGetters } from "vuex";
 
+import AccountIcon from "~/components/nav/AccountIcon.vue";
+
 export default {
   computed: {
     ...mapGetters([
@@ -36,6 +39,9 @@ export default {
       "userMeta"
     ])
   },
+  components: {
+    AccountIcon
+  }
 }
 
 </script>

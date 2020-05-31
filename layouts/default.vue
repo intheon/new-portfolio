@@ -15,9 +15,18 @@ import TopNav from "~/components/nav/Top.vue";
 export default {
   components: {
     TopNav
+  },
+  methods: {
+    ...mapActions([
+      "checkAuthState",
+    ])
+  },
+  async mounted(){
+    await this.checkAuthState();
   }
 };
 </script>
+
 
 <style lang="css">
 

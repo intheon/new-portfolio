@@ -1,13 +1,12 @@
 <template>
-  <div class=" mtx">
+  <div class="mtx">
     <h1>Oh hai...</h1>
     <section>
       <p>I'm Ben, developer of internets</p>
       <p>I'm a full stack developer, specialising in JavaScript</p>
       <p>> Check out my <nuxt-link to="/portfolio">portfolio</nuxt-link> for cool projects</p>
       <p>> Need tech help? <nuxt-link to="/contact">Contract</nuxt-link> me</p>
-      <p>> Not sure why you're here? Here's some <nuxt-link to="/random">interesting stuff</nuxt-link> :D<console-blink /></p>
-      <social-links />
+      <p>> Not sure why you're here? Here's some <nuxt-link to="/random">interesting stuff</nuxt-link> :D<console-blink></console-blink></p>
     </section>
   </div>
 </template>

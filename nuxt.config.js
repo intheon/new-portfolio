@@ -8,7 +8,7 @@ module.exports = {
       { hid: "identifier-url", name: "identifier-url", content: "https://vohzd.com" },
       { hid: "title", name: "title", content: "Vohzd.com" },
       { hid: "abstract", name: "abstract", content: "vohzd | Marvellous full-stack developer!" },
-      { hid: "keywords", name: "keywords", content: "sjavascript, developer, vue, gaming, unreal, tournament, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
+      { hid: "keywords", name: "keywords", content: "javascript, developer, vue, gaming, unreal, tournament, devops, nuxt, freelance, tutorial, ecommerce, conversion, rate, optimisation" },
       { hid: "author", name: "author", content: "vohzd" },
       { hid: "language", name: "language", content: "EN" },
       { hid: "robots", name: "robots", content: "All" }
@@ -21,6 +21,9 @@ module.exports = {
   css: [
     "~/node_modules/plyr/dist/plyr.css"
   ],
+  env: {
+    SERVER_ENDPOINT: process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : "http://localhost:1337"
+  },
   loading: { color: '#552a3f' },
   modules: [
     "@nuxtjs/axios",

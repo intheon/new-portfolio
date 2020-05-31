@@ -15,6 +15,7 @@ import getters 							from "./rootGetters.js";
 /*
  * INDIVIDUAL COMPONENT VUEX STUFF
  */
+import Account 						  	from "./Account/index.js";
 
 
 Vue.use(Vuex);
@@ -24,6 +25,7 @@ export default () => {
 		actions,
 		getters,
 		modules: {
+			Account
 		},
 		mutations: {
 			...myMutations
