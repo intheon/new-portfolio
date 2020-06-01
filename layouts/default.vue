@@ -347,6 +347,10 @@ export default {
     margin: 64px;
   }
 
+  .mtm {
+    margin-top: 16px;
+  }
+
   .mtx {
     margin-top: 64px;
   }

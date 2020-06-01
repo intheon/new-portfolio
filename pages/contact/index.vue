@@ -20,10 +20,17 @@
 </template>
 
 <script>
+
+import { mapGetters } from "vuex";
 import FormButton from "~/components/form/FormButton.vue";
 export default {
   components: {
     FormButton
+  },
+  computed: {
+    ...mapGetters([
+      "serverEndpoint"
+    ])
   },
   data(){
     return {
@@ -48,7 +55,7 @@ export default {
   methods: {
     async handleMessage(){
       this.isLoading = true;
-      await this.$axios.post("http://localhost:1337/email", {
+      await this.$axios.post(`${this.serverEndpoint}/message`, {
         "from": this.email,
         "name": this.name,
         "message": this.message

@@ -3,9 +3,9 @@
     <h1>Portfolio</h1>
     <p>Here's my professional projects I've done for clients.</p>
 
-    <a href="#" class="row mb" >All Silk Mastering House</a>
-    <a href="#" class="row mb" >All Silk Recording Studio</a>
-    <a href="#" class="row mb" >Superyagi Antennas</a>
+    <a href="https://allsilkmasteringhouse.com" class="row mb pad" >All Silk Mastering House</a>
+    <a href="#" class="row mb pad" >All Silk Recording Studio</a>
+    <a href="#" class="row mb pad" >Superyagi Antennas</a>
 
   </div>
 </template>
