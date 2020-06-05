@@ -2,6 +2,7 @@
   <div>
     <top-nav></top-nav>
     <nuxt class="main-view"></nuxt>
+    <particle-background></particle-background>
   </div>
 </template>
 
@@ -11,10 +12,12 @@ import { mapActions, mapGetters } from "vuex";
 import "~/node_modules/prismjs/themes/prism-twilight.css"
 
 import TopNav from "~/components/nav/Top.vue";
+import ParticleBackground from "~/components/ParticleBackground.vue";
 
 export default {
   components: {
-    TopNav
+    TopNav,
+    ParticleBackground
   },
   methods: {
     ...mapActions([
@@ -841,6 +844,7 @@ export default {
    animation: pulseAnim 2s infinite;
  }
 
+
    .black-fullscreen-overlay {
      background: black;
      width: 100% !important;
@@ -874,6 +878,16 @@ export default {
      margin: 0;
      overflow: hidden;
    }
+
+   .particle-background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: calc(100vh - 64px);
+   }
+
+
 
   input, textarea, .StripeElement, .input-field {
     padding: 24px;

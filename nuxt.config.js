@@ -38,6 +38,7 @@ module.exports = {
     gzip: true
   },
   plugins: [
+    { src:'~/plugins/particles.js', mode: "client" },
     "~/plugins/plyr.js",
     "~/plugins/date.js",
     "~/plugins/fontawesome.js"
