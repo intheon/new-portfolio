@@ -1,12 +1,7 @@
 <template>
   <div class="mtx">
-    <h1>Blog</h1>
-    <div class="blog-posts">
-
-      <div class="row" >
-        <div v-html="$md.render(blog)"></div>
-      </div>
-
+    <div class="row" >
+      <div v-html="$md.render(blog)"></div>
     </div>
   </div>
 </template>
@@ -65,8 +60,5 @@ export default {
 </script>
 
 <style>
-  .blog-cta {
-    border-bottom: 1px solid;
-    padding-bottom: 16px;
-  }
+
 </style>
