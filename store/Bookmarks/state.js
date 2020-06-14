@@ -1,5 +1,6 @@
 export default () =>  {
   return {
-    //userMeta: null,
+    bookmark: null,
+    bookmarks: []
   }
 }

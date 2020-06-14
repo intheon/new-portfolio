@@ -7,7 +7,10 @@
       </div>
       <div class="row">
         <h4>Existing Bookmarks</h4>
-        <p>None</p>
+        <div class="row mt" v-for="bookmark in bookmarks">
+          <a target="_blank" :href="bookmark.url">{{ bookmark.name }}</a>
+          <p>{{ bookmark.description }}</p>
+        </div>
       </div>
     </main>
   </div>
@@ -19,17 +22,21 @@ import { mapActions, mapGetters } from "vuex";
 
 
 export default {
-  meta: [
-    {
-      "test": "123"
-    }
-  ],
-  methods: {
-    ...mapActions([
-      "logout"
+  computed: {
+    ...mapGetters([
+      "bookmarks"
     ])
   },
-  middleware: ["isAdmin"]
+  methods: {
+    ...mapActions([
+      "logout",
+      "getBookmarks"
+    ])
+  },
+  middleware: ["isAdmin"],
+  mounted(){
+    this.getBookmarks();
+  }
 }
 
 </script>

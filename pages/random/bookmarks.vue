@@ -1,24 +1,41 @@
-<template>
-  <section class="background-wrapper colour4">
-    <section class="content-wrapper mtx">
-      <h2 class="main-header">Bookmarks</h2>
-      <p>nothing here...</p>
-      <input type="file" @change="parseFiles">
-		</section>
-  </section>
+<template lang="html">
+  <div>
+    <main class="center-container mtx">
+      <div class="row">
+        <h1>Bookmarks</h1>
+        <div class="row mt" v-for="bookmark in bookmarks">
+          <a target="_blank" :href="bookmark.url">{{ bookmark.name }}</a>
+          <p>{{ bookmark.description }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
-	export default {
-    methods: {
-      parseFiles(){
-        console.log("hello")
-        console.log(event)
-      }
-    }
-	}
+
+import { mapActions, mapGetters } from "vuex";
+
+
+export default {
+  computed: {
+    ...mapGetters([
+      "bookmarks"
+    ])
+  },
+  methods: {
+    ...mapActions([
+      "getBookmarks"
+    ])
+  },
+  mounted(){
+    this.getBookmarks();
+  }
+}
+
 </script>
 
-<style>
+<style lang="css">
+
 
 </style>

@@ -18,6 +18,7 @@ import getters 							from "./rootGetters.js";
 import Account 						  	from "./Account/index.js";
 import Bookmarks 						  from "./Bookmarks/index.js";
 import Blogs 						  		from "./Blogs/index.js";
+import Notification 					from "./Notification/index.js";
 
 Vue.use(Vuex);
 
@@ -28,7 +29,8 @@ export default () => {
 		modules: {
 			Account,
 			Blogs,
-			Bookmarks
+			Bookmarks,
+			Notification
 		},
 		mutations: {
 			...myMutations

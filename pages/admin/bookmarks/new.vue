@@ -4,24 +4,26 @@
       <div class="row">
         <h1>Create New Bookmark</h1>
         <label class="medium">Status: {{ status }}</label>
-        <button class="absolute-top-right">Create</button>
+        <button class="absolute-top-right" @click="handleNewBookmark">Create</button>
       </div>
       <div class="row mt">
-
-
         <div class="c50">
-          <div class="c90">
-            <label>URL</label>
-            <input v-model="url" placeholder="Website URL"/>
-          </div>
+          <label>URL</label>
+          <input v-model="url" placeholder="Website URL"/>
         </div>
-
         <div class="c50">
           <div v-if="status === 'retreived'">
             <img :src="screenshotURL" class="row">
           </div>
         </div>
-
+      </div>
+      <div class="row">
+        <div class="c50">
+          <label>Name</label>
+          <input v-model="name" placeholder="Name"/>
+          <label class="mt">Description</label>
+          <textarea v-model="description" placeholder="description"></textarea>
+        </div>
       </div>
     </main>
   </div>
@@ -31,20 +33,36 @@
 
 import { mapActions, mapGetters } from "vuex";
 
-
 export default {
   data(){
     return {
-      url: null,
+      description: "",
+      name: "",
       status: "ready",
-      screenshotURL: null
+      screenshotURL: null,
+      url: null
     }
   },
   middleware: ["isAdmin"],
   methods: {
     ...mapActions([
-      "getWebsiteScreenshot"
+      "createBookmark"
     ]),
+    async handleNewBookmark(){
+      await this.createBookmark({
+        "url": this.url,
+        "name": this.name,
+        "description": this.description
+      })
+      this.reset();
+    },
+    reset(){
+      this.description = "";
+      this.url = "";
+      this.name = "";
+    }
+
+    /* unneeded for now
     async handleWebsiteSnapshot(){
       console.log("this function has run...")
       console.log(this.url)
@@ -55,14 +73,15 @@ export default {
 
 
 
-    }
+    }*/
   },
+  /*
   watch: {
     url(){
       console.log("does this fire twice?!?!")
       this.handleWebsiteSnapshot()
     }
-  }
+  }*/
 }
 
 </script>

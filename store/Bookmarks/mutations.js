@@ -1,10 +1,10 @@
 import state from "./state.js";
 
 export default {
-  SET_USER_META(state, meta){
-    state.userMeta = meta;
+  SET_BOOKMARKS(state, bookmarks){
+    state.bookmarks = bookmarks;
   },
-  SET_USER_ORDERS(state, orders){
-    state.userOrders = orders;
+  SET_BOOKMARK(state, bookmark){
+    state.bookmark = bookmark;
   }
 }

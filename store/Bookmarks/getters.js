@@ -1,6 +1,6 @@
 import state from "./state.js";
 
 export default {
-  /*
-  userMeta: (state) => state.userMeta,*/
+  bookmark: (state) => state.bookmark,
+  bookmarks: (state) => state.bookmarks
 };
