@@ -29,7 +29,7 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
-    "@marcdiethelm/nuxtjs-countly"
+    { src:'@marcdiethelm/nuxtjs-countly', mode: "client" },
   ],
   countly: {
   	url: "https://stats.apps.epitrade.io",
