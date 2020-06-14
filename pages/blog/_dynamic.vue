@@ -50,7 +50,6 @@ export default {
           this.blog = parsed.content;
         }
       });
-      Prism.highlightAll()
     }
   },
   mounted(){
