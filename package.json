@@ -1,6 +1,6 @@
 {
   "name": "vohzd.com",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "vohzd.com homepage",
   "author": "Ben <admin@epitrade.io>",
   "scripts": {
@@ -18,6 +18,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@marcdiethelm/nuxtjs-countly": "^0.6.0",
     "@nuxtjs/axios": "^5.10.3",
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/sitemap": "^2.3.0",
