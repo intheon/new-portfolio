@@ -3,18 +3,9 @@
     <h1>Blog</h1>
     <div class="blog-posts">
 
-      <nuxt-link :to="`/blog/${blog.slug}`" class="mbx pad row" v-for="blog in parsedBlogs">
-        <article class="blog-cta">
-          <h3>{{ blog.title }}</h3>
-          <div class="">
-            {{ blog.description }}
-          </div>
-          <span v-for="tag in blog.tags">{{ tag }}</span>
-          <div class="blog-fixed-bottom">
-            <time>{{ blog.published }}</time>
-          </div>
-        </article>
-      </nuxt-link>
+      <div class="row" >
+        <div v-html="$md.render(blog)"></div>
+      </div>
 
     </div>
   </div>
@@ -35,14 +26,17 @@ export default {
   },
   data(){
     return {
-      parsedBlogs: []
+      blog: "",
+      slug: "",
+      title: "",
+      description: ""
     }
   },
   head () {
     return {
-      title: "Blog | vohzd.com",
+      title: `${this.title} | vohzd.com`,
       meta: [
-        { hid: "index-description", name: "description", content: "Useful technical tutorials for DIY DevOps & Full Stack Development" }
+        { hid: "index-description", name: "description", content: this.description }
       ]
     }
   },
@@ -51,20 +45,22 @@ export default {
       "getBlogs"
     ]),
     async init(){
+      this.slug = window.location.pathname.split("/")[2];
       await this.getBlogs();
-
       this.blogs.forEach((blog) => {
-        this.parsedBlogs.push(parseMD(blog).metadata);
+        const parsed = parseMD(blog);
+        if (parsed.metadata.slug === this.slug){
+          this.title = parsed.metadata.title;
+          this.title = parsed.metadata.description;
+          this.blog = parsed.content;
+        }
       });
-
-
       Prism.highlightAll()
-
     }
   },
   mounted(){
     this.init();
-  }
+  },
 }
 </script>
 

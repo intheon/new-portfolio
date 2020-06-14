@@ -31,6 +31,10 @@ module.exports = {
     "@nuxtjs/sitemap",
     { src:'@marcdiethelm/nuxtjs-countly', mode: "client" },
   ],
+  markdownit: {
+    injected: true,
+    breaks: true
+  },
   countly: {
   	url: "https://stats.apps.epitrade.io",
   	app_key: "290579aa23bf0fb1fa60a9187a879a2089386bb2",

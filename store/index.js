@@ -17,7 +17,7 @@ import getters 							from "./rootGetters.js";
  */
 import Account 						  	from "./Account/index.js";
 import Bookmarks 						  from "./Bookmarks/index.js";
-
+import Blogs 						  		from "./Blogs/index.js";
 
 Vue.use(Vuex);
 
@@ -27,6 +27,7 @@ export default () => {
 		getters,
 		modules: {
 			Account,
+			Blogs,
 			Bookmarks
 		},
 		mutations: {
