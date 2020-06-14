@@ -57,9 +57,6 @@ export default {
         this.parsedBlogs.push(parseMD(blog).metadata);
       });
 
-
-      Prism.highlightAll()
-
     }
   },
   mounted(){
