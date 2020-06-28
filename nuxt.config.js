@@ -29,19 +29,11 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
-    { src:'@marcdiethelm/nuxtjs-countly', mode: "client" },
+    ["nuxt-matomo", { matomoUrl: "https://stats.apps.epitrade.io", siteId: 1 }]
   ],
   markdownit: {
     injected: true,
     breaks: true
-  },
-  countly: {
-  	url: "https://stats.apps.epitrade.io",
-  	app_key: "290579aa23bf0fb1fa60a9187a879a2089386bb2",
-  	trackerSrc: "https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/20.4.0/countly.min.js",
-  	trackers: ["track_sessions", "track_pageview", "track_clicks", "track_scrolls", "track_errors", "track_links", "track_forms", "collect_from_forms"],
-  	noScript: true,
-  	debug: true
   },
   build: {
     optimizeCSS: true
@@ -53,7 +45,7 @@ module.exports = {
   plugins: [
     { src:'~/plugins/particles.js', mode: "client" },
     "~/plugins/plyr.js",
-    "~/plugins/date.js",
+    "~/plugins/time-filter.js",
     "~/plugins/fontawesome.js"
   ],
   axios: {

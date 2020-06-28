@@ -21,8 +21,8 @@ import { mapGetters } from "vuex";
   .account-icon {
     display: inline-block;
     right: 0;
-    top: 4px;
-    width: 48px;
+    top: 6px;
+    width: 56px;
     position: absolute;
   }
 

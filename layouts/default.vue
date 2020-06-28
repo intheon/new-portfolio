@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-nav></top-nav>
+    <header-wrapper></header-wrapper>
     <nuxt class="main-view"></nuxt>
     <particle-background></particle-background>
   </div>
@@ -11,12 +11,12 @@
 import { mapActions, mapGetters } from "vuex";
 import "~/node_modules/prismjs/themes/prism-twilight.css"
 
-import TopNav from "~/components/nav/Top.vue";
+import HeaderWrapper from "~/components/nav/HeaderWrapper.vue";
 import ParticleBackground from "~/components/ParticleBackground.vue";
 
 export default {
   components: {
-    TopNav,
+    HeaderWrapper,
     ParticleBackground
   },
   methods: {
@@ -153,7 +153,7 @@ export default {
 
   h3 {
     font-size: 32px;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.2em;
   }
 
   p {
@@ -1321,13 +1321,14 @@ export default {
 
   .nuxt-link-exact-active {
     color: var(--third-hex) !important;
+    opacity: 0.6;
     text-shadow: none;
   }
 
   .nuxt-link-exact-active:hover {
     text-shadow: 0px 0px transparent !important;
     color: var(--third-hex) !important;
-    opacity: 1;
+    opacity: 0.6;
     cursor: default;
   }
 
@@ -1550,7 +1551,6 @@ export default {
 
   .desktop-navigation {
     display: inline-block;
-    float: left;
   }
 
   .mobile-navigation {
@@ -1768,6 +1768,9 @@ export default {
     .cart-items.mt.c58 {
       width: 100%;
     }
+
+
+
   }
 
 
@@ -1789,8 +1792,22 @@ export default {
   @media (max-width: 1000px) {
    .main-view {
      width: 96%;
-     margin: 0 2%;
+     margin: 8% 2% 0% 2%;
    }
+
+   h2 {
+     width: 100%;
+     white-space: inherit;
+     background: none;
+     line-height: 32px;
+     padding-left: 0;
+   }
+
+   h3{
+     margin-bottom: 16px;
+     line-height: 32px;
+   }
+
   }
 
   @media (max-width: 700px){
@@ -1799,6 +1816,11 @@ export default {
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    h3 {
+      font-size: 22px;
+    }
+
 
 
     .explore-filters .ml {
