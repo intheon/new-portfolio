@@ -29,7 +29,7 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
-    ["nuxt-matomo", { matomoUrl: "https://stats.apps.epitrade.io", siteId: 1 }]
+    ["nuxt-matomo", { matomoUrl: "https://stats.apps.epitrade.io/", siteId: 1 }]
   ],
   markdownit: {
     injected: true,
