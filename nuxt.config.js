@@ -6,8 +6,6 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "identifier-url", name: "identifier-url", content: "https://vohzd.com" },
       { hid: "title", name: "title", content: "Vohzd.com" },
-      { hid: "abstract", name: "abstract", content: "vohzd | Marvellous full-stack developer!" },
-      { hid: "author", name: "author", content: "vohzd" },
       { hid: "language", name: "language", content: "EN" }
     ],
     link: [
@@ -21,7 +19,7 @@ module.exports = {
   env: {
     SERVER_ENDPOINT: process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : "http://localhost:1337"
   },
-  loading: { color: '#552a3f' },
+  loading: { color: '#2a4b55' },
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",

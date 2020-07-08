@@ -18,14 +18,6 @@ export default {
   components: {
     HeaderWrapper,
     ParticleBackground
-  },
-  methods: {
-    ...mapActions([
-      "checkAuthState",
-    ])
-  },
-  async mounted(){
-    await this.checkAuthState();
   }
 };
 </script>
