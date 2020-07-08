@@ -51,6 +51,15 @@ export default {
       started: false
     }
   },
+  head () {
+    return {
+      title: "Numbers Station | vohzd.com",
+      meta: [
+        { hid: "description", name: "description", content: "A mock numbers station front end experiement" },
+        { hid: "keywords", name: "keywords", content: "numbers, station" },
+      ]
+    }
+  },
   methods: {
     init(){
       this.started = true;

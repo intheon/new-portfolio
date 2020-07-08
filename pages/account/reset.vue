@@ -39,6 +39,15 @@ export default {
       userID: window.location.search ?  window.location.search.split("=")[2] : undefined
     }
   },
+  head () {
+    return {
+      title: "Reset Password | vohzd.com",
+      meta: [
+        { hid: "description", name: "description", content: "Reset your password" },
+        { hid: "keywords", name: "keywords", content: "reset, password" },
+      ]
+    }
+  },
   methods: {
     ...mapActions([
       "sendEmail",

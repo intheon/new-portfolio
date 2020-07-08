@@ -52,7 +52,8 @@ export default {
     return {
       title: "Blog | vohzd.com",
       meta: [
-        { hid: "index-description", name: "description", content: "Useful technical tutorials for DIY DevOps & Full Stack Development" }
+        { hid: "description", name: "description", content: "Useful technical tutorials for DIY DevOps & Full Stack Development" },
+        { hid: "keywords", name: "keywords", content: "blog, tutorials" },
       ]
     }
   },

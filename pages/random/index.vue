@@ -2,10 +2,11 @@
   <div class="mtx">
     <h1>Random</h1>
 
+    <!--
     <nuxt-link to="/random/bookmarks" class="row mtx bb pad">
       <h3>> Bookmarks</h3>
       <p class="medium">Cool bookmarks, with a stumbleupon random button!</p>
-    </nuxt-link>
+    </nuxt-link>-->
 
     <nuxt-link to="/random/numbers" class="row mtx bb pad">
       <h3>> Numbers station</h3>
@@ -37,12 +38,13 @@
 export default {
   head () {
     return {
-      title: "About  | vohzd.com",
+      title: "Random Stuff | vohzd.com",
       meta: [
-        { hid: "index-description", name: "description", content: "The homepage of superstar developer Vohzd" }
+        { hid: "description", name: "description", content: "Cool and random stuff worth looking at" },
+        { hid: "keywords", name: "keywords", content: "fun, random, games, tools, stuff" },
       ]
     }
-  },
+  }
 }
 </script>
 

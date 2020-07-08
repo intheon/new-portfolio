@@ -28,9 +28,19 @@ export default {
       "getBookmarks"
     ])
   },
+  head () {
+    return {
+      title: "Bookmarks | vohzd.com",
+      meta: [
+        { hid: "description", name: "description", content: "Surf some of my bookmarks" },
+        { hid: "keywords", name: "keywords", content: "bookmarks, surf, web" },
+      ]
+    }
+  },
   mounted(){
     this.getBookmarks();
-  }
+  },
+  middleware: ["isAdmin"]
 }
 
 </script>

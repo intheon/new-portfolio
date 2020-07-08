@@ -1,17 +1,17 @@
 <template>
-  <section class="background-wrapper colour2">
+  <div class="mtx">
     <section class="content-wrapper">
-      <h2 class="second-header mb">Sleepytime</h2>
+      <h2 >Sleepytime</h2>
       <h3>If you need to go to bed now, you should wake up at:</h3>
-      <div>The time is now {{ timeNow | dateFilter }}</div>
-      <div>Cycle 1: {{ cycle1 | dateFilter }}</div>
-      <div>Cycle 2: {{ cycle2 | dateFilter  }}</div>
-      <div>Cycle 3: {{ cycle3 | dateFilter }}</div>
-      <div>Cycle 4: {{ cycle4 | dateFilter }}</div>
-      <div>Cycle 5: {{ cycle5 | dateFilter }}</div>
-      <div>Cycle 6: {{ cycle6 | dateFilter }}</div>
+      <div>The time is now {{ timeNow | timeStamp }}</div>
+      <div>Cycle 1: {{ cycle1 | timeStamp }}</div>
+      <div>Cycle 2: {{ cycle2 | timeStamp  }}</div>
+      <div>Cycle 3: {{ cycle3 | timeStamp }}</div>
+      <div>Cycle 4: {{ cycle4 | timeStamp }}</div>
+      <div>Cycle 5: {{ cycle5 | timeStamp }}</div>
+      <div>Cycle 6: {{ cycle6 | timeStamp }}</div>
     </section>
-  </section>
+  </div>
 
 </template>
 
@@ -26,6 +26,15 @@
         cycle4: Date.now(),
         cycle5: Date.now(),
         cycle6: Date.now(),
+      }
+    },
+    head () {
+      return {
+        title: "Sleepytime | vohzd.com",
+        meta: [
+          { hid: "description", name: "description", content: "Calculate the best time to go to sleep based on sleep cycles." },
+          { hid: "keywords", name: "keywords", content: "sleep, cycles" },
+        ]
       }
     },
     methods: {
@@ -46,17 +55,6 @@
     }
 	}
 
-  /*
-
-  var zDate = new Date();
-
-  var res1 = new Date(zDate.getTime() + 104*60000);
-  var res2 = new Date(res1.getTime() + 90*60000);
-  var res3 = new Date(res2.getTime() + 90*60000);
-  var res4 = new Date(res3.getTime() + 90*60000);
-  var res5 = new Date(res4.getTime() + 90*60000);
-  var res6 = new Date(res5.getTime() + 90*60000);
-  */
 </script>
 
 <style>

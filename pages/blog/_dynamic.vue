@@ -24,6 +24,7 @@ export default {
       blog: "",
       slug: "",
       title: "",
+      tags: [],
       description: ""
     }
   },
@@ -31,10 +32,12 @@ export default {
     return {
       title: `${this.title} | vohzd.com`,
       meta: [
-        { hid: "index-description", name: "description", content: this.description }
+        { hid: "description", name: "description", content: this.description },
+        { hid: "keywords", name: "keywords", content: this.tags.join(", ") },
       ]
     }
   },
+
   methods: {
     ...mapActions([
       "getBlogs"
@@ -46,7 +49,8 @@ export default {
         const parsed = parseMD(blog);
         if (parsed.metadata.slug === this.slug){
           this.title = parsed.metadata.title;
-          this.title = parsed.metadata.description;
+          this.description = parsed.metadata.description;
+          this.tags = parsed.metadata.tags;
           this.blog = parsed.content;
         }
       });

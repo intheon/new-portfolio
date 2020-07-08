@@ -46,9 +46,10 @@ export default {
   },
   head () {
     return {
-      title: "Contact  | vohzd.com",
+      title: "Contact | vohzd.com",
       meta: [
-        { hid: "index-description", name: "description", content: "The homepage of superstar developer Vohzd" }
+        { hid: "description", name: "description", content: "Send me a direct message." },
+        { hid: "keywords", name: "keywords", content: "contact, message" },
       ]
     }
   },

@@ -28,6 +28,15 @@ export default {
       siteHeader: "Welcome",
     }
   },
+  head () {
+    return {
+      title: "Account | vohzd.com",
+      meta: [
+        { hid: "description", name: "description", content: "Log in to your account" },
+        { hid: "keywords", name: "keywords", content: "account, login" },
+      ]
+    }
+  },
   middleware: "dashboard",
   watch: {
     userMeta(){

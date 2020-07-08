@@ -24,10 +24,11 @@ export default {
     return {
       title: "Portfolio | vohzd.com",
       meta: [
-        { hid: "portfolio-description", name: "description", content: "Cool professional projects I've done" }
+        { hid: "description", name: "description", content: "Cool professional projects I've done" },
+        { hid: "keywords", name: "keywords", content: "portfolio, professional, past work" },
       ]
     }
-  },
+  }
 }
 </script>
 

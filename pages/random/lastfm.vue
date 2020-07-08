@@ -1,15 +1,19 @@
 <template>
-  <section class="background-wrapper colour2">
+  <div class="mtx">
     <section class="content-wrapper flex pad">
       <section class="c50">
-        <h2 class="second-header mb">Export your last.fm tracks</h2>
-        <input v-model="user" placeholder="last.fm username" class="mr" /><button @click="go">{{ buttonText }}</button>
+        <h2>Export your last.fm tracks</h2>
+        <p>hint, try mine... vohzd</p>
+        <div class="row">
+          <input v-model="user" placeholder="last.fm username" class="mr" />
+          <button @click="go" class="mt">{{ buttonText }}</button>
+        </div>
         <div v-if="numPages">
           <p>Downloaded {{ currentPage }} / {{ numPages }} pages.</p>
           <p>Downloaded {{ trackDownloadProgress }} / {{ numTracks }} tracks!</p>
         </div>
       </section>
-      <section class="c50">
+      <section class="c50 mtx">
         <div v-if="tracks" class="exported-tracks">
           <div v-for="track in tracks.slice().reverse()" class="track">
             <span v-if="track.artist">{{ track.artist["#text"] }} - </span>
@@ -20,7 +24,7 @@
         </div>
       </section>
     </section>
-  </section>
+  </div>
 
 </template>
 
@@ -35,6 +39,15 @@
         trackDownloadProgress: 1,
         tracks: null,
         buttonText: "Commence"
+      }
+    },
+    head () {
+      return {
+        title: "Last.fm Exporter | vohzd.com",
+        meta: [
+          { hid: "description", name: "description", content: "Export your entire last.fm history" },
+          { hid: "keywords", name: "keywords", content: "lastfm" },
+        ]
       }
     },
     methods:{
@@ -85,10 +98,10 @@
 <style>
 
   .exported-tracks {
-    font-size: 0.4em;
+    font-size: 16px;
     overflow-y: scroll;
     overflow-x: hidden;
-    box-shadow: inset 0px 0px 128px #c0dced;
+    box-shadow: inset 0px 0px 128px #000;
     height: calc(100vh - 64px);
     width: calc(100%);
     font-family: monospace;
@@ -96,7 +109,7 @@
   .exported-tracks .track{
     padding: 16px;
 
-    border-bottom: 1px solid #c0dced;
+    border-bottom: 1px solid #000;
   }
   .tiny {
     font-size: 0.8em;

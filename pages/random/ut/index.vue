@@ -9,6 +9,7 @@
 			<div class="row mt  pt">
         <h3>> UNREAL ARCHIVE</h3>
         <p>An amazing piece of engineering. A full archive of all the user created mods, maps, and other goodness from the past 20+ years!!!</p>
+        <p>I host a mirror which is found @ files.vohzd.com</p>
         <a href="https://unrealarchive.org" target="_blank">https://unrealarchive.org</a>
       </div>
 
@@ -30,6 +31,15 @@
 
 <script>
 	export default {
+    head () {
+      return {
+        title: "Unreal Tournament | vohzd.com",
+        meta: [
+          { hid: "description", name: "description", content: "Unreal Tournament tools and happenings" },
+          { hid: "keywords", name: "keywords", content: "unreal, tournament, assets" },
+        ]
+      }
+    }
 	}
 </script>
 

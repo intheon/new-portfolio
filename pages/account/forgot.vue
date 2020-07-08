@@ -38,6 +38,15 @@ export default {
       regEx: /\S+@\S+\.\S+/
     }
   },
+  head () {
+    return {
+      title: "Forgot Password | vohzd.com",
+      meta: [
+        { hid: "description", name: "description", content: "Forgot my password" },
+        { hid: "keywords", name: "keywords", content: "forgot, credentials" },
+      ]
+    }
+  },
   methods: {
     ...mapActions([
       "sendEmail",
