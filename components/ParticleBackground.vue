@@ -1,29 +1,24 @@
 <template lang="html">
-  <div class="particle-background">
-    <client-only>
-      <vue-particles
-        color="#353037"
-        :particleOpacity="0.7"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#353037"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
-    </client-only>
+  <div class="">
+    <div v-show="isLoading"></div>
+    <div v-show="!isLoading" class="particle-background"></div>
   </div>
+
 </template>
 
 <script>
-
+export default {
+  data(){
+    return {
+      isLoading: true
+    }
+  },
+  mounted(){
+    const lib = document.createElement("script");
+    lib.src = "nodes.js";
+    document.getElementsByTagName("head")[0].appendChild(lib);
+    this.isLoading = false;
+  }
+}
 
 </script>

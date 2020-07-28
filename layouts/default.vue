@@ -26,7 +26,7 @@ export default {
 <style lang="css">
 
   :root {
-    --first-hex: #1e1c1f;
+    --first-hex: #05020a;
     --first-hex-darker: #110e12;
     --first-r: 30;
     --first-g: 28;
@@ -876,6 +876,9 @@ export default {
      top: 0;
      left: 0;
      width: 100%;
+     height: calc(100vh - 64px);
+     overflow: hidden;
+     pointer-events: none;
    }
 
 
