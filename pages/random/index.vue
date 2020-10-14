@@ -13,6 +13,11 @@
       <p class="medium">A fake numbers station</p>
     </nuxt-link>
 
+    <nuxt-link to="https://scp.vohzd.com" class="row mtx bb pad">
+      <h3>> SCP Stories</h3>
+      <p class="medium">A mirror of the SCP Wiki, scraped, indexed, and searchable.</p>
+    </nuxt-link>
+
     <nuxt-link to="/random/ut" class="row mtx bb pad">
       <h3>> Unreal Tournament</h3>
       <p class="medium">Useful unreal tournament tools, maps, and my mirror of the unrealarchive</p>
