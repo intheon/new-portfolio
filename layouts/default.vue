@@ -2,7 +2,7 @@
   <div>
     <header-wrapper></header-wrapper>
     <nuxt class="main-view"></nuxt>
-    <particle-background></particle-background>
+    <!--<particle-background></particle-background>-->
   </div>
 </template>
 
@@ -12,12 +12,12 @@ import { mapActions, mapGetters } from "vuex";
 import "~/node_modules/prismjs/themes/prism-twilight.css"
 
 import HeaderWrapper from "~/components/nav/HeaderWrapper.vue";
-import ParticleBackground from "~/components/ParticleBackground.vue";
+//import ParticleBackground from "~/components/ParticleBackground.vue";
 
 export default {
   components: {
     HeaderWrapper,
-    ParticleBackground
+    //ParticleBackground
   }
 };
 </script>
