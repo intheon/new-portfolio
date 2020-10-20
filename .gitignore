@@ -4,6 +4,7 @@ node_modules
 # logs
 npm-debug.log
 access.json
+package-lock.json
 
 # Nuxt build
 .nuxt

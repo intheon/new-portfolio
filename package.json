@@ -31,5 +31,8 @@
     "prismjs": "^1.22.0",
     "vue-particles": "^1.0.9",
     "vue-plyr": "^6.0.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.1.3"
   }
 }
