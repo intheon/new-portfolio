@@ -30,9 +30,7 @@
     "plyr": "^3.6.2",
     "prismjs": "^1.22.0",
     "vue-particles": "^1.0.9",
-    "vue-plyr": "^6.0.4"
-  },
-  "devDependencies": {
+    "vue-plyr": "^6.0.4",
     "webpack": "^5.1.3"
   }
 }
