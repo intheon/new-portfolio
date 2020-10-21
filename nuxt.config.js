@@ -38,7 +38,6 @@ module.exports = {
     gzip: true
   },
   plugins: [
-    { src:'~/plugins/particles.js', mode: "client" },
     "~/plugins/plyr.js",
     "~/plugins/time-filter.js",
     "~/plugins/fontawesome.js"
