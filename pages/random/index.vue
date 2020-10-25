@@ -28,6 +28,12 @@
       <p class="medium">Export your ENTIRE lastfm history</p>
     </nuxt-link>
 
+    <nuxt-link to="/random/promo" class="row mtx bb pad">
+      <h3>> Generate Promo Codes</h3>
+      <p class="medium">Easily generate promo codes (e.g for competitions etc)</p>
+    </nuxt-link>
+
+
     <nuxt-link to="/random/sleepytime" class="row mtx bb pad">
       <h3>> VueJS port of sleepyti.me</h3>
       <p class="medium">A little app to help maximise your sleep cycles</p>
