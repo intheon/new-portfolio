@@ -8,6 +8,6 @@ package-lock.json
 
 # Nuxt build
 .nuxt
-
+sw.*
 # Nuxt generate
 dist

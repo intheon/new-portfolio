@@ -20,6 +20,9 @@ module.exports = {
     SERVER_ENDPOINT: process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : "http://localhost:1337"
   },
   loading: { color: '#2a4b55' },
+  buildModules: [
+    "@nuxtjs/pwa",
+  ],
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
