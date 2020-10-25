@@ -9,7 +9,6 @@ module.exports = {
       { hid: "language", name: "language", content: "EN" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "canonical", href: "https://vohzd.com" }
     ]
   },
