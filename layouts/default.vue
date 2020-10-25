@@ -1633,11 +1633,6 @@ export default {
       font-size: 14px;
     }
 
-  }
-
-  /* MOBILE STARTS HERE */
-  @media (max-width: 1200px){
-
     iframe {
       height: 420px;
     }
@@ -1646,7 +1641,12 @@ export default {
       width: 85%;
     }
 
-
+    .desktop-navigation {
+      display: none;
+    }
+    .mobile-navigation {
+      display: inline-block;
+    }
   }
 
   @media (max-width: 1000px){
@@ -1676,12 +1676,7 @@ export default {
       width: 25%;
     }
 
-    .desktop-navigation {
-      display: none;
-    }
-    .mobile-navigation {
-      display: inline-block;
-    }
+
 
   }
 

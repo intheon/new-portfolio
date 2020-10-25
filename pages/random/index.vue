@@ -2,11 +2,6 @@
   <div class="mtx">
     <h1>Random</h1>
 
-    <!--
-    <nuxt-link to="/random/bookmarks" class="row mtx bb pad">
-      <h3>> Bookmarks</h3>
-      <p class="medium">Cool bookmarks, with a stumbleupon random button!</p>
-    </nuxt-link>-->
 
     <nuxt-link to="/random/numbers" class="row mtx bb pad">
       <h3>> Numbers station</h3>
@@ -17,6 +12,11 @@
       <h3>> SCP Stories</h3>
       <p class="medium">A mirror of the SCP Wiki, scraped, indexed, and searchable.</p>
     </a>
+
+    <nuxt-link to="/random/midst" class="row mtx bb pad">
+      <h3>> In the midst of</h3>
+      <p class="medium">Quickly get the number of days between two random dates</p>
+    </nuxt-link>
 
     <nuxt-link to="/random/ut" class="row mtx bb pad">
       <h3>> Unreal Tournament</h3>

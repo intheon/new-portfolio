@@ -40,7 +40,8 @@ module.exports = {
   plugins: [
     "~/plugins/plyr.js",
     "~/plugins/time-filter.js",
-    "~/plugins/fontawesome.js"
+    "~/plugins/fontawesome.js",
+    { src:'~/plugins/dragscroll.js', mode: "client" },
   ],
   axios: {
     baseURL: "/",

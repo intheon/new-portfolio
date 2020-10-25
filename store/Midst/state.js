@@ -1,6 +1,6 @@
 export default () =>  {
   return {
-    bookmark: null,
-    bookmarks: []
+    numDays: null,
+  	selectedDates: []
   }
 }

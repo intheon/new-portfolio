@@ -23,11 +23,13 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "cross-env": "^7.0.2",
     "date-fns": "^2.16.1",
+    "moment": "^2.29.1",
     "nuxt": "^2.14.7",
     "nuxt-matomo": "^1.2.3",
     "parse-md": "^2.0.4",
     "plyr": "^3.6.2",
     "prismjs": "^1.22.0",
+    "vue-dragscroll": "^2.1.0",
     "vue-plyr": "^6.0.4"
   },
   "devDependencies": {
