@@ -1494,6 +1494,10 @@ export default {
       text-align: center;
     }
 
+    .text-right {
+      text-align: right;
+    }
+
   .lds-ellipsis div {
       position: absolute;
       top: 1px;
