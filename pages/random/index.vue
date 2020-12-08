@@ -2,6 +2,10 @@
   <div class="mtx">
     <h1>Random</h1>
 
+    <nuxt-link to="/random/domains" class="row mtx bb pad">
+      <h3>> Domain Dictionary</h3>
+      <p class="medium">Find some cool domain name hacks</p>
+    </nuxt-link>
 
     <nuxt-link to="/random/numbers" class="row mtx bb pad">
       <h3>> Numbers station</h3>

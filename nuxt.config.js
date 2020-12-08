@@ -10,6 +10,11 @@ module.exports = {
     ],
     link: [
       { rel: "canonical", href: "https://vohzd.com" }
+    ],
+    script: [
+      {
+        src: "https://stats.epitrade.io/js/plausible.js", async: true, defer: true, "data-domain": "vohzd.com"
+      }
     ]
   },
   css: [
@@ -26,7 +31,6 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
-    ["nuxt-matomo", { matomoUrl: "https://stats.apps.epitrade.io/", siteId: 1 }]
   ],
   markdownit: {
     injected: true,
