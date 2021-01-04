@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "cross-env IS_DEV=TRUE NODE_ENV=development nuxt",
     "start": "cross-env IS_DEV=FALSE NODE_ENV=production nuxt start",
-    "clean": "rm -rf .nuxt node_modules package-lock.json",
     "build": "nuxt build"
   },
   "repository": {
