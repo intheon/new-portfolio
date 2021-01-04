@@ -44,9 +44,9 @@ module.exports = {
     gzip: true
   },
   plugins: [
-    "~/plugins/plyr.js",
     "~/plugins/time-filter.js",
     "~/plugins/fontawesome.js",
+    { src:'~/plugins/plyr.js', mode: "client" },
     { src:'~/plugins/dragscroll.js', mode: "client" },
   ],
   axios: {
