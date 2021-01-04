@@ -11,7 +11,7 @@ RUN npm i
 
 COPY . .
 
-RUN npm prune
+RUN npm cache --clean
 RUN npm run build
 
 EXPOSE 80
