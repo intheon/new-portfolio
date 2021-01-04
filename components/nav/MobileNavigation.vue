@@ -6,13 +6,11 @@
       <font-awesome-icon :icon="['fas', 'times']" v-if="isMenuShown"></font-awesome-icon>
     </div>
     <div class="menu-items" :class="{ 'fs': isMenuShown }" >
-
       <nuxt-link to="/" class="row mb"  @click.native="handleMenu" >home</nuxt-link>
       <nuxt-link to="/blog" class="row mb" @click.native="handleMenu" >blog</nuxt-link>
       <nuxt-link to="/contact" class="row mb" @click.native="handleMenu" >contact</nuxt-link>
       <nuxt-link to="/portfolio" class="row mb" @click.native="handleMenu" >portfolio</nuxt-link>
       <nuxt-link to="/random" class="row mb" @click.native="handleMenu" >random</nuxt-link>
-
     </div>
   </nav>
 </template>

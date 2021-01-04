@@ -15,7 +15,6 @@ import getters 							from "./rootGetters.js";
 /*
  * INDIVIDUAL COMPONENT VUEX STUFF
  */
-import Account 						  	from "./Account/index.js";
 import Blogs 						  		from "./Blogs/index.js";
 import Midst 						  		from "./Midst/index.js";
 import Notification 					from "./Notification/index.js";
@@ -27,7 +26,6 @@ export default () => {
 		actions,
 		getters,
 		modules: {
-			Account,
 			Blogs,
 			Midst,
 			Notification

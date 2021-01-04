@@ -17,28 +17,5 @@
       random stuff
     </nuxt-link>
 
-
-    <div class="absolute-top-right">
-      <account-icon></account-icon>
-    </div>
   </span>
 </template>
-
-<script>
-
-import AccountIcon from "~/components/nav/AccountIcon.vue";
-
-import { mapGetters } from "vuex";
-
-export default {
-  components: {
-    AccountIcon
-  }
-}
-
-</script>
-
-<style lang="css">
-
-
-</style>
