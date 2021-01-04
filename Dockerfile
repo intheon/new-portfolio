@@ -1,6 +1,6 @@
-FROM node:15
+FROM node:alpine
 
-WORKDIR /app
+WORKDIR /src
 
 ARG SERVER_ENDPOINT=${SERVER_ENDPOINT}
 ENV PORT 80
@@ -8,11 +8,8 @@ ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=80
 
 RUN npm i
-
-COPY . .
-
 RUN npm run build
 
 EXPOSE 80
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
