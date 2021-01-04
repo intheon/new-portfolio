@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:latest
+FROM node/15.5.0-alpine3.11
 
 WORKDIR /app
 
@@ -11,7 +11,6 @@ RUN npm i
 
 COPY . .
 
-RUN npm cache --clean
 RUN npm run build
 
 EXPOSE 80
