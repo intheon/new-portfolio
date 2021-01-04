@@ -5,7 +5,6 @@ WORKDIR /src
 COPY package.json .
 
 ARG SERVER_ENDPOINT=${SERVER_ENDPOINT}
-RUN npm run clean
 RUN npm i --force
 COPY . .
 
