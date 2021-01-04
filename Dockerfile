@@ -7,6 +7,7 @@ ENV PORT 80
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=80
 
+COPY . .
 RUN npm i
 RUN npm run build
 
