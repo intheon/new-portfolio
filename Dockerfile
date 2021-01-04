@@ -1,18 +1,19 @@
-FROM mhart/alpine-node
+FROM mhart/alpine-node:latest
 
-WORKDIR /src
-
-COPY package.json .
+WORKDIR /app
 
 ARG SERVER_ENDPOINT=${SERVER_ENDPOINT}
-RUN npm install
-COPY . .
-
 ENV PORT 80
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=80
 
+RUN npm i
+
+COPY . .
+
+RUN npm prune
 RUN npm run build
+
 EXPOSE 80
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "start" ]
