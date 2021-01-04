@@ -5,7 +5,7 @@ WORKDIR /src
 COPY package.json .
 
 ARG SERVER_ENDPOINT=${SERVER_ENDPOINT}
-RUN npm i --force
+RUN npm install
 COPY . .
 
 ENV PORT 80
