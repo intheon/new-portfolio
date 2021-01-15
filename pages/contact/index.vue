@@ -14,9 +14,6 @@
         <div class="c20 right">
           <a href="https://github.com/vohzd" target="_blank" class="text-center"><font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon> @vohzd</a>
         </div>
-        <div class="row text-right">
-          <a href="mailto:website@vohzd.com">website@vohzd.com</a>
-        </div>
       </div>
     </div>
   </div>
