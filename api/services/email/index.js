@@ -3,7 +3,7 @@ const axios                   = require("axios");
 const {
   emailServerEndpoint,
   emailPassword
-}                             = require("../../config/keys/email.js");
+}                             = require("../../config/email.js");
 
 async function sendEmail(payload) {
   console.log("received email send request")
