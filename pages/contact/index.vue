@@ -21,16 +21,11 @@
 
 <script>
 
-import { mapGetters } from "vuex";
+import { mapActions } from "vuex";
 import FormButton from "~/components/form/FormButton.vue";
 export default {
   components: {
     FormButton
-  },
-  computed: {
-    ...mapGetters([
-      "serverEndpoint"
-    ])
   },
   data(){
     return {
@@ -54,13 +49,18 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      "sendMessage"
+    ]),
     async handleMessage(){
       this.isLoading = true;
-      await this.$axios.post(`${this.serverEndpoint}/message`, {
+
+      await this.sendMessage({
         "from": this.email,
         "name": this.name,
         "message": this.message
       });
+
       this.welcomeText = "Thank you! That's been sent!"
       this.reset();
     },

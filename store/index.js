@@ -17,6 +17,7 @@ import getters 							from "./rootGetters.js";
  */
 import Blogs 						  		from "./Blogs/index.js";
 import Midst 						  		from "./Midst/index.js";
+import Message 						  	from "./Message/index.js";
 import Notification 					from "./Notification/index.js";
 
 Vue.use(Vuex);
@@ -27,6 +28,7 @@ export default () => {
 		getters,
 		modules: {
 			Blogs,
+			Message,
 			Midst,
 			Notification
 		},

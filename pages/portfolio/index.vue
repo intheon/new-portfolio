@@ -24,10 +24,10 @@
       <p class="medium">Previously Skatelocate. Located @ https://github.com/vohzd/skatemark</p>
     </a>
 
-    <a href="https://shufflemark.com" class="row mb pad" target="_blank">
-      <h3>Shufflemark</h3>
+    <a href="https://snagmark.com" class="row mb pad" target="_blank">
+      <h3>Snagmark</h3>
       <p class="medium">An open source StumbleUpon. Self-hostable and will support ActivityPub</p>
-      <p class="medium">Located @ https://github.com/vohzd/shufflemark</p>
+      <p class="medium">Located @ https://github.com/vohzd/snagmark</p>
     </a>
 
     <a href="https://chantry.io" class="row mb pad" target="_blank">

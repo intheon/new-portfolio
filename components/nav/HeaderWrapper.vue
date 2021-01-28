@@ -1,7 +1,7 @@
 <template lang="html">
   <header class="main-header">
     <nuxt-link to="/" class="nav-link ml mrx">
-      <img src="~assets/img/zombiehand.png" class="home-logo"/>
+      <img src="~assets/img/hand.png" class="home-logo"/>
       <span class="mlx">vohzd.com</span>
     </nuxt-link>
     <desktop-navigation class="desktop-navigation"></desktop-navigation>
@@ -46,6 +46,7 @@ export default {
 
 .home-logo {
   width: 72px;
+  padding: 4px;
   position: absolute;
   top: 0;
 }

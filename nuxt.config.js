@@ -1,4 +1,12 @@
 module.exports = {
+  axios: {
+    baseURL: "/",
+    proxyHeaders: false,
+    credentials: true
+  },
+  build: {
+    optimizeCSS: true
+  },
   head: {
     title: "Vohzd | Full Stack JS Developer",
     meta: [
@@ -11,47 +19,29 @@ module.exports = {
     link: [
       { rel: "canonical", href: "https://vohzd.com" }
     ],
-    script: [
-      {
-        src: "https://stats.epitrade.io/js/plausible.js", async: true, defer: true, "data-domain": "vohzd.com"
-      }
-    ]
-  },
-  css: [
-    "~/node_modules/plyr/dist/plyr.css"
-  ],
-  env: {
-    SERVER_ENDPOINT: process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : "http://localhost:1337"
+    script: [{src: "https://stats.epitrade.io/js/plausible.js", async: true, defer: true, "data-domain": "vohzd.com"}]
   },
   loading: { color: '#2a4b55' },
-  buildModules: [
-    "@nuxtjs/pwa",
-  ],
-  modules: [
-    "@nuxtjs/axios",
-    "@nuxtjs/markdownit",
-    "@nuxtjs/sitemap",
-  ],
   markdownit: {
     injected: true,
     breaks: true
   },
-  build: {
-    optimizeCSS: true
-  },
-  sitemap: {
-    hostname: "https://vohzd.com",
-    gzip: true
-  },
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/markdownit",
+    "@nuxtjs/sitemap",
+  ],
   plugins: [
     "~/plugins/time-filter.js",
     "~/plugins/fontawesome.js",
-    { src:'~/plugins/plyr.js', mode: "client" },
     { src:'~/plugins/dragscroll.js', mode: "client" },
   ],
-  axios: {
-    baseURL: "/",
-    proxyHeaders: false,
-    credentials: true
+  serverMiddleware: [
+    { path: "/api", handler: "~/api/index.js" }
+  ],
+  sitemap: {
+    hostname: "https://vohzd.com",
+    gzip: true
   }
 }

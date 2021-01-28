@@ -1,14 +1,10 @@
 <template lang="html">
-  <section>
-    <section class="main-content-port">
+  <main class="mtx">
       <section class="intro-text">
         <p>Generate a funky domain name and check it's availability and price.</p>
         <p>Helpful for when you need to operate in reverse. Thinking of a cool domain hack and then checking its unavailable is a ballache!</p>
         <p>Select a TLD from the dropdown below and cycle through one. You can then query the price and availability.</p>
       </section>
-
-
-
 
       <section class="select-tld pad">
         <select v-model="userSelectedTLD" ref="tldSelectRef">
@@ -35,8 +31,7 @@
           </section>
         </section>
       </section>
-    </section>
-  </section>
+  </main>
 </template>
 
 <script>

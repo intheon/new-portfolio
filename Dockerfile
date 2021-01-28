@@ -1,15 +1,12 @@
-# Dockerfile
 FROM node:14.15.3
 
-#args
-ARG SERVER_ENDPOINT=${SERVER_ENDPOINT}
+ARG EMAIL_SERVER_ENDPOINT=${EMAIL_SERVER_ENDPOINT}
+ARG EMAIL_PASSWORD=${EMAIL_PASSWORD}
 
-# create destination directory
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
-
-# copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
+
 RUN npm install
 RUN npm run build
 

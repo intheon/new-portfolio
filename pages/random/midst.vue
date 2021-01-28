@@ -29,7 +29,7 @@
 
   			<div class="scrollable-container row mtx" v-dragscroll>
   				<div class="scroll-x-container">
-  					<month-wrapper v-for="n in 14" v-bind:index="(n-1)" class="month-wrapper" />
+  					<month-wrapper v-for="(n, i) in 14" :key="i" v-bind:index="(n-1)" class="month-wrapper" />
   				</div>
   			</div>
       </section>

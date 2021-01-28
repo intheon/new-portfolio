@@ -10,7 +10,7 @@
       </span>
     </div>
     <div class="blog-posts">
-      <nuxt-link :to="`/blog/${blog.slug}`" class="mbx pad row" v-for="blog in parsedBlogs">
+      <nuxt-link :to="`/blog/${blog.slug}`" class="mbx pad row" v-for="(blog, i) in parsedBlogs" :key="i">
         <article class="blog-cta">
           <h3>{{ blog.title }}</h3>
           <div class="blog-fixed-bottom medium">
