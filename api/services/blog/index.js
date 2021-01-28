@@ -9,7 +9,7 @@ async function getBlogs(){
 
   console.log("service: getBlogs");
   const base = path.resolve();
-  const dataPath = `${base}/data/blogs`;
+  const dataPath = `${base}/data`;
   console.log(dataPath);
   let promises = [];
 
