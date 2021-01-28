@@ -11,4 +11,5 @@ package-lock.json
 sw.*
 # Nuxt generate
 dist
+data
 api/config/keys/email.js
