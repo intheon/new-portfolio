@@ -19,7 +19,7 @@ module.exports = {
     link: [
       { rel: "canonical", href: "https://vohzd.com" }
     ],
-    script: [{src: "https://stats.epitrade.io/js/plausible.js", async: true, defer: true, "data-domain": "vohzd.com"}]
+    script: [{ src: "https://stats.vohzd.com/tracker.js", async: true, defer: true, "data-ackee-server": "stats.vohzd.com", "data-ackee-domain-id": "dce33bdd-6d52-4b8c-bd66-31225e08408e" }]
   },
   loading: { color: '#2a4b55' },
   markdownit: {
